@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <title>Pokemon Go Map</title>
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/test.js"></script>
+  <script src="js/gyms.js"></script>
+  <style>
+    html,
+    body,
+    #mapid {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+  </style>
+  <script>
+    // var json;
+
+    // zoeken naar:
+    // types: ["street_address"]
+    // types: ["political", "sublocality", "sublocality_level_2"]
+    $(document).ready(function() {
+
+      $.getJSON('js/gyms-loc.json', function(data) {
+        var items = [];
+
+        $.each(data, function(key, val) {
+          // for (var i = 0; i < array.length; i++) {
+          //   if (array[i][0] === val.gym_name) {
+          //     // console.log(i, array[i], val.gym_name);
+          //     val.latitude = array[i][1];
+          //     val.longitude = array[i][2];
+          //   }
+          // }
+
+          var getApi = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + val.latitude + ',' + val.longitude + '&key=AIzaSyD4mKkoLlvyIlx2LqC10512BD0_il3Gwqw';
+
+          var region_1, region_2, region_3, street, number, postal;
+
+          $.getJSON(getApi, function(data) {
+            for (var i = 0; i < data.results.length; i++) {
+              // console.log(data.results[i]);
+              if (data.results[i].types.indexOf('street_address') != -1) {
+                street = data.results[i].address_components[1].long_name;
+                number = data.results[i].address_components[0].long_name;
+                postal = data.results[i].address_components[7].long_name;
+              }
+              if (data.results[i].types.indexOf('sublocality_level_2') != -1) {
+                region_1 = data.results[i].address_components[2].long_name;
+                region_2 = data.results[i].address_components[1].long_name;
+                region_3 = data.results[i].address_components[0].long_name;
+              }
+            }
+
+            console.log('region_1: ' + region_1);
+            console.log('region_2: ' + region_2);
+            console.log('region_3: ' + region_3);
+            console.log('street: ' + street);
+            console.log('number: ' + number);
+            console.log('postal: ' + postal);
+          });
+
+          items.push('<li id="' + key + '">' + key + ' > ' + JSON.stringify(val) + '</li>');
+        });
+
+        $('<ul/>', {
+          'class': 'my-new-list',
+          html: items.join('')
+        }).appendTo('body');
+      });
+    });
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

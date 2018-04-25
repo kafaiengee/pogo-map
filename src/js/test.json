@@ -1,0 +1,4502 @@
+{
+  "0": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "3-points-to-the-stars",
+    "gym_name": "3 Points To The Stars",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "1": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "abraxas-sign",
+    "gym_name": "Abraxas Sign",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "2": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "agnietenkapel",
+    "gym_name": "Agnietenkapel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "3": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amalia-linde",
+    "gym_name": "Amalia-linde",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "4": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amphitrite-fountain",
+    "gym_name": "'Amphitrite' Fountain",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "5": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsteldijk-plaquette",
+    "gym_name": "Amsteldijk Plaquette",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "6": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amstel-monument",
+    "gym_name": "Amstel Monument",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "7": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsterdam-amstel-hotel",
+    "gym_name": "Amsterdam Amstel Hotel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "8": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsterdam-business-school",
+    "gym_name": "Amsterdam Business School",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "9": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsterdam-mosque",
+    "gym_name": "Amsterdam Mosque",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "10": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsterdam-rai-station",
+    "gym_name": "Amsterdam RAI Station",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "11": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsterdam-voc-ship",
+    "gym_name": "Amsterdam (VOC Ship)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "12": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsterdam-vrijmetselaars-westzijde",
+    "gym_name": "Amsterdam, Vrijmetselaars Westzijde",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "13": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amsterdam-zuid-station",
+    "gym_name": "Amsterdam Zuid Station",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "14": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ams-west-gabriel",
+    "gym_name": "AMS. West - Gabriël",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "15": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ams-west-vaarwel-2004",
+    "gym_name": "Ams. West - Vaarwel 2004",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "16": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ams-west-vrijheidsboom-5-mei-1945",
+    "gym_name": "Ams. West - Vrijheidsboom 5 Mei 1945",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "17": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amszo-drostenburg",
+    "gym_name": "AmsZO,  Drostenburg.",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "18": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amszo-house-of-steel",
+    "gym_name": "Amszo, House of Steel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "19": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "amszo-rainbow-bridge",
+    "gym_name": "AmsZO, Rainbow Bridge. ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "20": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "anchor-noord",
+    "gym_name": "Anchor Noord",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "21": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "anker",
+    "gym_name": "Anker",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "22": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "anne-frank-statue",
+    "gym_name": "Anne Frank Statue",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "23": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "another-cat-on-the-wall",
+    "gym_name": "Another Cat on the Wall",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "24": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "art-at-shell-building",
+    "gym_name": "Art at Shell Building",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "25": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "artistic-wall-painting",
+    "gym_name": "Artistic Wall Painting ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "26": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "art-street-sign",
+    "gym_name": "Art Street Sign",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "27": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "asian-fusion",
+    "gym_name": "Asian Fusion",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "28": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "atradius-building",
+    "gym_name": "Atradius Building",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "29": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "babies-having-fun-with-fish",
+    "gym_name": "Babies Having Fun with Fish",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "30": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "backgammon-memorial",
+    "gym_name": "Backgammon Memorial",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "31": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "badhuis-javaplein",
+    "gym_name": "Badhuis Javaplein",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "32": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bambi",
+    "gym_name": "Bambi",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "33": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "banana-peel",
+    "gym_name": "Banana Peel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "34": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bandstand-at-the-pampa",
+    "gym_name": "Bandstand at the Pampa",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "35": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "beatrix-park-lion",
+    "gym_name": "Beatrix Park Lion",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "36": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "beeld-door-maria-hovius",
+    "gym_name": "Beeld door Maria Hovius",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "37": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "beeld-met-gat",
+    "gym_name": "Beeld met Gat",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "38": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bella-grossa",
+    "gym_name": "Bella Grossa",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "39": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bergwijkpark-2",
+    "gym_name": "Bergwijkpark 2",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "40": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bethelkerk",
+    "gym_name": "Bethelkerk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "41": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "big-stone-column",
+    "gym_name": "Big Stone Column",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "42": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bike-box",
+    "gym_name": "Bike Box",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "43": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bird-ruige-speelplek",
+    "gym_name": "Bird (Ruige Speelplek)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "44": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bloempoort",
+    "gym_name": "Bloempoort",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "45": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "blote-leuter",
+    "gym_name": "Blote Leuter",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "46": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "boar",
+    "gym_name": "Boar",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "47": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "boatsurfer",
+    "gym_name": "Boatsurfer ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "48": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "boy-bear",
+    "gym_name": "Boy & Bear",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "49": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bredero-beroepscollege",
+    "gym_name": "Bredero Beroepscollege",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "50": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bridge-over-troubled-water",
+    "gym_name": "Bridge Over Troubled Water",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "51": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bridge-portal",
+    "gym_name": "Bridge Portal ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "52": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bronsmastiek-039-schelpvorm-039",
+    "gym_name": "Bronsmastiek &#039;Schelpvorm&#039;",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "53": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "bronze-relief-in-cobblestone",
+    "gym_name": "Bronze Relief in Cobblestone",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "54": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "brugje-met-6-ballen",
+    "gym_name": "Brugje Met 6 Ballen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "55": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "building-art",
+    "gym_name": "Building Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "56": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "built-in-1935-1938",
+    "gym_name": "Built in 1935-1938",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "57": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "buitenveldert-open-library",
+    "gym_name": "Buitenveldert Open Library",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "58": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "butterfly",
+    "gym_name": "Butterfly",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "59": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "cafetaria-koffiepost-hembrug",
+    "gym_name": "Cafetaria '/ Koffiepost Hembrug",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "60": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ceramplein-standbeeld",
+    "gym_name": "Ceramplein Standbeeld",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "61": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "chained-stone-at-acta",
+    "gym_name": "Chained Stone at ACTA",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "62": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "chess-horse",
+    "gym_name": "Chess Horse",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "63": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "churchill-art",
+    "gym_name": "Churchill Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "64": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "church-of-old-sloten",
+    "gym_name": "Church of Old Sloten",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "65": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "church-tuindorp",
+    "gym_name": "Church Tuindorp ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "66": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "circle-with-torch",
+    "gym_name": "Circle with Torch",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "67": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "climbing-the-wall",
+    "gym_name": "Climbing the Wall",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "68": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "clockwork",
+    "gym_name": "Clockwork",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "69": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "come-art",
+    "gym_name": "Come Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "70": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "concertgebouw",
+    "gym_name": "Concertgebouw",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "71": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "cow-mural",
+    "gym_name": "Cow Mural",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "72": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "cows-park-for-free",
+    "gym_name": "Cows Park for Free",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "73": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "crea",
+    "gym_name": "CREA",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "74": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "creepy-puppet",
+    "gym_name": "Creepy Puppet",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "75": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "crystal-tower",
+    "gym_name": "Crystal Tower",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "76": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "dam-square",
+    "gym_name": "Dam Square",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "77": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-aardige-amsterdammer",
+    "gym_name": "De Aardige Amsterdammer",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "78": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-akermolen",
+    "gym_name": "De Akermolen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "79": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-blauwe-poort",
+    "gym_name": "De Blauwe Poort",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "80": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-dobbelsteen",
+    "gym_name": "De Dobbelsteen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "81": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-eerste-en-de-laatste-gulden",
+    "gym_name": "De Eerste en de Laatste Gulden",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "82": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-gooyer",
+    "gym_name": "De Gooyer",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "83": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-klokkenstoel",
+    "gym_name": "De Klokkenstoel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "84": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-muziektent-in-het-park",
+    "gym_name": "De Muziektent in Het Park",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "85": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-pientere-zager",
+    "gym_name": "De Pientere Zager",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "86": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-poort-van-nieuwendam",
+    "gym_name": "De Poort van Nieuwendam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "87": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-potkachel-2011-eveline-van-duyl",
+    "gym_name": "De Potkachel, 2011, Eveline Van Duyl",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "88": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-ratelaar",
+    "gym_name": "De Ratelaar",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "89": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "desklamp-mural",
+    "gym_name": "Desklamp Mural",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "90": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-spiraal",
+    "gym_name": "De Spiraal",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "91": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "destroyed-bridge",
+    "gym_name": "Destroyed Bridge",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "92": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-toekomst-fel-in-kleuren-mural",
+    "gym_name": "De Toekomst Fel In Kleuren Mural",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "93": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-verdwenen-boer-karel-gomes",
+    "gym_name": "De Verdwenen Boer, Karel Gomes",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "94": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-vlaflip",
+    "gym_name": "De Vlaflip",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "95": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-waag",
+    "gym_name": "De Waag",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "96": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "de-zeeburcht-eerste-steen",
+    "gym_name": "De Zeeburcht Eerste Steen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "97": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "diamant-beurs",
+    "gym_name": "Diamant Beurs",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "98": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "diemen-lighthouse",
+    "gym_name": "Diemen Lighthouse",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "99": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "diemen-sniep-telraam",
+    "gym_name": "Diemen Sniep - Telraam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "100": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "diemerpark-ark-zone",
+    "gym_name": "Diemerpark - ARK-Zone",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "101": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "diemerzeedijk",
+    "gym_name": "Diemerzeedijk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "102": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "dierenartsen",
+    "gym_name": "Dierenartsen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "103": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "disc-golf-sloterpark",
+    "gym_name": "Disc Golf Sloterpark",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "104": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "double-ring",
+    "gym_name": "Double Ring",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "105": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "doughnut-shaped-fountain",
+    "gym_name": "Doughnut Shaped Fountain",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "106": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "drie-blokken",
+    "gym_name": "Drie Blokken",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "107": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "drie-boten",
+    "gym_name": "Drie Boten",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "108": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "droombeeld-1965-cephas-stauthamer",
+    "gym_name": "Droombeeld (1965) - Cephas Stauthamer",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "109": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "dutch-kuwaiti-cultural-and-social-center-mosque",
+    "gym_name": "Dutch Kuwaiti Cultural and Social Center (Mosque)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "110": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "dwarf-home",
+    "gym_name": "Dwarf Home",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "111": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ecolint-animales",
+    "gym_name": "Ecolint Animales",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "112": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "elevated-houses",
+    "gym_name": "Elevated Houses",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "113": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "el-taller-wall",
+    "gym_name": "El Taller Wall",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "114": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "entrance-artis-zoo",
+    "gym_name": "Entrance Artis Zoo",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "115": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "entrance-watersporteiland",
+    "gym_name": "Entrance Watersporteiland ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "116": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "europa-hal",
+    "gym_name": "Europa Hal",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "117": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "eyes-in-a-circle",
+    "gym_name": "Eyes in a Circle",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "118": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "faces-e-lawrence-of-arabia",
+    "gym_name": "Faces E Lawrence of Arabia",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "119": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "fancy-fence",
+    "gym_name": "Fancy Fence",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "120": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "faunapassage-liergouw",
+    "gym_name": "Faunapassage Liergouw",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "121": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "feed-him",
+    "gym_name": "Feed Him",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "122": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "fenix",
+    "gym_name": "Fenix.",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "123": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "fietsroute-knooppunt-36",
+    "gym_name": "Fietsroute Knooppunt 36",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "124": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "fietsroute-knooppunt-39",
+    "gym_name": "Fietsroute Knooppunt 39",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "125": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "fietsroute-waterlandse-zeedijk-9-5-km",
+    "gym_name": "Fietsroute Waterlandse Zeedijk 9,5 Km",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "126": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "fontein-buikslotermeerplein",
+    "gym_name": "Fontein Buikslotermeerplein",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "127": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "fontijn-bij-kronenburg-restaurant",
+    "gym_name": "Fontijn Bij Kronenburg Restaurant",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "128": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "football-player-mural",
+    "gym_name": "Football Player Mural",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "129": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "for-the-bees-table-sculpture",
+    "gym_name": "'For The Bees' Table Sculpture",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "130": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "frankendael-folly",
+    "gym_name": "Frankendael Folly",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "131": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "funenpark",
+    "gym_name": "Funenpark",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "132": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "gaysterdam",
+    "gym_name": "Gaysterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "133": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "geert-groote-college",
+    "gym_name": "Geert Groote College",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "134": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "geraldus-majellakerk",
+    "gym_name": "Geraldus Majellakerk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "135": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "gerbrandybank",
+    "gym_name": "Gerbrandybank",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "136": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "gereformeerde-gemeente",
+    "gym_name": "Gereformeerde Gemeente",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "137": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "giant-table",
+    "gym_name": "Giant Table",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "138": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "glass-palm-tree",
+    "gym_name": "Glass Palm tree ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "139": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "graffiti-4",
+    "gym_name": "Graffiti 4",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "140": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "graffiti-art",
+    "gym_name": "Graffiti Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "141": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "graffiti-wall",
+    "gym_name": "Graffiti Wall",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "142": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "graffity-art-de-rietwijker",
+    "gym_name": "Graffity Art De Rietwijker",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "143": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "grafitti-under-bridge-ii",
+    "gym_name": "Grafitti Under Bridge II",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "144": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "graf-van-manfred-langer",
+    "gym_name": "Graf Van Manfred Langer",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "145": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "green-tulip-playground",
+    "gym_name": "Green Tulip Playground",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "146": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "green-water-project-educational-tool",
+    "gym_name": "Green Water Project Educational Tool",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "147": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "grote-man-kleine-man",
+    "gym_name": "Grote Man, Kleine Man",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "148": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "haan-peer-veneman-1993",
+    "gym_name": "Haan, Peer Veneman, 1993",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "149": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "halfpipe-egeldonk",
+    "gym_name": "Halfpipe Egeldonk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "150": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "hans-snoek-fontein-2006",
+    "gym_name": "Hans Snoek Fontein (2006)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "151": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "happy-monkey",
+    "gym_name": "Happy Monkey",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "152": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "haringpakkers-toren",
+    "gym_name": "Haringpakkers Toren",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "153": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "hartog-039-s-volkoren",
+    "gym_name": "Hartog&#039;s Volkoren",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "154": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "hatched-house",
+    "gym_name": "Hatched House",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "155": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "headless-musician",
+    "gym_name": "Headless Musician",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "156": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "heavy-metal-playground",
+    "gym_name": "Heavy Metal Playground ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "157": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "heineken-experience",
+    "gym_name": "Heineken Experience ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "158": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "helicopter",
+    "gym_name": "Helicopter",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "159": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "helofytenveld",
+    "gym_name": "Helofytenveld",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "160": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "hereford",
+    "gym_name": "Hereford",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "161": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "herinrichting-schinkel",
+    "gym_name": "Herinrichting 'Schinkel'",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "162": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "het-beest-gaat-los",
+    "gym_name": "Het Beest Gaat Los",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "163": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "het-groene-wout",
+    "gym_name": "Het Groene Wout",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "164": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "het-pachuys-van-de-gouwe-wagen",
+    "gym_name": "Het Pachuys van de Gouwe Wagen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "165": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "het-stroom-huisje",
+    "gym_name": "Het Stroom huisje",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "166": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "het-tolhuis",
+    "gym_name": "Het Tolhuis",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "167": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "het-verlangen-9",
+    "gym_name": "Het Verlangen '9'",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "168": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "het-zebrapad",
+    "gym_name": "Het Zebrapad",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "169": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "hoogovenarbeider",
+    "gym_name": "Hoogovenarbeider",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "170": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "horseman-by-titus-leeser-1968",
+    "gym_name": "Horseman by Titus Leeser, 1968",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "171": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "horse-with-jockey",
+    "gym_name": "Horse With Jockey",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "172": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "how-to-meet-an-angel",
+    "gym_name": "How to Meet an Angel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "173": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "hurkende-jongen",
+    "gym_name": "Hurkende Jongen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "174": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "h-walings-plaque",
+    "gym_name": "H. Walings Plaque",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "175": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "i-am-at-home",
+    "gym_name": "I Am at Home",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "176": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "i-amsterdam",
+    "gym_name": "I amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "177": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "i-amsterdam-olympic-stadium",
+    "gym_name": "I Amsterdam Olympic Stadium",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "178": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "inclined-pole",
+    "gym_name": "Inclined Pole",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "179": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ingang-thijssepark",
+    "gym_name": "Ingang Thijssepark",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "180": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ing-boot",
+    "gym_name": "Ing Boot ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "181": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "international-text-wall",
+    "gym_name": "International Text Wall",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "182": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "interplanetaire-communicatie-medium",
+    "gym_name": "Interplanetaire Communicatie Medium",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "183": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "iron-ubermushroom",
+    "gym_name": "Iron übermushroom",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "184": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "jachthaven-flevo",
+    "gym_name": "Jachthaven Flevo",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "185": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "javaplein-fontein",
+    "gym_name": "Javaplein-fontein",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "186": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "johnny-jordaanplein-beeldentuin",
+    "gym_name": "Johnny Jordaanplein beeldentuin",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "187": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "jongen-onder-de-brug",
+    "gym_name": "Jongen onder de brug",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "188": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kabouter-huisje",
+    "gym_name": "Kabouter Huisje",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "189": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "keramiek-bankje",
+    "gym_name": "Keramiek Bankje",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "190": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kerk-1937",
+    "gym_name": "Kerk 1937",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "191": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kerk-het-apostolisch-genootschap",
+    "gym_name": "Kerk Het Apostolisch Genootschap",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "192": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kijker-1993",
+    "gym_name": "Kijker (1993)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "193": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kinderboerderij-de-bokkesprong",
+    "gym_name": "Kinderboerderij de Bokkesprong",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "194": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kinderkookkafe",
+    "gym_name": "Kinderkookkafe",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "195": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kinderkunst-sint-petrusschool",
+    "gym_name": "Kinderkunst Sint Petrusschool",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "196": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kinderspeeltoestellen-en-skatebaan",
+    "gym_name": "Kinderspeeltoestellen En Skatebaan",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "197": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kinker-neighbourhood-mural",
+    "gym_name": "Kinker Neighbourhood Mural",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "198": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kleiburg",
+    "gym_name": "Kleiburg",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "199": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "koninklijk-theater-carre",
+    "gym_name": "Koninklijk Theater Carré",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "200": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "koptisch-orthodoxe-kerk",
+    "gym_name": "Koptisch Orthodoxe Kerk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "201": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kpn-tower",
+    "gym_name": "KPN Tower",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "202": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kroontje-van-saan",
+    "gym_name": "Kroontje van Saan",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "203": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kubuspoort",
+    "gym_name": "Kubuspoort",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "204": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kunst-van-nico-betjes",
+    "gym_name": "Kunst Van Nico Betjes",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "205": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kunstwerk-bij-oba",
+    "gym_name": "Kunstwerk bij OBA",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "206": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "kwart-maan",
+    "gym_name": "Kwart Maan",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "207": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "l-039-envol-de-la-cigogne",
+    "gym_name": "L&#039;envol De La Cigogne",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "208": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "lighthouse",
+    "gym_name": "Lighthouse",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "209": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "lighthouse",
+    "gym_name": "Lighthouse",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "210": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "lion-head-on-stone-wall",
+    "gym_name": "Lion Head on Stone Wall",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "211": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "lizard-statue",
+    "gym_name": "Lizard Statue ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "212": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "lucky-dog-statue",
+    "gym_name": "Lucky Dog Statue",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "213": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "madame-tussaud",
+    "gym_name": "Madame Tussaud",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "214": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "magere-brug",
+    "gym_name": "Magere Brug",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "215": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mahatma-gandhi",
+    "gym_name": "Mahatma Gandhi",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "216": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "man-woman-wild",
+    "gym_name": "Man Woman Wild",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "217": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mediacollege-amsterdam",
+    "gym_name": "Mediacollege Amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "218": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mejiro",
+    "gym_name": "Mejiro",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "219": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "melkweg",
+    "gym_name": "Melkweg",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "220": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "menno-simons-statue",
+    "gym_name": "Menno Simons Statue",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "221": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mensen-op-strand-met-parasol",
+    "gym_name": "Mensen Op Strand Met Parasol",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "222": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mercator-fountain",
+    "gym_name": "Mercator Fountain",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "223": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mercator-toren",
+    "gym_name": "Mercator Toren",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "224": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mercure-hotel-aan-de-amstel",
+    "gym_name": "Mercure Hotel Aan de Amstel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "225": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "metal-curls-gelderlandplein",
+    "gym_name": "Metal Curls Gelderlandplein",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "226": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "metal-monument",
+    "gym_name": "Metal Monument ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "227": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "metal-statue-at-the-pond",
+    "gym_name": "Metal Statue at the Pond",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "228": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "metro-station-de-vlugtlaan",
+    "gym_name": "Metro Station De Vlugtlaan",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "229": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "metrostation-ernststraat",
+    "gym_name": "Metrostation Ernststraat",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "230": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "metro-station-spaklerweg",
+    "gym_name": "Metro Station Spaklerweg",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "231": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "metro-tramhalte-kronenburg",
+    "gym_name": "Metro'/tramhalte Kronenburg",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "232": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "michel-angelo",
+    "gym_name": "Michel Angelo",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "233": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mirandabad",
+    "gym_name": "Mirandabad",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "234": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "modern-art",
+    "gym_name": "Modern Art ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "235": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "moeder-natuur",
+    "gym_name": "Moeder Natuur",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "236": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mondriaan-plein",
+    "gym_name": "Mondriaan Plein",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "237": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "monkeys-at-a-table",
+    "gym_name": "Monkeys at a Table",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "238": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "monoliet",
+    "gym_name": "Monoliet",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "239": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "montelbaantoren",
+    "gym_name": "Montelbaantoren",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "240": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "monument-for-peace",
+    "gym_name": "Monument for Peace",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "241": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "monument-voor-de-moeders-die-op-zorgvlied-begraven-liggen",
+    "gym_name": "Monument voor de Moeders die op Zorgvlied Begraven Liggen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "242": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "more-metallic-tree-trunks",
+    "gym_name": "More Metallic Tree Trunks",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "243": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mosaic",
+    "gym_name": "Mosaic",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "244": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mother-of-all-beings",
+    "gym_name": "Mother of All Beings",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "245": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mountain-sculpture",
+    "gym_name": "Mountain Sculpture",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "246": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mozaiek-7",
+    "gym_name": "Mozaïefek 7",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "247": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mozaiek-boot",
+    "gym_name": "Mozaiek Boot",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "248": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mural-kluzzfabriek",
+    "gym_name": "Mural Kluzzfabriek",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "249": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "muziektent",
+    "gym_name": "Muziektent",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "250": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "mythical-monster-on-bridge",
+    "gym_name": "Mythical Monster on Bridge ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "251": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "nachdenklich",
+    "gym_name": "Nachdenklich",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "252": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "nachtwacht",
+    "gym_name": "Nachtwacht",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "253": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "narcisse-toudoir-vitrage-barcelonaplein",
+    "gym_name": "Narcisse Toudoir - Vitrage Barcelonaplein",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "254": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "nationaal-rugby-centrum-amsterdam",
+    "gym_name": "Nationaal Rugby Centrum Amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "255": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "natureluur",
+    "gym_name": "Natureluur",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "256": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "natuureducatie-aemsteltuin",
+    "gym_name": "Natuureducatie Aemsteltuin",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "257": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ndsm-monument",
+    "gym_name": "NDSM Monument",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "258": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "nereide-op-triton",
+    "gym_name": "Nereïefde Op Triton",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "259": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "new-crown-xl-office-fountain",
+    "gym_name": "New Crown XL Office Fountain",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "260": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "new-desire-2-auke-de-vries-1992-1995",
+    "gym_name": "New Desire 2 – Auke De Vries (1992–1995)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "261": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "new-desire-6-auke-de-vries-1992-1995",
+    "gym_name": "New Desire 6 – Auke De Vries (1992–1995)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "262": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "new-desire-8-auke-de-vries-1992-1995",
+    "gym_name": "New Desire 8 – Auke De Vries (1992–1995)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "263": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "nieuwe-west-kinderen-park",
+    "gym_name": "Nieuwe West Kinderen Park",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "264": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "noordbeeld",
+    "gym_name": "Noordbeeld",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "265": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "noordertoren-butterfly-south",
+    "gym_name": "Noordertoren Butterfly South",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "266": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "obrechtkerk",
+    "gym_name": "Obrechtkerk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "267": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "occii",
+    "gym_name": "OCCII",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "268": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ode-aan-de-marktkoopmensen",
+    "gym_name": "Ode Aan De Marktkoopmensen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "269": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "oeverlanden-park-entrance-mercure",
+    "gym_name": "Oeverlanden Park Entrance Mercure",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "270": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "oklahoma",
+    "gym_name": "Oklahoma",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "271": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "old-community-center-de-reiger",
+    "gym_name": "Old Community Center De Reiger",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "272": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "old-house-wall",
+    "gym_name": "Old House Wall",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "273": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "on-the-market",
+    "gym_name": "On the Market",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "274": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "oorlogsmonument",
+    "gym_name": "Oorlogsmonument",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "275": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "oostelijk-havengebied",
+    "gym_name": "Oostelijk Havengebied",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "276": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "orange-blue-metal-art",
+    "gym_name": "Orange Blue Metal Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "277": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "oude-en-jonge-arbeider",
+    "gym_name": "Oude En Jonge Arbeider",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "278": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "painted-square",
+    "gym_name": "Painted Square",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "279": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "painting-on-apartmentblock",
+    "gym_name": "Painting On Apartmentblock",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "280": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "park-de-kuil",
+    "gym_name": "Park De Kuil",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "281": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "passenger-terminal-amsterdam",
+    "gym_name": "Passenger Terminal Amsterdam. ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "282": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pedestrian-bridge-lamong",
+    "gym_name": "Pedestrian Bridge Lamong",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "283": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "peperbus",
+    "gym_name": "Peperbus",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "284": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "petruskerk",
+    "gym_name": "Petruskerk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "285": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pigeon-slide",
+    "gym_name": "Pigeon Slide",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "286": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pignon-dore-rue-du-marche",
+    "gym_name": "Pignon Doré Rue Du Marché",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "287": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pilotenstraat-art",
+    "gym_name": "Pilotenstraat Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "288": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "plaque-jeanne-d-039-arc",
+    "gym_name": "Plaque Jeanne d&#039;Arc",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "289": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "playground-jaagpad",
+    "gym_name": "Playground Jaagpad",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "290": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "plekkie-van-hazes",
+    "gym_name": "Plekkie van Hazes",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "291": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "polooi",
+    "gym_name": "Polooi",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "292": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pont-13",
+    "gym_name": "Pont 13",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "293": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pontanusstraat-mosaic",
+    "gym_name": "Pontanusstraat Mosaic ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "294": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "potloden",
+    "gym_name": "Potloden",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "295": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "power-cube",
+    "gym_name": "Power Cube",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "296": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "project-ajuin",
+    "gym_name": "Project Ajuin",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "297": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "public-gym",
+    "gym_name": "Public Gym",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "298": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pyramids-in-the-grass",
+    "gym_name": "Pyramids in the Grass",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "299": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "pythonbrug",
+    "gym_name": "Pythonbrug",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "300": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "queen-emma",
+    "gym_name": "Queen Emma",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "301": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "raadhuis-amstelveen",
+    "gym_name": "Raadhuis Amstelveen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "302": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "red-and-green-buoy",
+    "gym_name": "Red and Green Buoy",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "303": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "red-and-grey-sculpture",
+    "gym_name": "Red and Grey Sculpture ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "304": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "red-bridge-west-entrance-to-amstelpark",
+    "gym_name": "Red Bridge West Entrance to Amstelpark",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "305": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "red-people",
+    "gym_name": "Red People",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "306": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "red-sculpture",
+    "gym_name": "Red Sculpture ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "307": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rembo",
+    "gym_name": "Rembo",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "308": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rembrandtpark",
+    "gym_name": "Rembrandtpark",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "309": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "restaurant-open",
+    "gym_name": "Restaurant Open",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "310": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rijnlandse-waterkering",
+    "gym_name": "Rijnlandse Waterkering",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "311": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rioolpomphuis",
+    "gym_name": "Rioolpomphuis",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "312": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rk-c-w-dr-schaepman",
+    "gym_name": "Rk. C. W. Dr. Schaepman",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "313": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rk-parochie-sint-urbanus",
+    "gym_name": "RK Parochie sint Urbanus",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "314": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "r-k-sint-augustinuskerk-rijksmonument",
+    "gym_name": "R.k. Sint Augustinuskerk (rijksmonument)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "315": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rock-sculpture",
+    "gym_name": "Rock Sculpture",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "316": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rode-pilaar",
+    "gym_name": "Rode Pilaar",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "317": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "roest",
+    "gym_name": "Roest",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "318": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "roggekamp-playground",
+    "gym_name": "Roggekamp Playground",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "319": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rooftop-artwork-at-blane-039-s",
+    "gym_name": "Rooftop Artwork at Blane&#039;s",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "320": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rotary-sculptures",
+    "gym_name": "Rotary Sculptures",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "321": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "royal-asscher-diamond-building-1907",
+    "gym_name": "Royal Asscher Diamond Building (1907)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "322": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "royal-statue",
+    "gym_name": "Royal Statue",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "323": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ruiten",
+    "gym_name": "Ruiten",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "324": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rustende-tuinman-1938-jan-havermans",
+    "gym_name": "Rustende Tuinman (1938) - Jan Havermans",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "325": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "rusty-mother-of-all-beings",
+    "gym_name": "Rusty Mother of all Beings",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "326": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "saaftingestraat-hindu-temple",
+    "gym_name": "Saaftingestraat Hindu Temple",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "327": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "salvador-allende-memorial",
+    "gym_name": "Salvador Allende Memorial",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "328": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sancta-agnes-kerk",
+    "gym_name": "Sancta Agnes Kerk",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "329": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "san-quin-cube",
+    "gym_name": "San Quin Cube    ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "330": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "schellingwouder-anker",
+    "gym_name": "Schellingwouder Anker",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "331": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "schelpenhoek",
+    "gym_name": "Schelpenhoek",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "332": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "schelvis",
+    "gym_name": "Schelvis",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "333": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "schoolbank",
+    "gym_name": "Schoolbank",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "334": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "science-park-equinix",
+    "gym_name": "Science Park - Equinix",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "335": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "science-park-uva-sterrenwacht",
+    "gym_name": "Science Park - UvA Sterrenwacht",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "336": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sculpture",
+    "gym_name": "Sculpture",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "337": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sculpture-039-het-verlangen-039-1",
+    "gym_name": "Sculpture &#039;Het Verlangen&#039; 1",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "338": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sculpture-flevopark-amsterdam",
+    "gym_name": "Sculpture Flevopark Amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "339": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sculpture-vogelgod",
+    "gym_name": "sculpture 'vogelgod'",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "340": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sculptuur",
+    "gym_name": "Sculptuur",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "341": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "senza-parole",
+    "gym_name": "Senza Parole",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "342": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "shaper-soccer",
+    "gym_name": "Shaper Soccer",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "343": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "ship-of-signs",
+    "gym_name": "Ship of Signs",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "344": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "singing-siren",
+    "gym_name": "Singing Siren",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "345": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sitting-bear-sculpture-amsterdam",
+    "gym_name": "Sitting Bear Sculpture Amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "346": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sjako",
+    "gym_name": "Sjako",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "347": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "skate-park-noorderpark",
+    "gym_name": "Skate Park Noorderpark",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "348": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sloterhof",
+    "gym_name": "Sloterhof",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "349": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "speeleilanden",
+    "gym_name": "Speeleilanden",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "350": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "speelplastiek-by-josje-smit-1963",
+    "gym_name": "Speelplastiek by Josje Smit 1963",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "351": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "speeltoestellen",
+    "gym_name": "Speeltoestellen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "352": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "spiderweb-sculpture",
+    "gym_name": "Spiderweb Sculpture",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "353": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sportpark-ookmeer",
+    "gym_name": "Sportpark Ookmeer",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "354": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sports-park-ookmeer",
+    "gym_name": "Sports Park Ookmeer",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "355": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "spottersplaats-schiphol",
+    "gym_name": "Spottersplaats Schiphol",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "356": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "stadshout-paviljoen",
+    "gym_name": "Stadshout Paviljoen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "357": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "stadsschouwburg-amsterdam",
+    "gym_name": "Stadsschouwburg Amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "358": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "standbeeld-domela-nieuwenhuis",
+    "gym_name": "Standbeeld Domela Nieuwenhuis,",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "359": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "starwars-4a-mural",
+    "gym_name": "Starwars 4A Mural",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "360": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "station-amsterdam-amstel",
+    "gym_name": "Station Amsterdam Amstel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "361": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "station-amsterdam-science-park",
+    "gym_name": "Station Amsterdam Science Park",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "362": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "station-diemen-zuid-metro",
+    "gym_name": "Station Diemen-Zuid (Metro)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "363": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "statue-of-john-f-kennedy",
+    "gym_name": "Statue of John F Kennedy",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "364": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "statue-of-liberty",
+    "gym_name": "Statue of Liberty",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "365": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "statues-under-the-bridge-amst",
+    "gym_name": "Statues Under the Bridge, Amst",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "366": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "stedelijk-museum",
+    "gym_name": "Stedelijk Museum",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "367": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "steel-bridge",
+    "gym_name": "Steel Bridge",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "368": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "steel-tree",
+    "gym_name": "Steel Tree",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "369": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "steps-of-science-quantum-materials",
+    "gym_name": "Steps of Science - Quantum Materials",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "370": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "stier-poes-paard",
+    "gym_name": "Stier Poes Paard",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "371": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "stone-chicken",
+    "gym_name": "Stone Chicken",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "372": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "street-art",
+    "gym_name": "Street Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "373": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "street-art-green",
+    "gym_name": "Street Art Green",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "374": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "sublime-symbols-peter-van-der-locht",
+    "gym_name": "Sublime Symbols - Peter van der Locht",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "375": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "super-swirl",
+    "gym_name": "Super Swirl",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "376": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "swinging-bell",
+    "gym_name": "Swinging Bell",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "377": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tachisse-de-beun",
+    "gym_name": "Tachisse de Beun",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "378": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "telephone-hanging",
+    "gym_name": "Telephone Hanging",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "379": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tetraeder-met-cirkel",
+    "gym_name": "Tetraëder Met Cirkel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "380": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tgekroont-laken-1691",
+    "gym_name": "Tgekroont Laken 1691",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "381": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-coloured-eye-building",
+    "gym_name": "The Coloured Eye Building",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "382": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-headshop",
+    "gym_name": "The Headshop",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "383": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-icecream-sign",
+    "gym_name": "The Icecream Sign",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "384": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-oasis",
+    "gym_name": "The Oasis",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "385": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-old-churchbell",
+    "gym_name": "The old churchbell",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "386": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-rozijn",
+    "gym_name": "The Rozijn",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "387": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-sunken-submarine",
+    "gym_name": "The Sunken Submarine",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "388": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "the-westertoren",
+    "gym_name": "The Westertoren",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "389": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "three-cross-parking-garage",
+    "gym_name": "Three Cross Parking Garage",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "390": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tintin-de-pomme",
+    "gym_name": "Tintin De Pomme",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "391": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "toegang-jp-thijssepark",
+    "gym_name": "Toegang Jp Thijssepark",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "392": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "toegang-tot-heempark-de-braak",
+    "gym_name": "Toegang Tot Heempark De Braak",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "393": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "together",
+    "gym_name": "Together",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "394": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "totempaal",
+    "gym_name": "Totempaal",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "395": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "totem-pole",
+    "gym_name": "Totem Pole",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "396": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "to-the-core",
+    "gym_name": "To The Core",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "397": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tree-art",
+    "gym_name": "Tree Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "398": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tree-of-eeden",
+    "gym_name": "Tree of Eeden",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "399": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "treinstation-amsterdam-lelylaan",
+    "gym_name": "Treinstation Amsterdam Lelylaan",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "400": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tropenmuseum",
+    "gym_name": "Tropenmuseum",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "401": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tug-boat",
+    "gym_name": "Tug Boat",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "402": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "tugela-spoorwegtunnel",
+    "gym_name": "Tugela Spoorwegtunnel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "403": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "twee-kinderen",
+    "gym_name": "Twee Kinderen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "404": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "twisted-metal",
+    "gym_name": "Twisted Metal",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "405": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "van-de-dijk-af-1828-2011",
+    "gym_name": "Van De Dijk Af (1828 - 2011)",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "406": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "venserpolder-funky-needle",
+    "gym_name": "Venserpolder Funky Needle",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "407": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "venus",
+    "gym_name": "Venus",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "408": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "venus-mural",
+    "gym_name": "Venus Mural",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "409": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "verbindingsdam-bridge-zeeburg",
+    "gym_name": "Verbindingsdam Bridge, Zeeburg",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "410": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "verroest",
+    "gym_name": "Verroest",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "411": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vest",
+    "gym_name": "Vest",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "412": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "victoria-hotel-amsterdam",
+    "gym_name": "Victoria Hotel Amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "413": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vlinder",
+    "gym_name": "Vlinder",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "414": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vogels-van-de-vogelbuurt",
+    "gym_name": "Vogels van De Vogelbuurt",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "415": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vondelpark-frederikstraat-entrance",
+    "gym_name": "Vondelpark - Frederikstraat entrance",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "416": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vrede",
+    "gym_name": "Vrede",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "417": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vrijheidsbeeld-amsterdam",
+    "gym_name": "Vrijheidsbeeld Amsterdam",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "418": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vrouw-op-een-bankje",
+    "gym_name": "Vrouw Op Een Bankje",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "419": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vu-campus",
+    "gym_name": "VU campus",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "420": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "vu-campus-o2-building",
+    "gym_name": "VU Campus O2 Building",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "421": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wall-ornament-maria-magdalena",
+    "gym_name": "Wall Ornament Maria Magdalena",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "422": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wall-painters-painting",
+    "gym_name": "Wall Painters Painting",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "423": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wall-with-trains",
+    "gym_name": "Wall With Trains",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "424": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "watertank",
+    "gym_name": "Watertank",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "425": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "water-tower",
+    "gym_name": "Water Tower",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "426": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "weesperzijdekwartier",
+    "gym_name": "Weesperzijdekwartier",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "427": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "welkom-ibis-schiphol",
+    "gym_name": "Welkom Ibis Schiphol",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "428": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "westcord-fashion-hotel",
+    "gym_name": "Westcord Fashion Hotel",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "429": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "westermoskee-aya-sofya",
+    "gym_name": "Westermoskee Aya sofya",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "430": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "west-red-wish-art",
+    "gym_name": "West - Red Wish Art",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "431": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wind-mill-north",
+    "gym_name": "Wind Mill North",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "432": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "windmolen",
+    "gym_name": "Windmolen",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "433": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "winkelcentrum-diemerplein",
+    "gym_name": "Winkelcentrum Diemerplein",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "434": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "winnie-de-pooh",
+    "gym_name": "Winnie De Pooh",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "435": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "witte-bollen-boom",
+    "gym_name": "Witte Bollen Boom",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "436": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wonkel-15",
+    "gym_name": "Wonkel 15",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "437": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wonkel-8",
+    "gym_name": "Wonkel 8",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "438": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "words-on-wall",
+    "gym_name": "Words on Wall ",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "439": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wortels-van-science-park",
+    "gym_name": "Wortels van Science Park",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "440": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wow-did-you-see-that",
+    "gym_name": "WOW! did you see THAT!",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "441": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "wwii-memorial",
+    "gym_name": "WWII Memorial",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "442": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "xs4all",
+    "gym_name": "XS4ALL",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "443": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "yellow-blue-sea",
+    "gym_name": "Yellow Blue Sea",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "444": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "yellow-star-ball",
+    "gym_name": "yellow star ball",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "445": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "zamenhof",
+    "gym_name": "Zamenhof",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "446": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "zeldenrust-aan-de-ouddiemerlaan",
+    "gym_name": "Zeldenrust aan de Ouddiemerlaan",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "447": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "zernikehof",
+    "gym_name": "Zernikehof",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "448": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "zinloos-geweld-herdenkingsbord",
+    "gym_name": "Zinloos Geweld Herdenkingsbord",
+    "Latitude": "",
+    "Longitude": ""
+  },
+  "449": {
+    "raid_status": "0",
+    "raid_timer": "0",
+    "raid_level": "0",
+    "lure_timer": "0",
+    "gym_name_dashed": "zwerm",
+    "gym_name": "Zwerm",
+    "Latitude": "",
+    "Longitude": ""
+  }
+}

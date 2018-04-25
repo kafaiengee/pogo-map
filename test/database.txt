@@ -1,0 +1,26 @@
+1: users
+   Master Admins
+   Admins
+   Regular
+2: locations
+   id
+   name
+   latitude
+   longitude
+   region_1 <= Amsterdam
+   region_2 <= Amsterdam-Centrum
+   region_3 <= Westermarkt
+   street
+   number
+   postal
+   img
+3: gyms
+   id
+   location_id
+   raid {}
+4: stops
+   id
+   location_id
+   quest {}
+
+Ow, vergeet nog tablet van pokemon's en raidlevels
