@@ -21,60 +21,72 @@
   <script>
     // var json;
     var string = '';
+    var items = [];
+    var d = new Date();
+    var time = 0;
 
     // zoeken naar:
     // types: ["street_address"]
     // types: ["political", "sublocality", "sublocality_level_2"]
     $(document).ready(function() {
+      // $.getJSON('js/gyms-loc.1.json', function(data) {
       $.getJSON('js/gyms-loc.json', function(data) {
         $.each(data, function(key, val) {
-          var getApi = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + val.latitude + ',' + val.longitude + '&key=AIzaSyD4mKkoLlvyIlx2LqC10512BD0_il3Gwqw';
+          setTimeout(function() {
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var ms = d.getMilliseconds();
+            console.log(m + ':' + s + ':' + ms);
 
-          var region_1, region_2, region_3, street, number, postal;
+            var getApi = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + val.latitude + ',' + val.longitude + '&key=AIzaSyD4mKkoLlvyIlx2LqC10512BD0_il3Gwqw';
 
-          $.getJSON(getApi, function(data) {
-            // console.log('===============================================');
-            for (var i = 0; i < data.results.length; i++) {
-              // console.log(data.results[i]);
-              if (data.results[i].types.indexOf('street_address') != -1) {
-                for (var j = 0; j < data.results[i].address_components.length; j++) {
-                  if (data.results[i].address_components[j].types.indexOf('street_number') != -1) {
-                    number = data.results[i].address_components[j].long_name;
-                    // val.number = data.results[i].address_components[j].long_name;
-                  }
-                  if (data.results[i].address_components[j].types.indexOf('route') != -1) {
-                    street = data.results[i].address_components[j].long_name;
-                    // val.street = data.results[i].address_components[j].long_name;
-                  }
-                  if (data.results[i].address_components[j].types.indexOf('postal_code') != -1) {
-                    postal = data.results[i].address_components[j].long_name;
-                    // val.postal = data.results[i].address_components[j].long_name;
+            var region_1, region_2, region_3, street, number, postal;
+
+            $.getJSON(getApi, function(data2) {
+              items.push(data2);
+              // console.log('===============================================');
+              for (var i = 0; i < data2.results.length; i++) {
+                // console.log(data2.results[i]);
+                if (data2.results[i].types.indexOf('street_address') != -1) {
+                  for (var j = 0; j < data2.results[i].address_components.length; j++) {
+                    if (data2.results[i].address_components[j].types.indexOf('street_number') != -1) {
+                      number = data2.results[i].address_components[j].long_name;
+                      // val.number = data2.results[i].address_components[j].long_name;
+                    }
+                    if (data2.results[i].address_components[j].types.indexOf('route') != -1) {
+                      street = data2.results[i].address_components[j].long_name;
+                      // val.street = data2.results[i].address_components[j].long_name;
+                    }
+                    if (data2.results[i].address_components[j].types.indexOf('postal_code') != -1) {
+                      postal = data2.results[i].address_components[j].long_name;
+                      // val.postal = data2.results[i].address_components[j].long_name;
+                    }
                   }
                 }
+                if (data2.results[i].types.indexOf('sublocality_level_2') != -1) {
+                  region_1 = data2.results[i].address_components[2].long_name;
+                  // val.region_1 = data2.results[i].address_components[2].long_name;
+                  region_2 = data2.results[i].address_components[1].long_name;
+                  // val.region_2 = data2.results[i].address_components[1].long_name;
+                  region_3 = data2.results[i].address_components[0].long_name;
+                  // val.region_3 = data2.results[i].address_components[0].long_name;
+                }
               }
-              if (data.results[i].types.indexOf('sublocality_level_2') != -1) {
-                region_1 = data.results[i].address_components[2].long_name;
-                // val.region_1 = data.results[i].address_components[2].long_name;
-                region_2 = data.results[i].address_components[1].long_name;
-                // val.region_2 = data.results[i].address_components[1].long_name;
-                region_3 = data.results[i].address_components[0].long_name;
-                // val.region_3 = data.results[i].address_components[0].long_name;
-              }
-            }
+              string = val.latitude +
+                '\t' + val.longitude +
+                '\t' + val.name +
+                '\t' + region_1 +
+                '\t' + region_2 +
+                '\t' + region_3 +
+                '\t' + street +
+                '\t' + number +
+                '\t' + postal + '\n';
 
-            string = key +
-              '\tname:' + val.name +
-              '\tlatitude:' + val.latitude +
-              '\tlongitude:' + val.longitude +
-              '\tregion_1:' + region_1 +
-              '\tregion_2:' + region_2 +
-              '\tregion_3:' + region_3 +
-              '\tstreet:' + street +
-              '\tnumber:' + number +
-              '\tpostal:' + postal + '\n';
-
-            console.log(string);
-          });
+              console.log(string);
+              // $('body').append(string + '<br/>\n');
+            });
+          }, time);
+          time += 200;
         });
       });
 
