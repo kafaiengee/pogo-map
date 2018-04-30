@@ -19,7 +19,9 @@
     }
   </style>
   <script>
-    // var json;
+    // var apikey = 'AIzaSyD4mKkoLlvyIlx2LqC10512BD0_il3Gwqw';
+    var apikey = 'AIzaSyAIMsBbD69_3o-gb2R91F1TP-vrpW6FTCs';
+
     var string = '';
     var items = [];
     var d = new Date();
@@ -29,16 +31,11 @@
     // types: ["street_address"]
     // types: ["political", "sublocality", "sublocality_level_2"]
     $(document).ready(function() {
-      // $.getJSON('js/gyms-loc.1.json', function(data) {
-      $.getJSON('js/gyms-loc.json', function(data) {
+      $.getJSON('js/gyms-loc.1.json', function(data) {
+        // $.getJSON('js/gyms-loc.json', function(data) {
         $.each(data, function(key, val) {
           setTimeout(function() {
-            var m = d.getMinutes();
-            var s = d.getSeconds();
-            var ms = d.getMilliseconds();
-            console.log(m + ':' + s + ':' + ms);
-
-            var getApi = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + val.latitude + ',' + val.longitude + '&key=AIzaSyD4mKkoLlvyIlx2LqC10512BD0_il3Gwqw';
+            var getApi = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + val.latitude + ',' + val.longitude + '&key=' + apikey;
 
             var region_1, region_2, region_3, street, number, postal;
 
@@ -70,6 +67,20 @@
                   // val.region_2 = data2.results[i].address_components[1].long_name;
                   region_3 = data2.results[i].address_components[0].long_name;
                   // val.region_3 = data2.results[i].address_components[0].long_name;
+                } else if (data2.results[i].types.indexOf('neighborhood') != -1) {
+                  region_1 = data2.results[i].address_components[2].long_name;
+                  // val.region_1 = data2.results[i].address_components[2].long_name;
+                  region_2 = data2.results[i].address_components[1].long_name;
+                  // val.region_2 = data2.results[i].address_components[1].long_name;
+                  region_3 = data2.results[i].address_components[0].long_name;
+                  // val.region_3 = data2.results[i].address_components[0].long_name;
+                } else if ((data2.results[i].types.indexOf('locality') != -1) && (data2.results[i].types.indexOf('political') != -1)) {
+                  region_1 = data2.results[i].address_components[2].long_name;
+                  // val.region_1 = data2.results[i].address_components[2].long_name;
+                  region_2 = data2.results[i].address_components[1].long_name;
+                  // val.region_2 = data2.results[i].address_components[1].long_name;
+                  region_3 = data2.results[i].address_components[0].long_name;
+                  // val.region_3 = data2.results[i].address_components[0].long_name;
                 }
               }
               string = val.latitude +
@@ -85,8 +96,8 @@
               console.log(string);
               // $('body').append(string + '<br/>\n');
             });
-          }, time);
-          time += 200;
+          }, time * 200);
+          time++;
         });
       });
 
