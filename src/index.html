@@ -31,21 +31,42 @@
         iconSize: [48, 48]
       });
 
-      for (var i = 0; i < gyms.length; i++) {
-        marker = new L.marker([gyms[i][7], gyms[i][8]], {
-            id: gyms[i][0],
-            raid_status: gyms[i][1],
-            raid_timer: gyms[i][2],
-            raid_level: gyms[i][3],
-            lure_timer: gyms[i][4],
-            titleDashed: gyms[i][5],
-            title: gyms[i][6],
-            icon: uncontested,
-          })
-          // .bindPopup(gyms[i][0] + ': ' + gyms[i][6])
-          .addTo(pogomap)
-          .on('click', onMarkerClick);
-      }
+      // for (var i = 0; i < gyms.length; i++) {
+      //   marker = new L.marker([gyms[i][7], gyms[i][8]], {
+      //       id: gyms[i][0],
+      //       raid_status: gyms[i][1],
+      //       raid_timer: gyms[i][2],
+      //       raid_level: gyms[i][3],
+      //       lure_timer: gyms[i][4],
+      //       titleDashed: gyms[i][5],
+      //       title: gyms[i][6],
+      //       icon: uncontested,
+      //     })
+      //     // .bindPopup(gyms[i][0] + ': ' + gyms[i][6])
+      //     .addTo(pogomap)
+      //     .on('click', onMarkerClick);
+      // }
+
+      $.getJSON('php/gyms.php', function(json) {
+        $.each(json, function(i, item) {
+          console.log(item);
+          // console.log(item.id, [item.latitude, item.longitude], item.name);
+
+          marker = new L.marker([item.latitude, item.longitude], {
+              id: item.id,
+              raid_status: '',
+              raid_timer: '',
+              raid_level: '',
+              lure_timer: '',
+              titleDashed: '',
+              title: item.name,
+              icon: uncontested,
+            })
+            // .bindPopup(gyms[i][0] + ': ' + gyms[i][6])
+            .addTo(pogomap)
+            .on('click', onMarkerClick);
+        });
+      });
 
       dialog = $('#dialog').dialog({
         autoOpen: false,
