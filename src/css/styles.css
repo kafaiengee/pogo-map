@@ -25,3 +25,7 @@ body {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
+
+.leaflet-tooltip-bottom-custom {
+  margin-top: 26px;
+}
