@@ -120,13 +120,18 @@
                 direction: 'bottom',
                 className: 'leaflet-tooltip-bottom-custom'
               })
-              .setTooltipContent('<div id="tooltip' + i + '" data-timestamp-spawn="' + item.raid.spawn + '" data-timestamp-start="' + item.raid.start + '" data-timestamp-end="' + item.raid.end + '">20:30</div>');
+              .setTooltipContent('<div id="tooltip' + i + '" data-timestamp-spawn="' + item.raid.spawn + '" data-timestamp-start="' + item.raid.start + '" data-timestamp-end="' + item.raid.end + '">00:00</div>');
           }
 
           markersArray.push(marker);
         });
       }).done(function() {
         console.log('second success');
+        var tooltips = document.querySelectorAll('#mapid .leaflet-tooltip-pane div[id]');
+        for (var i = 0; i < tooltips.length; i++) {
+          // console.log(tooltips[i].id);
+          countdowntimer(tooltips[i].id);
+        }
       }).fail(function() {
         console.log('error');
       }).always(function() {
@@ -167,6 +172,35 @@
           title: e.target.options.title
         })
         .dialog('open');
+    }
+
+    function countdowntimer(element) {
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+        var div = document.getElementById(element);
+        var endDate = div.dataset.timestampEnd;
+
+        var countDownDate = new Date(endDate).getTime();
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        div.innerHTML = minutes + ':' + ((seconds < 10) ? '0' + seconds : seconds);
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          div.innerHTML = '';
+        }
+      }, 1000);
     }
   </script>
 </head>
