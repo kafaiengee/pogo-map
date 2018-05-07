@@ -83,12 +83,27 @@
       });
 
       var raid1 = L.icon({
-        iconUrl: 'images/Uncontested.png',
+        iconUrl: 'images/raid-lvl-1.png',
         iconSize: [48, 48]
       });
 
       var raid2 = L.icon({
-        iconUrl: 'images/Uncontested.png',
+        iconUrl: 'images/raid-lvl-2.png',
+        iconSize: [48, 48]
+      });
+
+      var raid3 = L.icon({
+        iconUrl: 'images/raid-lvl-3.png',
+        iconSize: [48, 48]
+      });
+
+      var raid4 = L.icon({
+        iconUrl: 'images/raid-lvl-4.png',
+        iconSize: [48, 48]
+      });
+
+      var raid5 = L.icon({
+        iconUrl: 'images/raid-lvl-5.png',
         iconSize: [48, 48]
       });
 
@@ -99,14 +114,39 @@
 
       var jqxhr = $.getJSON('php/gyms.php', function(json) {
         $.each(json, function(i, item) {
-          console.log(i, item);
+          var icon;
+          switch (item.raid.level) {
+            case 1:
+              console.log(1);
+              icon = raid1;
+              break;
+            case 2:
+              console.log(2);
+              icon = raid2;
+              break;
+            case 3:
+              console.log(3);
+              icon = raid3;
+              break;
+            case 4:
+              console.log(4);
+              icon = raid4;
+              break;
+            case 5:
+              console.log(5);
+              icon = raid5;
+              break;
+            default:
+              icon = uncontested;
+          }
+          console.log(i, item.raid.level, icon);
           marker = new L.marker([item.location.latitude, item.location.longitude], {
               id: item.id,
               raid: item.raid,
               lure_timer: '',
               titleDashed: '',
               title: item.location.name,
-              icon: uncontested,
+              icon: icon,
               virtual: true
             })
             // .bindPopup('marker ' + i)
@@ -114,7 +154,6 @@
             .on('click', onMarkerClick);
 
           if (item.raid.level > 0) {
-            console.log(item.raid.level);
             marker.bindTooltip('', {
                 permanent: true,
                 direction: 'bottom',
