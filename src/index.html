@@ -81,21 +81,22 @@
         iconSize: [48, 48]
       });
 
-      pogomap.on('resize moveend zoomend', function() {
+      pogomap.on('load resize moveend zoomend', function() {
         var markers = document.querySelectorAll('#mapid .leaflet-marker-pane *');
         document.querySelector('#visible').innerText = markers.length;
       });
 
       $.getJSON('php/gyms.php', function(json) {
         $.each(json, function(i, item) {
-          marker = new L.marker([item.latitude, item.longitude], {
+          console.log(item);
+          marker = new L.marker([item.location.latitude, item.location.longitude], {
               id: item.id,
               raid_status: '',
-              raid_timer: '',
+              raid_start: '',
               raid_level: '',
               lure_timer: '',
               titleDashed: '',
-              title: item.name,
+              title: item.location.name,
               icon: uncontested,
               virtual: true
             })
