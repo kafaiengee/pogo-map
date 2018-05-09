@@ -20,6 +20,8 @@
       popup = L.popup(),
       dialog;
 
+    var uncontested, raid1, raid2, raid3, raid4, raid5, test;
+
     $(document).ready(function() {
       L.Marker.addInitHook(function() {
         if (this.options.virtual) {
@@ -77,44 +79,49 @@
         id: 'mapbox.streets'
       }).addTo(pogomap);
 
-      var uncontested = L.icon({
+      uncontested = L.icon({
         iconUrl: 'images/Uncontested.png',
         iconSize: [48, 48]
       });
 
-      var raid1 = L.icon({
+      raid1 = L.icon({
         // iconUrl: 'images/raid-lvl-1.png',
         iconUrl: 'images/raidlv1.png',
         iconSize: [48, 48]
       });
 
-      var raid2 = L.icon({
+      raid2 = L.icon({
         // iconUrl: 'images/raid-lvl-2.png',
         iconUrl: 'images/raidlv2.png',
         iconSize: [48, 48]
       });
 
-      var raid3 = L.icon({
+      raid3 = L.icon({
         // iconUrl: 'images/raid-lvl-3.png',
         iconUrl: 'images/raidlv3.png',
         iconSize: [48, 48]
       });
 
-      var raid4 = L.icon({
+      raid4 = L.icon({
         // iconUrl: 'images/raid-lvl-4.png',
         iconUrl: 'images/raidlv4.png',
         iconSize: [48, 48]
       });
 
-      var raid5 = L.icon({
+      raid5 = L.icon({
         // iconUrl: 'images/raid-lvl-5.png',
         iconUrl: 'images/raidlv5.png',
         iconSize: [48, 48]
       });
 
+      test = new L.DivIcon({
+        className: 'egg',
+        html: '<img class="egg" src="images/raid.png" />' + '<span class="egg-text"></span>'
+      })
+
       pogomap.on('load resize moveend zoomend', function() {
-        var markers = document.querySelectorAll('#mapid .leaflet-marker-pane *');
-        document.querySelector('#visible').innerText = markers.length;
+        // var markers = document.querySelectorAll('#mapid .leaflet-marker-pane *');
+        // document.querySelector('#visible').innerText = markers.length;
       });
 
       var jqxhr = $.getJSON('php/gyms.php', function(json) {
@@ -140,6 +147,7 @@
               break;
             default:
               useIcon = uncontested;
+              // useIcon = test;
               break;
           }
 
@@ -153,34 +161,21 @@
               id: i,
               raid: item.raid,
               lure_timer: '',
-              titleDashed: ''
+              titleDashed: '',
+              pokemonId: item.raid.pokemon_id
             })
             // .bindPopup('marker ' + i)
             .addTo(pogomap)
             .on('click', onMarkerClick);
-
-          if (item.raid.level > 0) {
-            marker.bindTooltip('', {
-                permanent: true,
-                direction: 'bottom',
-                className: 'leaflet-tooltip-bottom-custom'
-              })
-              .setTooltipContent('<div id="tooltip' + i + '" data-raid-id="' + i + '" data-raid-name="' + item.location.name + '" data-timestamp-spawn="' + item.raid.spawn + '" data-timestamp-start="' + item.raid.start + '" data-timestamp-end="' + item.raid.end + '">00:00</div>');
-          }
-
           markersArray.push(marker);
         });
       }).done(function(e) {
-        console.log('second success', e);
-        var tooltips = document.querySelectorAll('#mapid .leaflet-tooltip-pane div[id]');
-        for (var i = 0; i < tooltips.length; i++) {
-          // console.log(tooltips[i].id);
-          countdowntimer(tooltips[i].id);
-        }
+        // console.log('second success', e);
+        setInfo(e);
       }).fail(function(e) {
         console.log('error', e);
       }).always(function(e) {
-        console.log('complete', e);
+        // console.log('complete', e);
         // console.log(markersArray);
         var group = new L.featureGroup(markersArray);
         // console.log(group);
@@ -205,6 +200,38 @@
       });
     });
 
+    function setInfo(e) {
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      for (var i = 0; i < markersArray.length; i++) {
+        if (markersArray[i].options.raid.level > 0) {
+          // Get date and time from element dataSets
+          var timestampSpawn = new Date(markersArray[i].options.raid.spawn).getTime();
+          var timestampStart = new Date(markersArray[i].options.raid.start).getTime();
+          var timestampEnd = new Date(markersArray[i].options.raid.end).getTime();
+          var raidId = markersArray[i].options.id;
+          var raidName = markersArray[i].options.title;
+          var raidLevel = markersArray[i].options.raid.level;
+          var pokemonId = markersArray[i].options.raid.pokemon_id
+
+          // console.log(markersArray[i], timestampSpawn, timestampStart, timestampEnd, raidId, raidName);
+          markersArray[i].bindTooltip('', {
+              permanent: true,
+              direction: 'bottom',
+              className: 'leaflet-tooltip-bottom-custom'
+            })
+            .setTooltipContent('<div id="tooltip' + raidId + '" data-raid-id="' + raidId +
+              '" data-raid-name="' + raidName + '">    </div>');
+          // .setTooltipContent('<div id="tooltip' + raidId + '" data-raid-id="' + raidId + '" data-raid-name="' + raidName +
+          //   '" data-timestamp-spawn="' + timestampSpawn + '" data-timestamp-start="' + timestampStart +
+          //   '" data-timestamp-end="' + timestampEnd + '"></div>');
+
+          countdowntimer(markersArray[i], raidId, raidName, raidLevel, timestampSpawn, timestampStart, timestampEnd, pokemonId);
+        }
+      }
+    }
+
     function onMarkerClick(e) {
       // console.log(e);
       // popup
@@ -219,51 +246,48 @@
         .dialog('open');
     }
 
-    function countdowntimer(element) {
-      var div = document.getElementById(element);
-
-      // Get todays date and time
+    function countdowntimer(element, raidId, raidName, raidLevel, timestampSpawn, timestampStart, timestampEnd, pokemonId) {
+      var div = document.getElementById('tooltip' + raidId);
       var now = new Date().getTime();
-
-      // Get date and time from element dataSets
-      var timestampSpawn = new Date(div.dataset.timestampSpawn).getTime();
-      var timestampStart = new Date(div.dataset.timestampStart).getTime();
-      var timestampEnd = new Date(div.dataset.timestampEnd).getTime();
-      var raidId = div.dataset.raidId;
-      var raidName = div.dataset.raidName;
-
       var countDownDate;
 
-      // console.log(now, timestampSpawn, timestampStart, timestampEnd);
-
       if ((now >= timestampStart) && (now <= timestampEnd)) {
-        $('#' + element).parent().addClass('time-started');
+        var iconHTML;
+        $('#tooltip' + raidId).parent().addClass('time-started');
         countDownDate = timestampEnd;
+
+        if (pokemonId > 0) {
+          iconHTML = '<img class="egg" src="images/raid.png" />' +
+            '<div class="egg-pokemon"><img class="pokemon-icon" src="images/icons/' + pokemonId + '.png" /></div>' +
+            '<span class="egg-text">' + raidLevel + '</span>';
+        } else {
+          iconHTML = '<img class="egg" src="images/raidlv0.png" />' +
+            '<span class="egg-text">' + raidLevel + '</span>';
+        }
+
+        element.setIcon(new L.DivIcon({
+          className: 'egg',
+          html: iconHTML
+        }));
       } else if (now <= timestampStart) {
-        $('#' + element).parent().addClass('time-spawn');
+        $('#tooltip' + raidId).parent().addClass('time-spawn');
         countDownDate = timestampStart;
       } else {
         countDownDate = now;
+        clearInterval(x);
+        element.setIcon(uncontested).unbindTooltip();
+        div.innerHTML = '';
       }
 
-      // Update the count down every 1 second
       var x = setInterval(function() {
         now = new Date().getTime();
-
-        // Find the distance between now an the count down date
         var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result in an element with id="demo"
         div.innerHTML = minutes + ':' + ((seconds < 10) ? '0' + seconds : seconds);
-
-        // If the count down is over, write some text 
         if (distance < 0) {
           clearInterval(x);
-          console.log($('img[alt=\'' + raidId + '\']').attr('src', 'images/Uncontested.png'));
+          element.setIcon(uncontested).unbindTooltip();
           div.innerHTML = '';
         }
       }, 1000);
@@ -272,7 +296,7 @@
 </head>
 
 <body>
-  <div id="visible"></div>
+  <!-- <div id="visible"></div> -->
   <div id="mapid"></div>
   <div id="dialog"></div>
 </body>

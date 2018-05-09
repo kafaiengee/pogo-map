@@ -44,7 +44,7 @@ while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
           $raid = array();
           $raid_id = '';
 
-          unset($row['id']);
+          // unset($row['id']);
           foreach ($row as $raid_key => $raid_value) {
             // print_r($raid_key . ' => ' . $raid_value . "<br>\n");
             $raid[$raid_key] = $raid_value;
