@@ -83,27 +83,32 @@
       });
 
       var raid1 = L.icon({
-        iconUrl: 'images/raid-lvl-1.png',
+        // iconUrl: 'images/raid-lvl-1.png',
+        iconUrl: 'images/raidlv1.png',
         iconSize: [48, 48]
       });
 
       var raid2 = L.icon({
-        iconUrl: 'images/raid-lvl-2.png',
+        // iconUrl: 'images/raid-lvl-2.png',
+        iconUrl: 'images/raidlv2.png',
         iconSize: [48, 48]
       });
 
       var raid3 = L.icon({
-        iconUrl: 'images/raid-lvl-3.png',
+        // iconUrl: 'images/raid-lvl-3.png',
+        iconUrl: 'images/raidlv3.png',
         iconSize: [48, 48]
       });
 
       var raid4 = L.icon({
-        iconUrl: 'images/raid-lvl-4.png',
+        // iconUrl: 'images/raid-lvl-4.png',
+        iconUrl: 'images/raidlv4.png',
         iconSize: [48, 48]
       });
 
       var raid5 = L.icon({
-        iconUrl: 'images/raid-lvl-5.png',
+        // iconUrl: 'images/raid-lvl-5.png',
+        iconUrl: 'images/raidlv5.png',
         iconSize: [48, 48]
       });
 
@@ -114,40 +119,41 @@
 
       var jqxhr = $.getJSON('php/gyms.php', function(json) {
         $.each(json, function(i, item) {
-          var icon;
-          switch (item.raid.level) {
-            case 1:
-              console.log(1);
-              icon = raid1;
+          var useIcon;
+
+          var raidLevel = item.raid.level;
+          switch (true) {
+            case (raidLevel == 1):
+              useIcon = raid1;
               break;
-            case 2:
-              console.log(2);
-              icon = raid2;
+            case (raidLevel == 2):
+              useIcon = raid2;
               break;
-            case 3:
-              console.log(3);
-              icon = raid3;
+            case (raidLevel == 3):
+              useIcon = raid3;
               break;
-            case 4:
-              console.log(4);
-              icon = raid4;
+            case (raidLevel == 4):
+              useIcon = raid4;
               break;
-            case 5:
-              console.log(5);
-              icon = raid5;
+            case (raidLevel == 5):
+              useIcon = raid5;
               break;
             default:
-              icon = uncontested;
+              useIcon = uncontested;
+              break;
           }
-          console.log(i, item.raid.level, icon);
+
+          console.log(i, item);
+
           marker = new L.marker([item.location.latitude, item.location.longitude], {
-              id: item.id,
+              alt: i,
+              title: item.location.name,
+              icon: useIcon,
+              virtual: true,
+              id: i,
               raid: item.raid,
               lure_timer: '',
-              titleDashed: '',
-              title: item.location.name,
-              icon: icon,
-              virtual: true
+              titleDashed: ''
             })
             // .bindPopup('marker ' + i)
             .addTo(pogomap)
@@ -159,22 +165,22 @@
                 direction: 'bottom',
                 className: 'leaflet-tooltip-bottom-custom'
               })
-              .setTooltipContent('<div id="tooltip' + i + '" data-timestamp-spawn="' + item.raid.spawn + '" data-timestamp-start="' + item.raid.start + '" data-timestamp-end="' + item.raid.end + '">00:00</div>');
+              .setTooltipContent('<div id="tooltip' + i + '" data-raid-id="' + i + '" data-raid-name="' + item.location.name + '" data-timestamp-spawn="' + item.raid.spawn + '" data-timestamp-start="' + item.raid.start + '" data-timestamp-end="' + item.raid.end + '">00:00</div>');
           }
 
           markersArray.push(marker);
         });
-      }).done(function() {
-        console.log('second success');
+      }).done(function(e) {
+        console.log('second success', e);
         var tooltips = document.querySelectorAll('#mapid .leaflet-tooltip-pane div[id]');
         for (var i = 0; i < tooltips.length; i++) {
           // console.log(tooltips[i].id);
           countdowntimer(tooltips[i].id);
         }
-      }).fail(function() {
-        console.log('error');
-      }).always(function() {
-        console.log('complete');
+      }).fail(function(e) {
+        console.log('error', e);
+      }).always(function(e) {
+        console.log('complete', e);
         // console.log(markersArray);
         var group = new L.featureGroup(markersArray);
         // console.log(group);
@@ -214,15 +220,35 @@
     }
 
     function countdowntimer(element) {
+      var div = document.getElementById(element);
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Get date and time from element dataSets
+      var timestampSpawn = new Date(div.dataset.timestampSpawn).getTime();
+      var timestampStart = new Date(div.dataset.timestampStart).getTime();
+      var timestampEnd = new Date(div.dataset.timestampEnd).getTime();
+      var raidId = div.dataset.raidId;
+      var raidName = div.dataset.raidName;
+
+      var countDownDate;
+
+      // console.log(now, timestampSpawn, timestampStart, timestampEnd);
+
+      if ((now >= timestampStart) && (now <= timestampEnd)) {
+        $('#' + element).parent().addClass('time-started');
+        countDownDate = timestampEnd;
+      } else if (now <= timestampStart) {
+        $('#' + element).parent().addClass('time-spawn');
+        countDownDate = timestampStart;
+      } else {
+        countDownDate = now;
+      }
+
       // Update the count down every 1 second
       var x = setInterval(function() {
-        var div = document.getElementById(element);
-        var endDate = div.dataset.timestampEnd;
-
-        var countDownDate = new Date(endDate).getTime();
-
-        // Get todays date and time
-        var now = new Date().getTime();
+        now = new Date().getTime();
 
         // Find the distance between now an the count down date
         var distance = countDownDate - now;
@@ -237,6 +263,7 @@
         // If the count down is over, write some text 
         if (distance < 0) {
           clearInterval(x);
+          console.log($('img[alt=\'' + raidId + '\']').attr('src', 'images/Uncontested.png'));
           div.innerHTML = '';
         }
       }, 1000);
