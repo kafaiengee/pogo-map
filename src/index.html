@@ -5,6 +5,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="css/map.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -80,43 +81,43 @@
       }).addTo(pogomap);
 
       uncontested = L.icon({
-        iconUrl: 'images/Uncontested.png',
+        iconUrl: 'images/map-icons/Uncontested.png',
         iconSize: [48, 48]
       });
 
       raid1 = L.icon({
-        // iconUrl: 'images/raid-lvl-1.png',
-        iconUrl: 'images/raidlv1.png',
+        // iconUrl: 'images/map-icons/raid-lvl-1.png',
+        iconUrl: 'images/map-icons/raidlv1.png',
         iconSize: [48, 48]
       });
 
       raid2 = L.icon({
-        // iconUrl: 'images/raid-lvl-2.png',
-        iconUrl: 'images/raidlv2.png',
+        // iconUrl: 'images/map-icons/raid-lvl-2.png',
+        iconUrl: 'images/map-icons/raidlv2.png',
         iconSize: [48, 48]
       });
 
       raid3 = L.icon({
-        // iconUrl: 'images/raid-lvl-3.png',
-        iconUrl: 'images/raidlv3.png',
+        // iconUrl: 'images/map-icons/raid-lvl-3.png',
+        iconUrl: 'images/map-icons/raidlv3.png',
         iconSize: [48, 48]
       });
 
       raid4 = L.icon({
-        // iconUrl: 'images/raid-lvl-4.png',
-        iconUrl: 'images/raidlv4.png',
+        // iconUrl: 'images/map-icons/raid-lvl-4.png',
+        iconUrl: 'images/map-icons/raidlv4.png',
         iconSize: [48, 48]
       });
 
       raid5 = L.icon({
-        // iconUrl: 'images/raid-lvl-5.png',
-        iconUrl: 'images/raidlv5.png',
+        // iconUrl: 'images/map-icons/raid-lvl-5.png',
+        iconUrl: 'images/map-icons/raidlv5.png',
         iconSize: [48, 48]
       });
 
       test = new L.DivIcon({
         className: 'egg',
-        html: '<img class="egg" src="images/raid.png" />' + '<span class="egg-text"></span>'
+        html: '<img class="egg" src="images/map-icons/raid.png" />' + '<span class="egg-text"></span>'
       })
 
       pogomap.on('load resize moveend zoomend', function() {
@@ -153,6 +154,31 @@
 
           console.log(i, item);
 
+          var popupHtml = '<h2 class="fw700">' + item.location.name + '</h2>' +
+            '<div class="mt4 mb4">' +
+            '  <a href="" onclick="window.open(this.href," rel="nofollow" target="_blank"><img src="images/map-icons/whatsapp.png" style="width:20px;" /></a>' +
+            '  <a class="ml10" href="" target="_blank"><img src="images/map-icons/twitter.png" style="width:20px;" /></a>' +
+            '  <a class="ml10" href="https://maps.google.com/maps?saddr=current+location&daddr=' + item.location.latitude + ',' + item.location.longitude + '&directionsmode=walking" target="_blank"><img src="images/map-icons/gmaps.png" style="width:20px;" /></a>' +
+            '</div>' +
+            '<div class="coordinate">Coordinate: ' + item.location.latitude + ', ' + item.location.longitude + '</div><br/>' +
+            '<table class="w100 wiki_p4 mb4">' +
+            '  <tbody>' +
+
+            (((item.raid.level > 0) && (item.raid.pokemon_id > 0)) ?
+              '    <tr><th>Raid Info</th></tr>' +
+              '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br> ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(12, 16) + '</td></tr>' +
+              '' :
+              ((item.raid.level > 0) && (item.raid.pokemon_id == 0)) ?
+              '    <tr><th>Raid Info</th></tr>' +
+              '    <tr><td>Lvl' + item.raid.level + ' ???<br> spawn: ' + item.raid.spawn + '</td></tr>' +
+              '    <tr><th>Add Raid Boss</th></tr>' +
+              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" style="width:50px;" /></td></tr>' :
+              '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
+              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" style="width:50px;" /><img src="images/map-icons/choose-pokemon.png" style="width:50px;" /></td></tr>') +
+
+            '  </tbody>' +
+            '</table>';
+
           marker = new L.marker([item.location.latitude, item.location.longitude], {
               alt: i,
               title: item.location.name,
@@ -166,7 +192,12 @@
             })
             // .bindPopup('marker ' + i)
             .addTo(pogomap)
-            .on('click', onMarkerClick);
+            .bindPopup(popupHtml, {
+              // className: 'leaflet-popup-content-custom',
+              minWidth: 175
+            })
+            /*.on('click', onMarkerClick)*/
+          ;
           markersArray.push(marker);
         });
       }).done(function(e) {
@@ -257,11 +288,11 @@
         countDownDate = timestampEnd;
 
         if (pokemonId > 0) {
-          iconHTML = '<img class="egg" src="images/raid.png" />' +
+          iconHTML = '<img class="egg" src="images/map-icons/raid.png" />' +
             '<div class="egg-pokemon"><img class="pokemon-icon" src="images/icons/' + pokemonId + '.png" /></div>' +
             '<span class="egg-text">' + raidLevel + '</span>';
         } else {
-          iconHTML = '<img class="egg" src="images/raidlv0.png" />' +
+          iconHTML = '<img class="egg" src="images/map-icons/raidlv0.png" />' +
             '<span class="egg-text">' + raidLevel + '</span>';
         }
 

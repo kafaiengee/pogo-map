@@ -65,7 +65,16 @@ img.egg {
   line-height: 1;
   margin-top: 26px;
   text-align: center;
-  width: 30px;
+  width: 45px;
+}
+
+.leaflet-popup-content-custom {
+  margin: 10px 10px;
+}
+
+.coordinate {
+  font-size: 12px;
+  color: gray;
 }
 
 .time-spawn {
