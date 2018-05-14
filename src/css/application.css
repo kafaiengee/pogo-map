@@ -1,0 +1,142 @@
+
+
+
+
+.image_picker_image {
+	max-width: 100%;
+	height: auto;
+}
+
+ul.thumbnails.image_picker_selector {
+  overflow: auto;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  padding-left: 0px;
+
+}
+ul.thumbnails.image_picker_selector ul {
+  overflow: auto;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+/*ul.thumbnails.image_picker_selector li.group_title {
+  float: none;
+}*/
+ul.thumbnails.image_picker_selector li {
+  margin: 0px 12px 12px 0px;
+  list-style-type: circle;
+  display: inline-block;
+  width: 15%;
+  /* float: left; */
+}
+/*ul.thumbnails.image_picker_selector li .thumbnail {
+  padding: 6px;
+  border: 1px solid #ddd;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}*/
+ul.thumbnails.image_picker_selector li .thumbnail img {
+  -webkit-user-drag: none;
+ 	-webkit-filter: opacity(30%); /* Safari 6.0 - 9.0 */
+    filter: opacity(30%);
+
+}
+ul.thumbnails.image_picker_selector li .thumbnail.selected img {
+  /*background: #08c;*/
+    -webkit-filter: opacity(100%); /* Safari 6.0 - 9.0 */
+    filter: opacity(100%);
+}
+
+.modal-footer {
+	justify-content: center;
+}
+
+#here {
+  margin: 0px 12px 12px 0px;
+  list-style-type: circle;
+  display: inline-block;
+  width: 15%;
+    -webkit-user-drag: none;
+  -webkit-filter: opacity(30%); /* Safari 6.0 - 9.0 */
+    filter: opacity(30%);
+}
+
+.selected#here {
+    -webkit-filter: opacity(100%);  Safari 6.0 - 9.0
+    filter: opacity(100%);
+}
+
+
+
+
+ul#gym_egg {
+  overflow: auto;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  padding-left: 12px;
+}
+
+ul#gym_egg li {
+	margin: 0px 12px 12px 0px;
+  list-style-type: circle;
+  display: inline-block;
+  width: 15%;
+	/* float: left; */
+
+  -webkit-user-drag: none;
+ 	-webkit-filter: opacity(30%); /* Safari 6.0 - 9.0 */
+    filter: opacity(30%);
+
+}
+ul#gym_egg li.selected {
+  /*background: #08c;*/
+    -webkit-filter: opacity(100%); /* Safari 6.0 - 9.0 */
+    filter: opacity(100%);
+}
+
+
+
+ul#gym_boss_list {
+  overflow: auto;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  padding-left: 12px;
+}
+
+ul#gym_boss_list li {
+	margin: 0px 12px 12px 0px;
+  list-style-type: circle;
+  display: inline-block;
+  width: 15%;
+	/* float: left; */
+
+  -webkit-user-drag: none;
+ 	-webkit-filter: opacity(30%); /* Safari 6.0 - 9.0 */
+    filter: opacity(30%);
+
+}
+ul#gym_boss_list li.selected {
+  /*background: #08c;*/
+    -webkit-filter: opacity(100%); /* Safari 6.0 - 9.0 */
+    filter: opacity(100%);
+}
+
+
+
+@media (max-width: 370px) {
+	ul#gym_egg li {
+		float: left;
+	}
+
+	ul#gym_boss_list li {
+		float: left;
+	}
+
+}
