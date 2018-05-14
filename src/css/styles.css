@@ -72,6 +72,40 @@ img.egg {
   margin: 10px 10px;
 }
 
+.leaflet-control-custom {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.nest {
+  background-image: url('../images/map-icons/nest.png');
+}
+
+.nest.disabled {
+  background-image: url('../images/map-icons/nestoff.png');
+}
+
+.raids {
+  background-image: url('../images/map-icons/Uncontested.png');
+}
+
+.raids.disabled {
+  background-image: url('../images/map-icons/Uncontestedoff.png');
+}
+
+.stops {
+  background-image: url('../images/map-icons/pokestop.png');
+}
+
+.stops.disabled {
+  background-image: url('../images/map-icons/pokestopoff.png');
+}
+
 .coordinate {
   font-size: 12px;
   color: gray;

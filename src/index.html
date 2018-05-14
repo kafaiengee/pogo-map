@@ -69,6 +69,63 @@
         }
       });
 
+      var customControlNest = L.Control.extend({
+        options: {
+          position: 'topright' //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
+        },
+        onAdd: function(pogomap) {
+          var buttonNest = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom nest');
+          buttonNest.onclick = function(e) {
+            event.preventDefault();
+            if (pogomap.hasLayer(layerNests)) {
+              $(this).addClass('disabled');
+              pogomap.removeLayer(layerNests);
+            } else {
+              $(this).removeClass('disabled');
+              pogomap.addLayer(layerNests);
+            }
+          }
+          return buttonNest;
+        }
+      });
+
+      var customControlRaid = L.Control.extend({
+        options: {
+          position: 'topright' //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
+        },
+        onAdd: function(pogomap) {
+          var buttonRaid = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom raids');
+          buttonRaid.onclick = function(e) {
+            event.preventDefault();
+            if (pogomap.hasLayer(layerRaids)) {
+              $(this).addClass('disabled');
+              pogomap.removeLayer(layerRaids);
+            } else {
+              $(this).removeClass('disabled');
+              pogomap.addLayer(layerRaids);
+            }
+          }
+          return buttonRaid;
+        }
+      });
+
+      var customControlStop = L.Control.extend({
+        options: {
+          position: 'topright' //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
+        },
+        onAdd: function(pogomap) {
+          var buttonStop = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom stops');
+          buttonStop.onclick = function(e) {
+            if (this.className.indexOf('disabled') != -1) {
+              $(this).removeClass('disabled');
+            } else {
+              $(this).addClass('disabled');
+            }
+          }
+          return buttonStop;
+        }
+      });
+
       pogomap = L.map('mapid');
       pogomap.setView([52.379189, 4.899431], 15);
 
@@ -80,37 +137,45 @@
         id: 'mapbox.streets'
       }).addTo(pogomap);
 
+      var layerNests = L.layerGroup().addTo(pogomap);
+      jQuery.getJSON("js/ams-park-plantsoen-groen.json", function(json) {
+        L.geoJSON(json, {
+          onEachFeature: function(feature, layer) {
+            layerNests.addLayer(layer);
+          }
+        }).bindPopup('a');
+      });
+
+      pogomap.addControl(new customControlNest());
+      pogomap.addControl(new customControlRaid());
+      // pogomap.addControl(new customControlStop());
+
       uncontested = L.icon({
         iconUrl: 'images/map-icons/Uncontested.png',
         iconSize: [48, 48]
       });
 
       raid1 = L.icon({
-        // iconUrl: 'images/map-icons/raid-lvl-1.png',
         iconUrl: 'images/map-icons/raidlv1.png',
         iconSize: [48, 48]
       });
 
       raid2 = L.icon({
-        // iconUrl: 'images/map-icons/raid-lvl-2.png',
         iconUrl: 'images/map-icons/raidlv2.png',
         iconSize: [48, 48]
       });
 
       raid3 = L.icon({
-        // iconUrl: 'images/map-icons/raid-lvl-3.png',
         iconUrl: 'images/map-icons/raidlv3.png',
         iconSize: [48, 48]
       });
 
       raid4 = L.icon({
-        // iconUrl: 'images/map-icons/raid-lvl-4.png',
         iconUrl: 'images/map-icons/raidlv4.png',
         iconSize: [48, 48]
       });
 
       raid5 = L.icon({
-        // iconUrl: 'images/map-icons/raid-lvl-5.png',
         iconUrl: 'images/map-icons/raidlv5.png',
         iconSize: [48, 48]
       });
@@ -125,6 +190,7 @@
         // document.querySelector('#visible').innerText = markers.length;
       });
 
+      var layerRaids = L.layerGroup().addTo(pogomap);
       var jqxhr = $.getJSON('php/gyms.php', function(json) {
         $.each(json, function(i, item) {
           var useIcon;
@@ -148,7 +214,6 @@
               break;
             default:
               useIcon = uncontested;
-              // useIcon = test;
               break;
           }
 
@@ -190,14 +255,12 @@
               titleDashed: '',
               pokemonId: item.raid.pokemon_id
             })
-            // .bindPopup('marker ' + i)
-            .addTo(pogomap)
+            // .addTo(pogomap)
             .bindPopup(popupHtml, {
-              // className: 'leaflet-popup-content-custom',
               minWidth: 175
-            })
-            /*.on('click', onMarkerClick)*/
-          ;
+            });
+
+          layerRaids.addLayer(marker);
           markersArray.push(marker);
         });
       }).done(function(e) {
@@ -209,7 +272,6 @@
         // console.log('complete', e);
         // console.log(markersArray);
         var group = new L.featureGroup(markersArray);
-        // console.log(group);
         pogomap.fitBounds(group.getBounds());
       });
 
