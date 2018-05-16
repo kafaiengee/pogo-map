@@ -158,6 +158,10 @@
 
           console.log(i, item);
 
+          // console.log("==test==");
+          // console.log(i);
+          // console.log('end');
+
           var popupHtml = '<h2 class="fw700">' + item.location.name + '</h2>' +
             '<div class="mt4 mb4">' +
             '  <a href="" onclick="window.open(this.href," rel="nofollow" target="_blank"><img src="images/map-icons/whatsapp.png" style="width:20px;" /></a>' +
@@ -176,9 +180,9 @@
               '    <tr><th>Raid Info</th></tr>' +
               '    <tr><td>Lvl' + item.raid.level + ' ???<br> spawn: ' + item.raid.spawn + '</td></tr>' +
               '    <tr><th>Add Raid Boss</th></tr>' +
-              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" /></td></tr>' :
+              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="'+ i +'" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" /></td></tr>' :
               '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
-              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" data-toggle="modal" data-target="#exampleModalCenter" style="width:50px;" /><img src="images/map-icons/choose-pokemon.png" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" /></td></tr>') +
+              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#exampleModalCenter" style="width:50px;" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="'+ i +'" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" /></td></tr>') +
 
             '  </tbody>' +
             '</table>';
@@ -339,7 +343,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+      <!--   <h5 class="modal-title" id="exampleModalLongTitle"> Modal title</h5> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -375,6 +379,7 @@
           <button type="submit" class="btn btn-primary" disabled>Register</button>
         </div>
       </div>
+      <input type="hidden" class="locationId" name="locationId" value="">
       <input type="hidden" class="lv" name="lv" value="">
       </form>
 
@@ -434,6 +439,7 @@
           <button type="submit" class="btn btn-primary">Register</button>
         </div>
       </div>
+      <input type="hidden" class="locationId" name="locationId" value="">
       <input type="hidden" class="pokemon_id" name="pokemon_id" value="">
       <input type="hidden" class="lv" name="lv" value="">
       </form>
