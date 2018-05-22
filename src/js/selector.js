@@ -54,7 +54,7 @@ $(document).click(function() {
 		$(this).addClass('selected');
 
 		var lvNumber = $(this).attr('data-lv');
-		$('.lv').prop('value', lvNumber);
+		$('.level').prop('value', lvNumber);
 
 
 	  $("button[type=submit]").removeAttr("disabled");

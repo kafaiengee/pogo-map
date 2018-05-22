@@ -352,21 +352,21 @@
         <div class="container">
           <div class="row justify-content-md-center" >
             <div class="text-center">
-              <p>① Choose your egg</p>
+              
 
-              <form id="gym_egg_create_form" action="/" method="POST">
-                    <div class="form-group text-center">
-                       <ul id="gym_egg">
-                        <li data-lv="1" class=""><img class="img-fluid" src="images/map-icons/raidlv1.png"></li>
-                        <li data-lv="2" class=""><img class="img-fluid" src="images/map-icons/raidlv2.png"></li>
-                        <li data-lv="3" class=""><img class="img-fluid" src="images/map-icons/raidlv3.png"></li>
-                        <li data-lv="4" class=""><img class="img-fluid" src="images/map-icons/raidlv4.png"></li>
-                        <li data-lv="5" class=""><img class="img-fluid" src="images/map-icons/raidlv5.png"></li>
-                      </ul>
-                    </div>
-
-                    <div class="form-group">
-                <p>② Time minutes left: <input type="number" name="minutes" min="1" max="60" placeholder="45"  required></p>
+              <form id="gym_egg_create_form" action="php/raid-add.php" method="POST">
+                <div class="form-group">
+                  <p>① Enter start time: <input type="time" name="minutes" required></p>
+                </div>
+                <p>② Choose the egg to register</p>
+                <div class="form-group text-center">
+                  <ul id="gym_egg">
+                    <li data-lv="1" class=""><img class="img-fluid" src="images/map-icons/raidlv1.png"></li>
+                    <li data-lv="2" class=""><img class="img-fluid" src="images/map-icons/raidlv2.png"></li>
+                    <li data-lv="3" class=""><img class="img-fluid" src="images/map-icons/raidlv3.png"></li>
+                    <li data-lv="4" class=""><img class="img-fluid" src="images/map-icons/raidlv4.png"></li>
+                    <li data-lv="5" class=""><img class="img-fluid" src="images/map-icons/raidlv5.png"></li>
+                  </ul>
                 </div>
             </div>
         </div>
@@ -380,7 +380,7 @@
         </div>
       </div>
       <input type="hidden" class="locationId" name="locationId" value="">
-      <input type="hidden" class="lv" name="lv" value="">
+      <input type="hidden" class="level" name="level" value="">
       </form>
 
     </div>
@@ -401,7 +401,10 @@
     <div class="row justify-content-md-center" >
       <div class="text-center">
         <form action="/" method="POST">
-          <p>① Select your egg to register</p>
+          <div class="form-group">
+            <p>① Time minutes left: <input type="number" name="minutes" min="1" max="45" placeholder="45"  required></p>
+          </div>
+          <p>② Select your egg to register</p>
 
           <div class="form-group">
              <ul id="gym_egg">
@@ -413,7 +416,7 @@
             </ul>
           </div>
 
-         <p>② Select your Pokemon to register</p>
+         <p>③ Select your Pokemon to register</p>
 
          <div class="form-group">
            <ul id="gym_boss_list">
@@ -425,9 +428,7 @@
           </ul>
          </div>
 
-          <div class="form-group">
-            <p>③ Time minutes left: <input type="number" name="minutes" min="1" max="60" placeholder="45"  required></p>
-          </div>
+          
       </div>
     </div>
   </div>
