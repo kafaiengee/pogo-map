@@ -3,8 +3,8 @@
 /* DOT NOT EDIT & SHARE */
 
 $dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
+$dbuser = 'root2';
+$dbpass = 'astronaut';
 $dbname = 'pogo-map';
 $dblink = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 

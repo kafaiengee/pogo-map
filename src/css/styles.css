@@ -41,8 +41,14 @@ img.egg {
 .egg-text {
   position: relative;
   top: -20px;
-  left: 29px;
+  left: 35px;
   font-weight: 800;
+  opacity: 0.9;
+  background-color: #FFF;
+  border-radius: 10px;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0px 4px;
 }
 
 .egg-pokemon {
