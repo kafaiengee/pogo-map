@@ -66,7 +66,7 @@ $(document).ready(function() {
 
   uncontested = L.icon({
     iconUrl: 'images/map-icons/Uncontested.png',
-    iconSize: [48, 48]
+    iconSize: [32, 32]
   });
 
   raid1 = L.icon({
