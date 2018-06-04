@@ -33,137 +33,42 @@
         id: 'mapbox.streets'
       }).addTo(pogomap);
 
-      var uncontested = L.icon({
-        iconUrl: 'images/Uncontested.png',
-        iconSize: [48, 48]
-      });
-
-      // for (var i = 0; i < gyms.length; i++) {
-      //   L.marker([gyms[i][7], gyms[i][8]], {
-      //       id: gyms[i][0],
-      //       raid_status: gyms[i][1],
-      //       raid_timer: gyms[i][2],
-      //       raid_level: gyms[i][3],
-      //       lure_timer: gyms[i][4],
-      //       titleDashed: gyms[i][5],
-      //       title: gyms[i][6],
-      //       icon: uncontested,
-      //       virtual: true
-      //     })
-      //     // .bindPopup(gyms[i][0] + ': ' + gyms[i][6])
-      //     .bindPopup('marker ' + i)
-      //     .addTo(pogomap)
-      //     .on('click', onMarkerClick);
-
-      //   // markersArray.push(marker);
-      // }
-
-      pogomap.on('resize moveend zoomend', function() {
-        var markers = document.querySelectorAll('#map .leaflet-marker-pane *');
-        var shadows = document.querySelectorAll('#map .leaflet-shadow-pane *');
-        document.querySelector('#visible').innerText = markers.length + "/" + shadows.length;
-        // console.log(pogomap.getBounds());
-      });
-
-      L.geoJson(amsParks).addTo(pogomap);
-
-      // $.getJSON('php/gyms.php', function(json) {
-      //   $.each(json, function(i, item) {
-      //     console.log(item);
-      //     // console.log(item.id, [item.latitude, item.longitude], item.name);
-
-      //     marker = new L.marker([item.latitude, item.longitude], {
-      //         id: item.id,
-      //         raid_status: '',
-      //         raid_timer: '',
-      //         raid_level: '',
-      //         lure_timer: '',
-      //         titleDashed: '',
-      //         title: item.name,
-      //         icon: uncontested,
-      //       })
-      //       // .bindPopup(gyms[i][0] + ': ' + gyms[i][6])
-      //       .addTo(pogomap)
-      //       .on('click', onMarkerClick);
-      //   });
-      // });
-
-      dialog = $('#dialog').dialog({
-        autoOpen: false,
-        height: 400,
-        width: 500,
-        modal: true,
-        draggable: false,
-        buttons: {
-          Ok: function() {
-            $(this).dialog("close");
-          },
-          Cancel: function() {
-            dialog.dialog('close');
-          }
+      var customControls = L.Control.extend({
+        options: {
+          position: 'topleft' //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
         },
-        close: function() {}
-      });
+        onAdd: function(map) {
+          var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+          container.style.backgroundColor = 'white';
+          container.style.width = '30px';
+          container.style.height = '110px';
+          var gyms = L.DomUtil.create('div', 'custom-controls raids');
+          gyms.onclick = function() {
+            $(this).toggleClass('disabled');
+            console.log('buttonClicked');
+          }
+          var stops = L.DomUtil.create('div', 'custom-controls stops');
+          stops.onclick = function() {
+            $(this).toggleClass('disabled');
+            console.log('buttonClicked');
+          }
+          var nests = L.DomUtil.create('div', 'custom-controls nests');
+          nests.onclick = function() {
+            $(this).toggleClass('disabled');
+            console.log('buttonClicked');
+          }
 
-      L.Marker.addInitHook(function() {
-        if (this.options.virtual) {
-          // setup virtualization after marker was added
-          this.on('add', function() {
-            this._updateIconVisibility = function() {
-              var map = this._map,
-                isVisible = map.getBounds().contains(this.getLatLng()),
-                wasVisible = this._wasVisible,
-                icon = this._icon,
-                iconParent = this._iconParent,
-                shadow = this._shadow,
-                shadowParent = this._shadowParent;
-
-              // remember parent of icon 
-              if (!iconParent) {
-                iconParent = this._iconParent = icon.parentNode;
-              }
-              if (shadow && !shadowParent) {
-                shadowParent = this._shadowParent = shadow.parentNode;
-              }
-
-              // add/remove from DOM on change
-              if (isVisible != wasVisible) {
-                if (isVisible) {
-                  iconParent.appendChild(icon);
-                  if (shadow) {
-                    shadowParent.appendChild(shadow);
-                  }
-                } else {
-                  iconParent.removeChild(icon);
-                  if (shadow) {
-                    shadowParent.removeChild(shadow);
-                  }
-                }
-                this._wasVisible = isVisible;
-              }
-            };
-
-            // on map size change, remove/add icon from/to DOM
-            this._map.on('resize moveend zoomend', this._updateIconVisibility, this);
-            this._updateIconVisibility();
-          }, this);
+          container.appendChild(gyms);
+          container.appendChild(stops);
+          container.appendChild(nests);
+          return container;
         }
       });
-    });
 
-    function onMarkerClick(e) {
-      console.log(e);
-      // popup
-      //   .setLatLng(e.latlng)
-      //   .setContent("You clicked the map at " + e.latlng.toString())
-      //   .openOn(pogomap);
-      dialog
-        .html(JSON.stringify(e.target.options))
-        .dialog({
-          title: e.target.options.title
-        })
-        .dialog('open');
-    }
+      pogomap.addControl(new customControls());
+
+      L.geoJson(amsParks).addTo(pogomap);
+    });
   </script>
 </head>
 

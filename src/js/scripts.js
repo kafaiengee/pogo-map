@@ -57,12 +57,13 @@ $(document).ready(function() {
   pogomap.setView([52.379189, 4.899431], 15);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZHJhZ29uZHJhYWsiLCJhIjoiY2pnOWFtZjd4MDhybTJxbzVrdmMxaHRpNyJ9.6dUslZn7O2Md69_eZA1Q_A', {
-    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '',
     accessToken: 'pk.eyJ1IjoiZHJhZ29uZHJhYWsiLCJhIjoiY2pnOWFtZjd4MDhybTJxbzVrdmMxaHRpNyJ9.6dUslZn7O2Md69_eZA1Q_A',
     id: 'mapbox.streets'
   }).addTo(pogomap);
+
+  pogomap.zoomControl.setPosition('bottomright');
 
   uncontested = L.icon({
     iconUrl: 'images/map-icons/Uncontested.png',
@@ -70,38 +71,28 @@ $(document).ready(function() {
   });
 
   raid1 = L.icon({
-    // iconUrl: 'images/map-icons/raid-lvl-1.png',
     iconUrl: 'images/map-icons/raidlv1.png',
     iconSize: [48, 48]
   });
 
   raid2 = L.icon({
-    // iconUrl: 'images/map-icons/raid-lvl-2.png',
     iconUrl: 'images/map-icons/raidlv2.png',
     iconSize: [48, 48]
   });
 
   raid3 = L.icon({
-    // iconUrl: 'images/map-icons/raid-lvl-3.png',
     iconUrl: 'images/map-icons/raidlv3.png',
     iconSize: [48, 48]
   });
 
   raid4 = L.icon({
-    // iconUrl: 'images/map-icons/raid-lvl-4.png',
     iconUrl: 'images/map-icons/raidlv4.png',
     iconSize: [48, 48]
   });
 
   raid5 = L.icon({
-    // iconUrl: 'images/map-icons/raid-lvl-5.png',
     iconUrl: 'images/map-icons/raidlv5.png',
     iconSize: [48, 48]
-  });
-
-  test = new L.DivIcon({
-    className: 'egg',
-    html: '<img class="egg" src="images/map-icons/raid.png" />' + '<span class="egg-text"></span>'
   });
 
   pogomap.on('load resize moveend zoomend', function() {
@@ -132,14 +123,10 @@ $(document).ready(function() {
           break;
         default:
           useIcon = uncontested;
-          // useIcon = test;
           break;
       }
 
       console.log(i, item);
-      // console.log("==test==");
-      // console.log(i);
-      // console.log('end');
 
       var popupHtml = '<h2 class="fw700">' + item.location.name + '</h2>' +
         '<div class="mt4 mb4">' +
@@ -327,15 +314,19 @@ $(document).ready(function() {
       });
   });
 
-  $("#choose-egg").on("hidden.bs.modal", function(e) {
+  $('#choose-egg').on('hidden.bs.modal', function(e) {
     $('#choose-egg #eggTime').val('');
     $('#choose-egg #gym_egg li').removeClass('selected');
   });
 
-  $("#choose-pokemon").on("hidden.bs.modal", function(e) {
+  $('#choose-pokemon').on('hidden.bs.modal', function(e) {
     $('#choose-pokemon .form-group.1').html('<p>① Time minutes left:</p><input type="number" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>');
     $('#choose-pokemon #gym_egg li').removeClass('selected');
     $('#choose-pokemon #gym_boss_list').html('');
+  });
+
+  $('#topnav').click(function() {
+    $(this).toggleClass('change');
   });
 });
 
