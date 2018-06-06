@@ -1,7 +1,11 @@
 var pogomap,
   marker,
   markersArray = [],
-  group,
+  overlayMaps = {},
+  layerGyms,
+  layerStops,
+  layerNests,
+  groupGyms,
   popup = L.popup(),
   dialog;
 
@@ -64,6 +68,55 @@ $(document).ready(function() {
   }).addTo(pogomap);
 
   pogomap.zoomControl.setPosition('bottomright');
+
+  var customControls = L.Control.extend({
+    options: {
+      position: 'topright' //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
+    },
+    onAdd: function(pogomap) {
+      var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+      container.style.backgroundColor = 'white';
+      container.style.width = '30px';
+      container.style.height = '110px';
+      var gyms = L.DomUtil.create('div', 'custom-controls raids');
+      gyms.onclick = function() {
+        $(this).toggleClass('disabled');
+        if (pogomap.hasLayer(layerGyms)) {
+          pogomap.removeLayer(layerGyms);
+        } else {
+          pogomap.addLayer(layerGyms);
+        }
+      };
+      var stops = L.DomUtil.create('div', 'custom-controls stops');
+      stops.onclick = function() {
+        $(this).toggleClass('disabled');
+        if (pogomap.hasLayer(layerStops)) {
+          pogomap.removeLayer(layerStops);
+        } else {
+          pogomap.addLayer(layerStops);
+        }
+      };
+      var nests = L.DomUtil.create('div', 'custom-controls nests');
+      nests.onclick = function() {
+        $(this).toggleClass('disabled');
+        if (pogomap.hasLayer(layerNests)) {
+          pogomap.removeLayer(layerNests);
+        } else {
+          pogomap.addLayer(layerNests);
+        }
+      };
+
+      container.appendChild(gyms);
+      container.appendChild(stops);
+      container.appendChild(nests);
+      return container;
+    }
+  });
+
+  pogomap.addControl(new customControls());
+
+  layerNests = new L.geoJson(amsParks);
+  pogomap.addLayer(layerNests);
 
   uncontested = L.icon({
     iconUrl: 'images/map-icons/Uncontested.png',
@@ -172,7 +225,7 @@ $(document).ready(function() {
           pokemonId: item.raid.pokemon_id
         })
         // .bindPopup('marker ' + i)
-        .addTo(pogomap)
+        // .addTo(pogomap)
         .bindPopup(popupHtml, {
           // className: 'leaflet-popup-content-custom',
           minWidth: 180
@@ -183,15 +236,14 @@ $(document).ready(function() {
     });
   }).done(function(e) {
     // console.log('second success', e);
+    layerGyms = new L.featureGroup(markersArray);
+    pogomap.addLayer(layerGyms);
     setInfo(e);
   }).fail(function(e) {
     console.log('error', e);
   }).always(function(e) {
     // console.log('complete', e);
-    // console.log(markersArray);
-    var group = new L.featureGroup(markersArray);
-    // console.log(group);
-    pogomap.fitBounds(group.getBounds());
+    pogomap.fitBounds(layerGyms.getBounds());
   });
 
 
