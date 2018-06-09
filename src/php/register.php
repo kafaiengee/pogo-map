@@ -3,8 +3,8 @@
 require_once 'common.php';
 
 // Define variables and initialize with empty values
-$username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = "";
+$username = $firstname = $lastname = $password = $team = $level = $confirm_password = "";
+$username_err = $firstname_err = $lastname_err = $password_err = $confirm_password_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -55,13 +55,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Check input errors before inserting in database
   if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
     // Prepare an insert statement
-    $sql = "INSERT INTO users (user_name, user_password, user_level) VALUES (?, ?, '0')";
+    $sql = "INSERT INTO users (user_name, user_password, user_firstname, user_lastname, user_team, user_level) VALUES (?, ?, ?, ?, ?, ?)";
     if ($stmt = $dblink->prepare($sql)) {
       // Bind variables to the prepared statement as parameters
-      $stmt->bind_param("ss", $param_username, $param_password);
+      $stmt->bind_param("ssss", $param_username, $param_password, $param_firstname, $param_lastname, $param_team, $param_level);
       // Set parameters
       $param_username = $username;
       $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+      $param_firstname = $firstname;
+      $param_lastname = $lastname;
+      $param_team = $team;
+      $param_level = "0";
       // Attempt to execute the prepared statement
       if ($stmt->execute()) {
         // Redirect to login page
@@ -108,6 +112,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label>Confirm Password</label>
         <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
         <span class="help-block"><?php echo $confirm_password_err; ?></span>
+      </div>
+      <div class="form-group>">
+        <label>First name (optional)</label>
+        <input type="text" name="firstname"class="form-control" value="<?php echo $firstname; ?>">
+        <span class="help-block"><?php echo $firstname_err; ?></span>
+      </div>
+      <div class="form-group>">
+        <label>Last name (optional)</label>
+        <input type="text" name="lastname"class="form-control" value="<?php echo $lastname; ?>">
+        <span class="help-block"><?php echo $lastname_err; ?></span>
+      </div>
+      <div class="form-group>">
+        <label>Team (optional)</label>
+        <select name="team"class="form-control">
+          <option value="">selct team</option>
+          <option value="mystic">Mystic</option>
+          <option value="instinct">Instinct</option>
+          <option value="valor">Valor</option>
+        </select>
       </div>
       <div class="form-group">
         <input type="submit" class="btn btn-primary" value="Submit">

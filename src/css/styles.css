@@ -193,3 +193,7 @@ img.egg {
   background-color: black;
   border-color: #fd5c6d !important;
 }
+
+.autoModal.modal .modal-body {
+  max-height: 100%;
+}
