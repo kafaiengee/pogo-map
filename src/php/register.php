@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <style type="text/css">
     body{ font: 14px sans-serif; }
-    .wrapper{ width: 350px; padding: 20px; }
+    .wrapper{ width: auto; }
   </style>
 </head>
 <body>
@@ -126,17 +126,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="form-group>">
         <label>Team (optional)</label>
         <select name="team"class="form-control">
-          <option value="">selct team</option>
+          <option value="">select team</option>
           <option value="mystic">Mystic</option>
           <option value="instinct">Instinct</option>
           <option value="valor">Valor</option>
         </select>
+        <span class="help-block"></span>
       </div>
       <div class="form-group">
         <input type="submit" class="btn btn-primary" value="Submit">
         <input type="reset" class="btn btn-default" value="Reset">
       </div>
-      <p>Already have an account? <a href="login.php">Login here</a>.</p>
+      <p>Already have an account? <a href="login.php" onclick="javascript:window.parent.document.getElementsByTagName('object')[0].height='350';">Login here</a>.</p>
     </form>
   </div>
 </body>

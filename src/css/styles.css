@@ -198,6 +198,6 @@ img.egg {
   max-height: 100%;
 }
 
-input[type=number].inputSmallBar {
-  width: 10%;
+#login-window object {
+  width: 100%;
 }

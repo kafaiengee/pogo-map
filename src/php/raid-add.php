@@ -20,6 +20,8 @@ $move_2_id = (isset($_POST['move_2_id']) ? $_POST['move_2_id'] : '0');
 $team_id = (isset($_POST['team_id']) ? $_POST['team_id'] : '0');
 $active = (isset($_POST['active']) ? $_POST['active'] : true);
 $locationId = (isset($_POST['locationId']) ? $_POST['locationId'] : '0');
+$user = (isset($_POST['user']) ? $_POST['user'] : '');
+
 
 if ($raid == 'egg') {
   $time = $spawn;
@@ -30,7 +32,7 @@ if ($raid == 'egg') {
 
   // print_r(NULL . ', ' . $level . ', ' . $spawn . ', ' . $start . ', ' . $end . ', ' . $pokemon_id . ', ' . $move_1_id . ', ' . $move_2_id . ', ' . $team_id . ', ' . $active);
 
-  $query = "INSERT INTO `raids` (`id`, `level`, `spawn`, `start`, `end`, `pokemon_id`, `move_1_id`, `move_2_id`, `team_id`, `active`) VALUES (NULL, '$level', '$spawn', '$start', '$end', $pokemon_id, $move_1_id, $move_2_id, $team_id, '$active');";
+  $query = "INSERT INTO `raids` (`id`, `level`, `spawn`, `start`, `end`, `pokemon_id`, `move_1_id`, `move_2_id`, `team_id`, `user`, `active`) VALUES (NULL, '$level', '$spawn', '$start', '$end', $pokemon_id, $move_1_id, $move_2_id, $team_id, $user, '$active');";
   echo $query . "\n";
   $result = mysqli_query($dblink, $query) or die('raids > ' . mysqli_error($dblink) . ' > ' . $query);
   $raidId = mysqli_insert_id($dblink);
@@ -48,7 +50,7 @@ if ($raid == 'pokemon-add') {
   $start = date('Y-m-d H:i:s', strtotime($end) - (45 * 60));
 
   // print_r(NULL . ', ' . $level . ', ' . $spawn . ', ' . $start . ', ' . $end . ', ' . $pokemon_id . ', ' . $move_1_id . ', ' . $move_2_id . ', ' . $team_id . ', ' . $active);
-  $query = "INSERT INTO `raids` (`id`, `level`, `spawn`, `start`, `end`, `pokemon_id`, `move_1_id`, `move_2_id`, `team_id`, `active`) VALUES (NULL, '$level', '$spawn', '$start', '$end', $pokemon_id, $move_1_id, $move_2_id, $team_id, '$active');";
+  $query = "INSERT INTO `raids` (`id`, `level`, `spawn`, `start`, `end`, `pokemon_id`, `move_1_id`, `move_2_id`, `team_id`, `user`, `active`) VALUES (NULL, '$level', '$spawn', '$start', '$end', $pokemon_id, $move_1_id, $move_2_id, $team_id, $user, '$active');";
   echo $query . "\n";
   $result = mysqli_query($dblink, $query) or die('raids > ' . mysqli_error($dblink) . ' > ' . $query);
   $raidId = mysqli_insert_id($dblink);
@@ -59,7 +61,6 @@ if ($raid == 'pokemon-add') {
 }
 
 if ($raid == 'pokemon-update') {
-  
   $query = "SELECT * FROM `gyms` WHERE `location_id`=$locationId";
   echo $query . "\n";
   $result = mysqli_query($dblink, $query) or die('gyms > ' . mysqli_error($dblink) . ' > ' . $query);
@@ -67,8 +68,8 @@ if ($raid == 'pokemon-update') {
   while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
     $raidId = $row['raid_id'] . "\n";
   }
-
   $query = "UPDATE `raids` SET `pokemon_id`='$pokemon_id' where `id`=$raidId";
+  $query = "UPDATE `raids` SET `user`='$user' where `id`=$raidId";
   echo $query . "\n";
   $result = mysqli_query($dblink, $query) or die('raids > ' . mysqli_error($dblink) . ' > ' . $query);
 }

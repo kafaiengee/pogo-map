@@ -1,3 +1,26 @@
+<?php
+// Initialize the session
+session_start();
+
+$username = $firstname = $lastname = $team = '';
+$level = '0';
+if (isset($_SESSION['username'])) {
+  $username = $_SESSION['username'];
+}
+if (isset($_SESSION['user_firstname'])) {
+  $firstname = $_SESSION['user_firstname'];
+}
+if (isset($_SESSION['user_lastname'])) {
+  $lastname = $_SESSION['user_lastname'];
+}
+if (isset($_SESSION['user_team'])) {
+  $team = $_SESSION['user_team'];
+}
+if (isset($_SESSION['user_level'])) {
+  $level = $_SESSION['user_level'];
+}
+?>
+
 <html>
 
 <head>
@@ -16,9 +39,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  <script src="js/ams-park-plantsoen-groen.js"></script>
   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
   <script src="js/leaflet-plugins/Marker-text.js"></script>
+  <script src="js/ams-park-plantsoen-groen.js"></script>
+  <script>
+    var user = {
+      'username': '<?php echo $username ?>',
+      'firstname': '<?php echo $firstname ?>',
+      'lastname': '<?php echo $lastname ?>',
+      'team': '<?php echo $team ?>',
+      'level': '<?php echo $level ?>'
+    }
+  </script>
   <script src="js/scripts.js"></script>
 </head>
 
@@ -49,7 +81,7 @@
                 <div class="text-center">
                   <div class="form-group">
                     <p>① Enter start time:</p>
-                    <input type="time" id="eggTime" name="time" min="08:00:00" max="20:00:00" value="" required>
+                    <input type="time" id="eggTime" name="time" min="08:00:00" max="20:00:00" value="12:00:00" required>
                   </div>
                   <p>② Choose the egg to register</p>
                   <div class="form-group text-center">
@@ -94,7 +126,7 @@
                 <div class="text-center">
                   <div class="form-group 1">
                     <p>① Time minutes left:</p>
-                    <input type="number" class="inputSmallBar" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>
+                    <input type="number" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>
                   </div>
                   <div class="form-group 2">
                     <p>② Select your egg to register</p>
@@ -138,7 +170,7 @@
           </button>
         </div> -->
         <div class="modal-body">
-          <object data="php/login.php" width="350" height="350"></object>
+          <object data="php/login.php" width="auto" height="350"></object>
         </div>
       </div>
     </div>

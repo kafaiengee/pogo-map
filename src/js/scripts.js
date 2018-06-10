@@ -113,10 +113,10 @@ $(document).ready(function() {
     }
   });
 
-  pogomap.addControl(new customControls());
+  // pogomap.addControl(new customControls());
 
-  layerNests = new L.geoJson(amsParks);
-  pogomap.addLayer(layerNests);
+  // layerNests = new L.geoJson(amsParks);
+  // pogomap.addLayer(layerNests);
 
   uncontested = L.icon({
     iconUrl: 'images/map-icons/Uncontested.png',
@@ -191,24 +191,26 @@ $(document).ready(function() {
         '<table class="w100 wiki_p4 mb4">' +
         '  <tbody>' +
 
-        (((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id > 0)) ?
-          '    <tr><th>Raid Info</th></tr>' +
-          '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br> Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
-          '' :
-          ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (new Date().getTime() >= new Date(item.raid.spawn).getTime())) ?
-          '    <tr><th>Raid Info</th></tr>' +
-          '    <tr><td>Lvl' + item.raid.level + ' ???<br> Time:' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
-          '    <tr><th>Add Raid Boss</th></tr>' +
-          '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>' +
-          '' :
-          ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id === 0)) ?
-          '    <tr><th>Raid Info</th></tr>' +
-          '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
-          '    <tr><th>Add Raid Boss</th></tr>' +
-          '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>' +
-          '' :
-          '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
-          '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>') +
+        ((user.level > 0) ?
+          (((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id > 0)) ?
+            '    <tr><th>Raid Info</th></tr>' +
+            '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br> Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
+            '' :
+            ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (new Date().getTime() >= new Date(item.raid.spawn).getTime())) ?
+            '    <tr><th>Raid Info</th></tr>' +
+            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Time:' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
+            '    <tr><th>Add Raid Boss</th></tr>' +
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>' +
+            '' :
+            ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id === 0)) ?
+            '    <tr><th>Raid Info</th></tr>' +
+            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
+            '    <tr><th>Add Raid Boss</th></tr>' +
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>' +
+            '' :
+            '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>') :
+          '') +
 
         '  </tbody>' +
         '</table>';
@@ -299,7 +301,8 @@ $(document).ready(function() {
           raid: 'egg',
           spawn: time,
           locationId: locationId,
-          level: lvl
+          level: lvl,
+          user: user.username
         },
         function(e) {
           // console.log('success');

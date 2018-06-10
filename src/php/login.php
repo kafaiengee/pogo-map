@@ -2,6 +2,15 @@
 // Include config file
 require_once 'common.php';
 
+// Initialize the session
+session_start();
+
+// If session variable is set it will redirect to welcome page
+if (isset($_SESSION['username'])) {
+  header("location: welcome.php");
+  exit;
+}
+
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
@@ -38,11 +47,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           // Bind result variables
           $stmt->bind_result($username, $hashed_password);
           if ($stmt->fetch()) {
+            print_r($stmt->fetch());
             if (password_verify($password, $hashed_password)) {
               /* Password is correct, so start a new session and
               save the username to the session */
-              session_start();
+              // session_start();
               $_SESSION['username'] = $username;
+              $sql = "SELECT * FROM users WHERE user_name = '$username'";
+              $result = mysqli_query($dblink, $sql) or die(mysqli_error($dblink));
+
+              while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                $_SESSION['user_firstname'] = $row['user_firstname'];
+                $_SESSION['user_lastname'] = $row['user_lastname'];
+                $_SESSION['user_team'] = $row['user_team'];
+                $_SESSION['user_level'] = $row['user_level'];
+              }
               header("location: welcome.php");
             } else {
               // Display an error message if password is not valid
@@ -73,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <style type="text/css">
     body{ font: 14px sans-serif; }
-    .wrapper{ width: 350px; padding: 20px; }
+    .wrapper{ width: auto; }
   </style>
 </head>
 <body>
@@ -94,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="form-group">
         <input type="submit" class="btn btn-primary" value="Login">
       </div>
-      <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+      <p>Don't have an account? <a href="register.php" onclick="javascript:window.parent.document.getElementsByTagName('object')[0].height='570';">Sign up now</a>.</p>
     </form>
   </div>
 </body>
