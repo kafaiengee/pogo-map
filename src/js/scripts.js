@@ -372,7 +372,7 @@ $(document).ready(function() {
   });
 
   $('#choose-pokemon').on('hidden.bs.modal', function(e) {
-    $('#choose-pokemon .form-group.1').html('<p>① Time minutes left:</p><input type="number" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>');
+    $('#choose-pokemon .form-group.1').html('<p>① Time minutes left:</p><input type="number" class="inputSmallBar" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>');
     $('#choose-pokemon #gym_egg li').removeClass('selected');
     $('#choose-pokemon #gym_boss_list').html('');
   });
@@ -524,7 +524,7 @@ function addRaid(e, id) {
       $('#choose-pokemon #registerPokemon').removeAttr('disabled');
     });
   } else {
-    $('#choose-pokemon .form-group.1').html('<p>① Time minutes left:</p><input type="number" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>');
+    $('#choose-pokemon .form-group.1').html('<p>① Time minutes left:</p><input type="number" class="inputSmallBar" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>');
   }
 }
 

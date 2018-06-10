@@ -79,7 +79,7 @@ ul#gym_egg {
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
-  padding-left: 12px;
+/*  padding-left: 12px;*/
 }
 
 ul#gym_egg li {
@@ -107,7 +107,7 @@ ul#gym_boss_list {
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
-  padding-left: 12px;
+/*  padding-left: 12px;*/
 }
 
 ul#gym_boss_list li {
@@ -130,6 +130,7 @@ ul#gym_boss_list li.selected {
 
 
 
+
 @media (max-width: 370px) {
 	ul#gym_egg li {
 		float: left;
@@ -138,5 +139,4 @@ ul#gym_boss_list li.selected {
 	ul#gym_boss_list li {
 		float: left;
 	}
-
 }

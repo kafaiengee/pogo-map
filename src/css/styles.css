@@ -197,3 +197,7 @@ img.egg {
 .autoModal.modal .modal-body {
   max-height: 100%;
 }
+
+input[type=number].inputSmallBar {
+  width: 10%;
+}

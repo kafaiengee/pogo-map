@@ -4,8 +4,8 @@
 
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'astronaut';
-$dbname = 'pogo-map';
+$dbpass = '';
+$dbname = 'test';
 $dblink = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 /* DOT NOT EDIT & SHARE */
