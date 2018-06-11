@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $param_firstname = $firstname;
       $param_lastname = $lastname;
       $param_team = $team;
-      $param_level = "0";
+      $param_level = "1";
       // Attempt to execute the prepared statement
       if ($stmt->execute()) {
         // Redirect to login page

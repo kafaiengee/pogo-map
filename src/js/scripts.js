@@ -8,7 +8,8 @@ var pogomap,
   groupGyms,
   popup = L.popup(),
   dialog;
-
+var useMyLocation = true,
+  pin, circle;
 var uncontested, raid1, raid2, raid3, raid4, raid5, test;
 
 $(document).ready(function() {
@@ -69,6 +70,45 @@ $(document).ready(function() {
 
   pogomap.zoomControl.setPosition('bottomright');
 
+  pogomap.locate({
+    enableHighAccuracy: true,
+    maxZoom: 16,
+    setView: true
+  });
+
+  pogomap.on('load resize moveend zoomend', function() {});
+
+  pogomap.on('locationfound', onLocationFound);
+  pogomap.on('locationerror', onLocationError);
+
+  function onLocationFound(e) {
+    useMyLocation = true;
+    console.log(useMyLocation, e);
+    var radius = e.accuracy / 2;
+    if (pogomap.hasLayer(pin)) {
+      pogomap.removeLayer(pin);
+    }
+    pin = L.marker(e.latlng).bindPopup("You are within " + radius + " meters from this point").openPopup();
+    pogomap.addLayer(pin);
+
+    if (pogomap.hasLayer(circle)) {
+      pogomap.removeLayer(circle);
+    }
+    circle = L.circle(e.latlng, radius).addTo(pogomap);
+    pogomap.addLayer(circle);
+
+    pogomap.locate({
+      enableHighAccuracy: true,
+      maxZoom: 16,
+      setView: true
+    });
+  }
+
+  function onLocationError(e) {
+    console.log(useMyLocation, e);
+    console.log(e.message);
+  }
+
   var customControls = L.Control.extend({
     options: {
       position: 'topright' //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
@@ -76,8 +116,21 @@ $(document).ready(function() {
     onAdd: function(pogomap) {
       var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
       container.style.backgroundColor = 'white';
-      container.style.width = '30px';
-      container.style.height = '110px';
+      var myLocation = L.DomUtil.create('div', 'custom-controls myLocation');
+      myLocation.onclick = function() {
+        $(this).toggleClass('disabled');
+        if (useMyLocation) {
+          useMyLocation = false;
+          pogomap.stopLocate();
+        } else {
+          useMyLocation = true;
+          pogomap.locate({
+            enableHighAccuracy: true,
+            maxZoom: 16,
+            setView: true
+          });
+        }
+      };
       var gyms = L.DomUtil.create('div', 'custom-controls raids');
       gyms.onclick = function() {
         $(this).toggleClass('disabled');
@@ -106,51 +159,47 @@ $(document).ready(function() {
         }
       };
 
-      container.appendChild(gyms);
-      container.appendChild(stops);
-      container.appendChild(nests);
+      container.appendChild(myLocation);
+      // container.appendChild(gyms);
+      // container.appendChild(stops);
+      // container.appendChild(nests);
       return container;
     }
   });
 
-  // pogomap.addControl(new customControls());
+  pogomap.addControl(new customControls());
 
   // layerNests = new L.geoJson(amsParks);
   // pogomap.addLayer(layerNests);
 
   uncontested = L.icon({
-    iconUrl: 'images/map-icons/Uncontested.png',
-    iconSize: [32, 32]
+    iconUrl: 'images/map-icons/Uncontested.svg',
+    iconSize: [24, 24]
   });
 
   raid1 = L.icon({
     iconUrl: 'images/map-icons/raidlv1.png',
-    iconSize: [48, 48]
+    iconSize: [24, 24]
   });
 
   raid2 = L.icon({
     iconUrl: 'images/map-icons/raidlv2.png',
-    iconSize: [48, 48]
+    iconSize: [24, 24]
   });
 
   raid3 = L.icon({
     iconUrl: 'images/map-icons/raidlv3.png',
-    iconSize: [48, 48]
+    iconSize: [24, 24]
   });
 
   raid4 = L.icon({
     iconUrl: 'images/map-icons/raidlv4.png',
-    iconSize: [48, 48]
+    iconSize: [24, 24]
   });
 
   raid5 = L.icon({
     iconUrl: 'images/map-icons/raidlv5.png',
-    iconSize: [48, 48]
-  });
-
-  pogomap.on('load resize moveend zoomend', function() {
-    // var markers = document.querySelectorAll('#mapid .leaflet-marker-pane *');
-    // document.querySelector('#visible').innerText = markers.length;
+    iconSize: [24, 24]
   });
 
   var jqxhrGyms = $.getJSON('php/gyms.php', function(json) {
@@ -179,39 +228,49 @@ $(document).ready(function() {
           break;
       }
 
-      console.log(i, item);
+      // console.log(i, item);
+
+      var locationPopupBody = '';
+      var gmapsUrl = 'https://maps.google.com/maps?saddr=current+location&daddr=' + item.location.latitude + ',' + item.location.longitude + '&directionsmode=walking';
+      var whatsappText = '';
+      var whatsappUrl = '';
+
+      if (user.level > 0) {
+        if ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id > 0)) {
+          locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
+            '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br> Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
+          whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
+        } else if ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (new Date().getTime() >= new Date(item.raid.spawn).getTime())) {
+          locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
+            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Time:' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
+            '    <tr><th>Add Raid Boss</th></tr>' +
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
+          whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
+        } else if ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id === 0)) {
+          locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
+            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
+            '    <tr><th>Add Raid Boss</th></tr>' +
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
+          whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
+        } else {
+          locationPopupBody = '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>';
+          whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
+        }
+      }
+
+      whatsappUrl = 'https://api.whatsapp.com/send?text=' + escape(whatsappText);
 
       var popupHtml = '<h2 class="fw700">' + item.location.name + '</h2>' +
         '<div class="mt4 mb4">' +
-        '  <a href="" onclick="window.open(this.href," rel="nofollow" target="_blank"><img src="images/map-icons/whatsapp.png" style="width:20px;" /></a>' +
-        '  <a class="ml10" href="" target="_blank"><img src="images/map-icons/twitter.png" style="width:20px;" /></a>' +
-        '  <a class="ml10" href="https://maps.google.com/maps?saddr=current+location&daddr=' + item.location.latitude + ',' + item.location.longitude + '&directionsmode=walking" target="_blank"><img src="images/map-icons/gmaps.png" style="width:20px;" /></a>' +
+        '  <a href="' + whatsappUrl + '" rel="nofollow" target="_blank"><img src="images/map-icons/whatsapp.png" style="width:20px;" /></a>' +
+        // '  <a class="ml10" href="" target="_blank"><img src="images/map-icons/twitter.png" style="width:20px;" /></a>' +
+        '  <a class="ml10" href="' + gmapsUrl + '" target="_blank"><img src="images/map-icons/gmaps.png" style="width:20px;" /></a>' +
         '</div>' +
         '<div class="coordinate">Coordinate: ' + item.location.latitude + ', ' + item.location.longitude + '</div><br/>' +
         '<table class="w100 wiki_p4 mb4">' +
         '  <tbody>' +
-
-        ((user.level > 0) ?
-          (((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id > 0)) ?
-            '    <tr><th>Raid Info</th></tr>' +
-            '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br> Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
-            '' :
-            ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (new Date().getTime() >= new Date(item.raid.spawn).getTime())) ?
-            '    <tr><th>Raid Info</th></tr>' +
-            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Time:' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
-            '    <tr><th>Add Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>' +
-            '' :
-            ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id === 0)) ?
-            '    <tr><th>Raid Info</th></tr>' +
-            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
-            '    <tr><th>Add Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>' +
-            '' :
-            '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>') :
-          '') +
-
+        locationPopupBody +
         '  </tbody>' +
         '</table>';
 
@@ -245,7 +304,7 @@ $(document).ready(function() {
     console.log('error', e);
   }).always(function(e) {
     // console.log('complete', e);
-    pogomap.fitBounds(layerGyms.getBounds());
+    // pogomap.fitBounds(layerGyms.getBounds());
   });
 
 
@@ -321,7 +380,7 @@ $(document).ready(function() {
   $('#choose-pokemon-form').submit(function(event) {
     event.preventDefault();
     var data = $(this).serializeArray();
-    console.log(data);
+    // console.log(data);
     var minutes, timeStart, timeEnd, locationId, pokemonId, lvl;
     var postData = {};
     if (data[0].name == 'minutes') {

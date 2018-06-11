@@ -3,8 +3,10 @@
 require_once('common.php');
 
 // $sql = 'SELECT json_object(\'id\', id, \'name\', name, \'latitude\', latitude, \'longitude\', longitude, \'region_1\', region_1, \'region_2\', region_2, \'region_3\', region_3, \'street\', street, \'number\', number, \'postal\', postal, \'img\', img, \'last_modified\', last_modified) FROM locations;';
-$query = 'SELECT * FROM gyms LIMIT 5';
-// $query = 'SELECT * FROM gyms';
+$query = 'SELECT * FROM gyms';
+
+/* For testing only! */
+// $query = 'SELECT * FROM gyms LIMIT 5';
 
 $result = mysqli_query($dblink, $query) or die(mysqli_error($dblink));
 $num_rows = mysqli_num_rows($result);

@@ -26,7 +26,7 @@ if (isset($_SESSION['user_level'])) {
 <head>
   <title>Pokemon Go Map</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -56,11 +56,11 @@ if (isset($_SESSION['user_level'])) {
 
 <body>
   <div id="topbar">
-    <div id="topnav">
+    <!-- <div id="topnav">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
-    </div>
+    </div> -->
     <div id="login" data-toggle="modal" data-target="#login-window"></div>
   </div>
   <div id="mapid"></div>

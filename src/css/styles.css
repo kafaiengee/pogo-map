@@ -138,7 +138,7 @@ img.egg {
 
 .leaflet-control-custom {
   background-color: #fff;
-  height: 114px !important;
+  height: auto !important;
   width: 34px !important;
   margin-top: 50px !important;
 }
@@ -147,9 +147,20 @@ img.egg {
   background-color: white;
   background-size: 30px 30px;
   cursor: pointer;
-  margin-bottom: 10px;
   height: 30px;
   width: 30px;
+}
+
+.custom-controls:nth-child(n+2) {
+  margin-top: 10px;
+}
+
+.myLocation {
+  background-image: url('../images/map-icons/location.png');
+}
+
+.myLocation.disabled {
+  background-image: url('../images/map-icons/locationoff.png');
 }
 
 .raids {
