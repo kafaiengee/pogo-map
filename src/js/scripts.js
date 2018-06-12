@@ -62,7 +62,7 @@ $(document).ready(function() {
   pogomap.setView([52.379189, 4.899431], 15);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZHJhZ29uZHJhYWsiLCJhIjoiY2pnOWFtZjd4MDhybTJxbzVrdmMxaHRpNyJ9.6dUslZn7O2Md69_eZA1Q_A', {
-    maxZoom: 18,
+    maxZoom: 17,
     attribution: '',
     accessToken: 'pk.eyJ1IjoiZHJhZ29uZHJhYWsiLCJhIjoiY2pnOWFtZjd4MDhybTJxbzVrdmMxaHRpNyJ9.6dUslZn7O2Md69_eZA1Q_A',
     id: 'mapbox.streets'
@@ -72,7 +72,7 @@ $(document).ready(function() {
 
   pogomap.locate({
     enableHighAccuracy: true,
-    maxZoom: 16,
+    maxZoom: 17,
     setView: true
   });
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   function onLocationFound(e) {
     useMyLocation = true;
-    console.log(useMyLocation, e);
+    // console.log(useMyLocation, e);
     var radius = e.accuracy / 2;
     if (pogomap.hasLayer(pin)) {
       pogomap.removeLayer(pin);
@@ -99,13 +99,13 @@ $(document).ready(function() {
 
     pogomap.locate({
       enableHighAccuracy: true,
-      maxZoom: 16,
+      maxZoom: 17,
       setView: true
     });
   }
 
   function onLocationError(e) {
-    console.log(useMyLocation, e);
+    // console.log(useMyLocation, e);
     console.log(e.message);
   }
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
           useMyLocation = true;
           pogomap.locate({
             enableHighAccuracy: true,
-            maxZoom: 16,
+            maxZoom: 17,
             setView: true
           });
         }
@@ -228,7 +228,6 @@ $(document).ready(function() {
           break;
       }
 
-      // console.log(i, item);
 
       var locationPopupBody = '';
       var gmapsUrl = 'https://maps.google.com/maps?saddr=current+location&daddr=' + item.location.latitude + ',' + item.location.longitude + '&directionsmode=walking';
@@ -236,22 +235,33 @@ $(document).ready(function() {
       var whatsappUrl = '';
 
       if (user.level > 0) {
-        if ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id > 0)) {
-          locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
-            '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br> Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
-          whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
-        } else if ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (new Date().getTime() >= new Date(item.raid.spawn).getTime())) {
-          locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
-            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Time:' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
-            '    <tr><th>Add Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
-          whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
-        } else if ((new Date().getTime() <= new Date(item.raid.end).getTime()) && (item.raid.level > 0) && (item.raid.pokemon_id === 0)) {
-          locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
-            '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
-            '    <tr><th>Add Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
-          whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
+        if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.spawn).getTime())) {
+          if (item.raid.pokemon_id > 0) {
+            console.log('if', i, item);
+            locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
+              '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
+            whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
+          } else if (item.raid.pokemon_id <= 0) {
+            console.log('else if 1', i, item);
+            locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
+              '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
+              '    <tr><th>Add Raid Boss</th></tr>' +
+              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
+            whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
+          } else {
+            locationPopupBody = '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
+              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>';
+            whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
+          }
+        } else if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.end).getTime())) {
+          if (new Date().getTime() >= new Date(item.raid.spawn).getTime()) {
+            console.log('else if 2', i, item);
+            locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
+              '    <tr><td>Lvl' + item.raid.level + ' ???<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
+              '    <tr><th>Add Raid Boss</th></tr>' +
+              '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
+            whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
+          }
         } else {
           locationPopupBody = '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
             '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>';
@@ -553,7 +563,7 @@ function addRaid(e, id) {
   $('.locationId').prop('value', id);
 
   if ((target == '#choose-pokemon') && (raidLevel !== undefined) && (raidPokemonid !== undefined) && (raidStart !== undefined) && (raidEnd !== undefined)) {
-    $('#choose-pokemon .form-group.1').html('<p>① Raid Time:</p><p>' + raidStart.substring(0, 16) + ' &tilde; ' + raidEnd.substring(11, 16) + '</p><input type="hidden" id="starttime" name="starttime" value="' + raidStart + '"><input type="hidden" id="endtime" name="endtime" value="' + raidEnd + '">');
+    $('#choose-pokemon .form-group.1').html('<p>① Raid Time: </p><p>' + raidStart.substring(0, 16) + ' &tilde; ' + raidEnd.substring(11, 16) + '</p><input type="hidden" id="starttime" name="starttime" value="' + raidStart + '"><input type="hidden" id="endtime" name="endtime" value="' + raidEnd + '">');
     $('#choose-pokemon #gym_egg li[data-lv=' + raidLevel + ']').addClass('selected');
     $('#choose-pokemon .level').val(raidLevel);
 
@@ -570,7 +580,7 @@ function addRaid(e, id) {
       $('#choose-pokemon #registerPokemon').removeAttr('disabled');
     });
   } else if ((target == '#choose-pokemon') && (raidLevel !== undefined) && (raidPokemonid !== undefined) && (raidSpawn !== undefined)) {
-    $('#choose-pokemon .form-group.1').html('<p>① Spawn Time:</p><p>' + raidSpawn + '</p><input type="hidden" id="starttime" name="starttime" value="' + raidSpawn + '">');
+    $('#choose-pokemon .form-group.1').html('<p>① Spawn Time: </p><p>' + raidSpawn + '</p><input type="hidden" id="starttime" name="starttime" value="' + raidSpawn + '">');
     $('#choose-pokemon #gym_egg li[data-lv=' + raidLevel + ']').addClass('selected');
 
     $('#choose-pokemon #gym_boss_list').html('');
