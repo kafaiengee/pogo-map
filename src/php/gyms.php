@@ -48,12 +48,27 @@ while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
 
           // unset($row['id']);
           foreach ($row as $raid_key => $raid_value) {
+            // $raid['now'] = time();
             // print_r($raid_key . ' => ' . $raid_value . "<br>\n");
-            $raid[$raid_key] = $raid_value;
+            if (($raid_key == 'end') && (strtotime($raid_value) < time())) {
+              $query4 = 'UPDATE `raids` SET `active` = 0 WHERE `id` = ' . $gym_value . ';';
+              $result4 = mysqli_query($dblink, $query4) or die('gyms > ' . mysqli_error($dblink) . ' > ' . $query4);
+
+              $raid = array();
+              break;
+            } else {
+              $raid[$raid_key] = $raid_value;
+            }
           }
         }
       }
-      // $gym[$gym_key] = $raid;
+
+      if (ISSET($raid['active'])) {
+        if ((boolean)$raid['active'] == false) {
+          $raid = array();
+        }
+      }
+
       $gym['raid'] = $raid;
     } else if ($gym_key == 'id') {
       $gym_id = $gym_value;

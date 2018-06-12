@@ -1,7 +1,9 @@
 var pogomap,
+  lastZoom,
   marker,
   markersArray = [],
   overlayMaps = {},
+  layerTooltips,
   layerGyms,
   layerStops,
   layerNests,
@@ -77,6 +79,32 @@ $(document).ready(function() {
   });
 
   pogomap.on('load resize moveend zoomend', function() {});
+
+  pogomap.on('zoomend', onZoomEnd);
+
+  function onZoomEnd() {
+    var zoom = pogomap.getZoom();
+    if (zoom < 15 && (!lastZoom || lastZoom >= 15)) {
+      pogomap.eachLayer(function(l) {
+        if (l.getTooltip) {
+          var toolTip = l.getTooltip();
+          if (toolTip) {
+            toolTip._contentNode.style.visibility = 'hidden';
+          }
+        }
+      });
+    } else if (zoom >= 15 && (!lastZoom || lastZoom < 15)) {
+      pogomap.eachLayer(function(l) {
+        if (l.getTooltip) {
+          var toolTip = l.getTooltip();
+          if (toolTip) {
+            toolTip._contentNode.style.visibility = 'visible';
+          }
+        }
+      });
+    }
+    lastZoom = zoom;
+  }
 
   pogomap.on('locationfound', onLocationFound);
   pogomap.on('locationerror', onLocationError);
@@ -237,12 +265,12 @@ $(document).ready(function() {
       if (user.level > 0) {
         if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.spawn).getTime())) {
           if (item.raid.pokemon_id > 0) {
-            console.log('if', i, item);
+            // console.log('if', i, item);
             locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
               '    <tr><td>Lvl' + item.raid.level + ' ' + item.raid.pokemon_id + '<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
             whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
           } else if (item.raid.pokemon_id <= 0) {
-            console.log('else if 1', i, item);
+            // console.log('else if 1', i, item);
             locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
               '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
               '    <tr><th>Add Raid Boss</th></tr>' +
@@ -255,7 +283,7 @@ $(document).ready(function() {
           }
         } else if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.end).getTime())) {
           if (new Date().getTime() >= new Date(item.raid.spawn).getTime()) {
-            console.log('else if 2', i, item);
+            // console.log('else if 2', i, item);
             locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
               '    <tr><td>Lvl' + item.raid.level + ' ???<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
               '    <tr><th>Add Raid Boss</th></tr>' +
@@ -475,11 +503,7 @@ function setInfo(e) {
           direction: 'bottom',
           className: 'leaflet-tooltip-bottom-custom'
         })
-        .setTooltipContent('<div id="tooltip' + raidId + '" data-raid-id="' + raidId +
-          '" data-raid-name="' + raidName + '">    </div>');
-      // .setTooltipContent('<div id="tooltip' + raidId + '" data-raid-id="' + raidId + '" data-raid-name="' + raidName +
-      //   '" data-timestamp-spawn="' + timestampSpawn + '" data-timestamp-start="' + timestampStart +
-      //   '" data-timestamp-end="' + timestampEnd + '"></div>');
+        .setTooltipContent('<div id="tooltip' + raidId + '" data-raid-id="' + raidId + '" data-raid-name="' + raidName + '"></div>');
 
       countdowntimer(markersArray[i], raidId, raidName, raidLevel, timestampSpawn, timestampStart, timestampEnd, pokemonId);
     }
