@@ -115,6 +115,18 @@ img.egg {
   left: 0px;
 }
 
+.eggie {
+  cursor: pointer;
+}
+
+#gym_egg li img {
+  cursor: pointer;
+}
+
+#gym_boss_list li img {
+  cursor: pointer;
+}
+
 .pokemon-icon {
   position: absolute;
   width: 40px;

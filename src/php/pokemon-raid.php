@@ -2,10 +2,9 @@
 
 require_once('common.php');
 
-$query = 'SELECT * FROM `pokemons` WHERE `raid_lvl` > 0 ORDER BY `pokemons`.`raid_lvl` ASC';
+$query = 'SELECT * FROM `pokemons` WHERE `raid_lvl` != \'0\' ORDER BY `pokemons`.`raid_lvl` ASC';
 
 $result = mysqli_query($dblink, $query) or die(mysqli_error($dblink));
-$num_rows = mysqli_num_rows($result);
 
 while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
   $pokemons = array();
@@ -30,7 +29,7 @@ while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
   $data[$raid_lvl][$pokemon_id] = $pokemon;
 }
 
-print_r(json_encode(utf8ize($data), JSON_FORCE_OBJECT));
 // print_r($data);
+print_r(json_encode(utf8ize($data), JSON_FORCE_OBJECT));
 
 json_last_error();
