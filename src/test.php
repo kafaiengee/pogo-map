@@ -1,17 +1,17 @@
 <?php
 
 if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
-    $environment = 'fieldraids.com';
-  } else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
-    $environment = 'www.fieldraids.com';
-  } else {
-    $environment = 'localhost';
-  }
-  
-  if ($_SERVER['SERVER_NAME'] != $environment) {
-    print_r('403 - Forbidden!');
-    exit;
-  }
+  $environment = 'fieldraids.com';
+} else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
+  $environment = 'www.fieldraids.com';
+} else {
+  $environment = 'localhost';
+}
+
+if ($_SERVER['SERVER_NAME'] != $environment) {
+  print_r('403 - Forbidden!');
+  exit;
+}
 
 $indicesServer = array('PHP_SELF', 
 'argv', 

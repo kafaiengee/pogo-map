@@ -326,11 +326,13 @@ $(document).ready(function() {
     var minutes, timeStart, timeEnd, locationId, pokemonId, lvl;
     var postData = {};
 
+    console.log(data);
+
     if (data[0].name == 'minutes') {
       minutes = data[0].value;
       locationId = data[1].value;
-      if (Object.keys(raidPokemonBosses[lvl]).length <= 1) {
-        pokemonId = Object.keys(raidPokemonBosses[lvl])[0];
+      if (Object.keys(raidPokemonBosses[data[3].value]).length <= 1) {
+        pokemonId = Object.keys(raidPokemonBosses[data[3].value])[0];
       } else {
         pokemonId = data[2].value;
       }
@@ -344,11 +346,31 @@ $(document).ready(function() {
         level: lvl,
         user: user.username
       };
-    } else {
+    } else if (data[0].name == 'starttime') {
       timeStart = data[0].value;
+      timeEnd = data[1].value;
+      locationId = data[2].value;
+      if (Object.keys(raidPokemonBosses[data[4].value]).length <= 1) {
+        pokemonId = Object.keys(raidPokemonBosses[data[4].value])[0];
+      } else {
+        pokemonId = data[3].value;
+      }
+      lvl = data[4].value;
+
+      postData = {
+        raid: 'pokemon-update',
+        start: timeStart,
+        end: timeEnd,
+        locationId: locationId,
+        pokemonId: pokemonId,
+        level: lvl,
+        user: user.username
+      };
+    } else {
+      timeSpawn = data[0].value;
       locationId = data[1].value;
-      if (Object.keys(raidPokemonBosses[lvl]).length <= 1) {
-        pokemonId = Object.keys(raidPokemonBosses[lvl])[0];
+      if (Object.keys(raidPokemonBosses[data[3].value]).length <= 1) {
+        pokemonId = Object.keys(raidPokemonBosses[data[3].value])[0];
       } else {
         pokemonId = data[2].value;
       }
@@ -356,7 +378,7 @@ $(document).ready(function() {
 
       postData = {
         raid: 'pokemon-update',
-        start: timeStart,
+        spawn: timeSpawn,
         locationId: locationId,
         pokemonId: pokemonId,
         level: lvl,
@@ -557,11 +579,11 @@ function updateGym(id) {
           locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
             '    <tr><td>Lvl' + item.raid.level + ' ???<br> Spawn: ' + item.raid.spawn + '</td></tr>' +
             '    <tr><th>Add Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + id + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-spawn="' + item.raid.spawn + '" style="width:50px;" onclick="addRaid(this, ' + id + ', );" /></td></tr>';
           whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
         } else {
           locationPopupBody = '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>';
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + id + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + id + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + id + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + id + ');" /></td></tr>';
           whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
         }
       } else if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.end).getTime())) {
@@ -573,12 +595,12 @@ function updateGym(id) {
           locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
             '    <tr><td>Lvl' + item.raid.level + ' ???<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>' +
             '    <tr><th>Add Raid Boss</th></tr>' +
-            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + i + ', );" /></td></tr>';
+            '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + id + '" data-toggle="modal" data-target="#choose-pokemon" data-raid-level="' + item.raid.level + '" data-raid-pokemonid="' + item.raid.pokemon_id + '" data-raid-start="' + item.raid.start + '" data-raid-end="' + item.raid.end + '" style="width:50px;" onclick="addRaid(this, ' + id + ', );" /></td></tr>';
           whatsappText = 'Raid at: ' + item.location.name + ' (' + gmapsUrl + ')' + '\nTime: ' + item.raid.start.substring(0, 16) + ' ~ ' + item.raid.end.substring(11, 16);
         }
       } else {
         locationPopupBody = '    <tr><th>Register an Egg or Raid Boss</th></tr>' +
-          '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>';
+          '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + id + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + id + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + id + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + id + ');" /></td></tr>';
         whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
       }
     }
@@ -772,7 +794,7 @@ function addRaid(e, id) {
       $('#choose-pokemon #registerPokemon').removeAttr('disabled');
     });
   } else if ((target == '#choose-pokemon') && (raidLevel !== undefined) && (raidPokemonid !== undefined) && (raidSpawn !== undefined)) {
-    $('#choose-pokemon .form-group.1').html('<p>① Spawn Time: </p><p>' + raidSpawn + '</p><input type="hidden" id="starttime" name="starttime" value="' + raidSpawn + '">');
+    $('#choose-pokemon .form-group.1').html('<p>① Spawn Time: </p><p>' + raidSpawn + '</p><input type="hidden" id="spawntime" name="spawntime" value="' + raidSpawn + '">');
     $('#choose-pokemon #gym_egg li[data-lv=' + raidLevel + ']').addClass('selected');
 
     $('#choose-pokemon #gym_boss_list').html('');

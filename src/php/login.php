@@ -1,6 +1,13 @@
 <?php
 
-$environment = ($_SERVER["SERVER_NAME"] == 'localhost') ? 'localhost' : ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') ? 'www.fieldraids.com' : 'fieldraids.com';
+if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
+  $environment = 'fieldraids.com';
+} else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
+  $environment = 'www.fieldraids.com';
+} else {
+  $environment = 'localhost';
+}
+
 if ($_SERVER['SERVER_NAME'] != $environment) {
   print_r('403 - Forbidden!');
   exit;
