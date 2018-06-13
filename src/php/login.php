@@ -1,4 +1,11 @@
 <?php
+
+$environment = ($_SERVER["SERVER_NAME"] == 'localhost') ? 'localhost' : 'www.fieldraids.com';
+if ($_SERVER['SERVER_NAME'] != $environment) {
+  print_r('403 - Forbidden!');
+  exit;
+}
+
 // Include config file
 require_once 'common.php';
 

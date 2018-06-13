@@ -1,5 +1,11 @@
 <?php
 
+$environment = ($_SERVER["SERVER_NAME"] == 'localhost') ? 'localhost' : 'www.fieldraids.com';
+if ($_SERVER['SERVER_NAME'] != $environment) {
+  print_r('403 - Forbidden!');
+  exit;
+}
+
 require_once('common.php');
   
 // file_put_contents("test.txt", file_get_contents("php://input"));

@@ -1,4 +1,11 @@
 <?php
+
+$environment = ($_SERVER["SERVER_NAME"] == 'localhost') ? 'localhost' : 'www.fieldraids.com';
+if ($_SERVER['SERVER_NAME'] != $environment) {
+  print_r('403 - Forbidden!');
+  exit;
+}
+
 // Initialize the session
 session_start();
 
