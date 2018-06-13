@@ -95,7 +95,7 @@ if (isset($_SESSION['user_level'])) {
                 <div class="text-center">
                   <div class="form-group">
                     <p>① Enter start time:</p>
-                    <input type="time" id="eggTime" name="time" min="08:00:00" max="20:00:00" value="12:00:00" required>
+                    <input type="time" id="eggTime" name="time" min="08:00:00" max="21:00:00" value="12:00:00" required>
                   </div>
                   <p>② Choose the egg to register</p>
                   <div class="form-group text-center">

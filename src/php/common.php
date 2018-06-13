@@ -16,7 +16,7 @@ if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
 /* DOT NOT EDIT & SHARE */
 
 $dbhost = 'localhost';
-$dbuser = 'root2';
+$dbuser = 'root';
 $dbpass = 'astronaut';
 $dbname = 'pogo-map';
 $dblink = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);

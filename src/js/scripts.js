@@ -536,7 +536,7 @@ function importGyms(id) {
   });
 }
 
-function updateGym(id) {
+function updateGym(id, type) {
   var item, useIcon, popupHtml;
   var jqxhrGyms = $.getJSON('php/gyms.php?id=' + id, function(json) {
     item = json[id];
@@ -635,7 +635,6 @@ function updateGym(id) {
     };
     markersArray[id - 1].setIcon(useIcon);
     markersArray[id - 1]._popup.setContent(popupHtml);
-    markersArray[id - 1].bindPopup();
     $(markersArray[id - 1]._icon).addClass('leaflet-interactive');
     setInfo(id);
   }).fail(function(e) {
@@ -651,7 +650,7 @@ function setInfo(id) {
   var timestampSpawn, timestampStart, timestampEnd, raidId, raidName, raidLevel, pokemonId;
 
   if ($('#tooltip' + id).length <= 0) {
-    // console.log(id);
+    console.log(id);
     if (id !== undefined) {
       id = id - 1;
       if (markersArray[id].options.raid.level > 0) {
@@ -664,7 +663,7 @@ function setInfo(id) {
         raidLevel = markersArray[id].options.raid.level;
         pokemonId = markersArray[id].options.raid.pokemon_id;
 
-        // console.log(markersArray[id], timestampSpawn, timestampStart, timestampEnd, raidId, raidName);
+        console.log(markersArray[id], timestampSpawn, timestampStart, timestampEnd, raidId, raidName);
         markersArray[id].bindTooltip('', {
             permanent: true,
             direction: 'bottom',
@@ -699,15 +698,6 @@ function setInfo(id) {
       }
     }
   }
-}
-
-function onMarkerClick(e) {
-  dialog
-    .html(JSON.stringify(e.target.options))
-    .dialog({
-      title: e.target.options.title
-    })
-    .dialog('open');
 }
 
 function countdowntimer(element, raidId, raidName, raidLevel, timestampSpawn, timestampStart, timestampEnd, pokemonId) {
@@ -796,6 +786,7 @@ function addRaid(e, id) {
   } else if ((target == '#choose-pokemon') && (raidLevel !== undefined) && (raidPokemonid !== undefined) && (raidSpawn !== undefined)) {
     $('#choose-pokemon .form-group.1').html('<p>① Spawn Time: </p><p>' + raidSpawn + '</p><input type="hidden" id="spawntime" name="spawntime" value="' + raidSpawn + '">');
     $('#choose-pokemon #gym_egg li[data-lv=' + raidLevel + ']').addClass('selected');
+    $('#choose-pokemon .level').val(raidLevel);
 
     $('#choose-pokemon #gym_boss_list').html('');
     $.each(raidPokemonBosses[raidLevel], function(i, item) {
