@@ -81,9 +81,9 @@ if ($raid == 'pokemon-update') {
   while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
     $raidId = $row['raid_id'] . "<br>\n";
   }
-  // $query2 = "UPDATE `raids` SET `pokemon_id` = '$pokemon_id' WHERE `id` = $raidId";
-  // echo $query2 . "<br>\n";
-  // $result2 = mysqli_query($dblink, $query2) or die('raids > ' . mysqli_error($dblink) . ' > ' . $query2);
+  $query2 = "UPDATE `raids` SET `pokemon_id` = '$pokemon_id' WHERE `id` = $raidId";
+  echo $query2 . "<br>\n";
+  $result2 = mysqli_query($dblink, $query2) or die('raids > ' . mysqli_error($dblink) . ' > ' . $query2);
   
   $query3 = "UPDATE `raids` SET `user` = '$user' WHERE `id` = $raidId";
   echo $query3 . "<br>\n";
