@@ -5,6 +5,10 @@ require_once('common.php');
 // $sql = 'SELECT json_object(\'id\', id, \'name\', name, \'latitude\', latitude, \'longitude\', longitude, \'region_1\', region_1, \'region_2\', region_2, \'region_3\', region_3, \'street\', street, \'number\', number, \'postal\', postal, \'img\', img, \'last_modified\', last_modified) FROM locations;';
 $query = 'SELECT * FROM gyms';
 
+if (isset($_GET['id'])) {
+  $query = 'SELECT * FROM gyms WHERE id = ' . $_GET['id'];
+}
+
 /* For testing only! */
 // $query = 'SELECT * FROM gyms LIMIT 5';
 
