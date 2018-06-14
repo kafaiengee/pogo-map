@@ -284,7 +284,6 @@ $(document).ready(function() {
     var locationId = data[1].value;
     var lvl = data[2].value;
     var pokemonId = '0';
-    // console.log(time, locationId, lvl);
 
     if (Object.keys(raidPokemonBosses[lvl]).length <= 1) {
       pokemonId = Object.keys(raidPokemonBosses[lvl])[0];
@@ -325,8 +324,6 @@ $(document).ready(function() {
     var data = $(this).serializeArray();
     var minutes, timeStart, timeEnd, locationId, pokemonId, lvl;
     var postData = {};
-
-    console.log(data);
 
     if (data[0].name == 'minutes') {
       minutes = data[0].value;
@@ -633,7 +630,11 @@ function updateGym(id, type) {
       titleDashed: '',
       pokemonId: item.raid.pokemon_id
     };
-    markersArray[id - 1].setIcon(useIcon);
+    if (new Date().getTime() <= new Date(item.raid.spawn).getTime()) {
+      markersArray[id - 1].setIcon(useIcon);
+    } else {
+      markersArray[id - 1].setIcon(newDivIcon(item.raid.level, item.raid.pokemon_id));
+    }
     markersArray[id - 1]._popup.setContent(popupHtml);
     $(markersArray[id - 1]._icon).addClass('leaflet-interactive');
     setInfo(id);
@@ -650,7 +651,6 @@ function setInfo(id) {
   var timestampSpawn, timestampStart, timestampEnd, raidId, raidName, raidLevel, pokemonId;
 
   if ($('#tooltip' + id).length <= 0) {
-    console.log(id);
     if (id !== undefined) {
       id = id - 1;
       if (markersArray[id].options.raid.level > 0) {
@@ -663,7 +663,7 @@ function setInfo(id) {
         raidLevel = markersArray[id].options.raid.level;
         pokemonId = markersArray[id].options.raid.pokemon_id;
 
-        console.log(markersArray[id], timestampSpawn, timestampStart, timestampEnd, raidId, raidName);
+        // console.log(markersArray[id], timestampSpawn, timestampStart, timestampEnd, raidId, raidName);
         markersArray[id].bindTooltip('', {
             permanent: true,
             direction: 'bottom',
@@ -704,26 +704,16 @@ function countdowntimer(element, raidId, raidName, raidLevel, timestampSpawn, ti
   var div = document.getElementById('tooltip' + raidId);
   var now = new Date().getTime();
   var countDownDate;
+  var time;
 
   if ((now >= timestampStart) && (now <= timestampEnd)) {
-    var iconHTML;
+    time = 'started';
     $('#tooltip' + raidId).parent().addClass('time-started');
     countDownDate = timestampEnd;
 
-    if (pokemonId > 0) {
-      iconHTML = '<img class="egg" src="images/map-icons/raid.png" />' +
-        '<div class="egg-pokemon"><img class="pokemon-icon" src="images/icons/' + pokemonId + '.png" /></div>' +
-        '<span class="egg-text">' + raidLevel + '</span>';
-    } else {
-      iconHTML = '<img class="egg" src="images/map-icons/raidlv0.png" />' +
-        '<span class="egg-text">' + raidLevel + '</span>';
-    }
-
-    element.setIcon(new L.DivIcon({
-      className: 'egg',
-      html: iconHTML
-    }));
+    element.setIcon(newDivIcon(raidLevel, pokemonId));
   } else if (now <= timestampStart) {
+    time = 'spawn';
     $('#tooltip' + raidId).parent().addClass('time-spawn');
     countDownDate = timestampStart;
   } else {
@@ -739,7 +729,9 @@ function countdowntimer(element, raidId, raidName, raidLevel, timestampSpawn, ti
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     div.innerHTML = minutes + ':' + ((seconds < 10) ? '0' + seconds : seconds);
-    if (distance < 0) {
+    if ((distance < 0) && (time == 'spawn')) {
+      countdowntimer(element, raidId, '', raidLevel, timestampSpawn, timestampStart, timestampEnd, pokemonId);
+    } else if (distance < 0) {
       clearInterval(x);
       element.setIcon(uncontested).unbindTooltip();
       div.innerHTML = '';
@@ -747,7 +739,7 @@ function countdowntimer(element, raidId, raidName, raidLevel, timestampSpawn, ti
   }, 1000);
 }
 
-// Register egg/pkmn or adding raidboss works
+// Register egg/pkmn or adding raidboss
 function addRaid(e, id) {
   var locationId = e.dataset.locationId;
   var raidLevel = e.dataset.raidLevel;
@@ -756,12 +748,14 @@ function addRaid(e, id) {
   var raidStart = e.dataset.raidStart;
   var raidEnd = e.dataset.raidEnd;
   var target = e.dataset.target;
-  // "2018-05-09 11:00:00"
 
-  // console.log(e, e.dataset, id);
+  if ((target == '#choose-egg')) {
+    var timeNow = new Date().toTimeString().substring(0, 5);
+    $('#eggTime').attr('min', timeNow);
+    $('#eggTime').attr('value', timeNow);
+  }
 
   $('.locationId').prop('value', id);
-
   if ((target == '#choose-pokemon') && (raidLevel !== undefined) && (raidPokemonid !== undefined) && (raidStart !== undefined) && (raidEnd !== undefined)) {
     $('#choose-pokemon .form-group.1').html('<p>① Raid Time: </p><p>' + raidStart.substring(0, 16) + ' &tilde; ' + raidEnd.substring(11, 16) + '</p><input type="hidden" id="starttime" name="starttime" value="' + raidStart + '"><input type="hidden" id="endtime" name="endtime" value="' + raidEnd + '">');
     $('#choose-pokemon #gym_egg li[data-lv=' + raidLevel + ']').addClass('selected');
@@ -807,4 +801,17 @@ function addRaid(e, id) {
   } else {
     $('#choose-pokemon .form-group.1').html('<p>① Time minutes left:</p><input type="number" class="inputSmallBar" id="pokemonTime" name="minutes" min="1" max="45" placeholder="45" required>');
   }
+}
+
+function newDivIcon(raidLevel, pokemonId) {
+  if ((pokemonId !== undefined) && (pokemonId > 0)) {
+    iconHTML = '<img class="egg" src="images/map-icons/raid.png" />' +
+      '<div class="egg-pokemon"><img class="pokemon-icon" src="images/icons/' + pokemonId + '.png" /></div>' +
+      '<span class="egg-text">' + raidLevel + '</span>';
+  } else {
+    iconHTML = '<img class="egg" src="images/map-icons/raidlv0.png" />' +
+      '<span class="egg-text">' + raidLevel + '</span>';
+  }
+
+  return new L.DivIcon({ className: 'egg', html: iconHTML });
 }
