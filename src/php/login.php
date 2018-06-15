@@ -76,7 +76,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_team'] = $row['user_team'];
                 $_SESSION['user_level'] = $row['user_level'];
               }
-              header("location: welcome.php");
+              echo "  <script>" . 
+              "  setTimeout(function(e) {" . 
+              "    parent.window.location.reload();" . 
+              "  }, 200);" . 
+              "  </script>";
+              // header("location: welcome.php");
             } else {
               // Display an error message if password is not valid
               $password_err = 'The password you entered was not valid.';

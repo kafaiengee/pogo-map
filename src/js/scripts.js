@@ -14,6 +14,7 @@ var useMyLocation = true,
   pin, circle;
 var uncontested, raid1, raid2, raid3, raid4, raid5, test;
 var raidPokemonBosses = {};
+var loginRequired = true;
 
 $(document).ready(function() {
   L.Marker.addInitHook(function() {
@@ -453,7 +454,7 @@ function importGyms(id) {
       var whatsappText = '';
       var whatsappUrl = '';
 
-      if (user.level > 0) {
+      if (!loginRequired || ((loginRequired) && (user.level > 0))) {
         if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.spawn).getTime())) {
           if (item.raid.pokemon_id > 0) {
             locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
@@ -566,7 +567,7 @@ function updateGym(id, type) {
     var whatsappText = '';
     var whatsappUrl = '';
 
-    if (user.level > 0) {
+    if (!loginRequired || ((loginRequired) && (user.level > 0))) {
       if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.spawn).getTime())) {
         if (item.raid.pokemon_id > 0) {
           locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
