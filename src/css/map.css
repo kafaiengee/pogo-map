@@ -1784,6 +1784,10 @@ body {
   line-height: 1.6
 }
 
+.lh20px {
+  line-height: 20px
+}
+
 .lh22px {
   line-height: 22px
 }
