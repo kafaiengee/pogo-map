@@ -1,18 +1,5 @@
 <?php
 
-if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
-  $environment = 'fieldraids.com';
-} else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
-  $environment = 'www.fieldraids.com';
-} else {
-  $environment = 'localhost';
-}
-
-if ($_SERVER['SERVER_NAME'] != $environment) {
-  print_r('403 - Forbidden!');
-  exit;
-}
-
 require_once('common.php');
 
 $query = 'SELECT * FROM `pokemons` WHERE `raid_lvl` != \'0\' ORDER BY `pokemons`.`raid_lvl` ASC';

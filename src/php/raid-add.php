@@ -1,18 +1,5 @@
 <?php
 
-if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
-  $environment = 'fieldraids.com';
-} else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
-  $environment = 'www.fieldraids.com';
-} else {
-  $environment = 'localhost';
-}
-
-if ($_SERVER['SERVER_NAME'] != $environment) {
-  print_r('403 - Forbidden!');
-  exit;
-}
-
 require_once('common.php');
   
 // file_put_contents("test.txt", file_get_contents("php://input"));
@@ -33,7 +20,7 @@ $move_2_id = (isset($_POST['move_2_id']) ? $_POST['move_2_id'] : '0');
 $team_id = (isset($_POST['team_id']) ? $_POST['team_id'] : '0');
 $active = (isset($_POST['active']) ? $_POST['active'] : true);
 $locationId = (isset($_POST['locationId']) ? $_POST['locationId'] : '0');
-$user = (isset($_POST['user']) ? $_POST['user'] : '');
+$user = (isset($_POST['user']) ? $_POST['user'] : 'Anonymous');
 
 
 if ($raid == 'egg') {

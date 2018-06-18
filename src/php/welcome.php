@@ -4,6 +4,8 @@ if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
   $environment = 'fieldraids.com';
 } else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
   $environment = 'www.fieldraids.com';
+} else if ($_SERVER["SERVER_NAME"] == '192.168.1.61') {
+  $environment = '192.168.1.61';
 } else {
   $environment = 'localhost';
 }

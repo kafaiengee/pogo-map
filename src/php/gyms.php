@@ -1,18 +1,5 @@
 <?php
 
-if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
-  $environment = 'fieldraids.com';
-} else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
-  $environment = 'www.fieldraids.com';
-} else {
-  $environment = 'localhost';
-}
-
-if ($_SERVER['SERVER_NAME'] != $environment) {
-  print_r('403 - Forbidden!');
-  exit;
-}
-
 require_once('common.php');
 
 // $sql = 'SELECT json_object(\'id\', id, \'name\', name, \'latitude\', latitude, \'longitude\', longitude, \'region_1\', region_1, \'region_2\', region_2, \'region_3\', region_3, \'street\', street, \'number\', number, \'postal\', postal, \'img\', img, \'last_modified\', last_modified) FROM locations;';

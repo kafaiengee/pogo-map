@@ -4,6 +4,8 @@ if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
   $environment = 'fieldraids.com';
 } else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
   $environment = 'www.fieldraids.com';
+} else if ($_SERVER["SERVER_NAME"] == '192.168.1.61') {
+  $environment = '192.168.1.61';
 } else {
   $environment = 'localhost';
 }
@@ -13,7 +15,8 @@ if ($_SERVER['SERVER_NAME'] != $environment) {
   exit;
 }
 
-date_default_timezone_set('Europe/Amsterdam');
+// date_default_timezone_set('Europe/Amsterdam');
+date_default_timezone_set('GMT');
 
 /* DOT NOT EDIT & SHARE */
 
@@ -28,11 +31,11 @@ $dblink = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 function utf8ize($d) {
   if (is_array($d)) {
-      foreach ($d as $k => $v) {
-          $d[$k] = utf8ize($v);
-      }
+    foreach ($d as $k => $v) {
+      $d[$k] = utf8ize($v);
+    }
   } else if (is_string ($d)) {
-      return utf8_encode($d);
+    return utf8_encode($d);
   }
   return $d;
 }

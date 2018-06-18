@@ -455,7 +455,7 @@ function importGyms(id) {
       var whatsappUrl = '';
 
       if (!loginRequired || ((loginRequired) && (user.level > 0))) {
-        if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.spawn.split(' ').join('T')).getTime())) {
+        if ((item.raid.level > 0) && (new Date().getTime() <= (new Date(item.raid.spawn.split(' ').join('T') + 'Z').getTime() - 7200000))) {
           if (item.raid.pokemon_id > 0) {
             locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
               '    <tr><td>Lvl' + item.raid.level + ': ' + item.raid.pokemon_id + ' - ' + raidPokemonBosses[item.raid.level][item.raid.pokemon_id].name + '<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
@@ -471,7 +471,7 @@ function importGyms(id) {
               '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + i + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + i + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + i + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + i + ');" /></td></tr>';
             whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
           }
-        } else if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.end.split(' ').join('T')).getTime())) {
+        } else if ((item.raid.level > 0) && (new Date().getTime() <= (new Date(item.raid.end.split(' ').join('T') + 'Z').getTime() - 7200000))) {
           if (item.raid.pokemon_id > 0) {
             locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
               '    <tr><td>Lvl' + item.raid.level + ': ' + item.raid.pokemon_id + ' - ' + raidPokemonBosses[item.raid.level][item.raid.pokemon_id].name + '<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
@@ -568,7 +568,7 @@ function updateGym(id, type) {
     var whatsappUrl = '';
 
     if (!loginRequired || ((loginRequired) && (user.level > 0))) {
-      if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.spawn.split(' ').join('T')).getTime())) {
+      if ((item.raid.level > 0) && (new Date().getTime() <= (new Date(item.raid.spawn.split(' ').join('T') + 'Z').getTime() - 7200000))) {
         if (item.raid.pokemon_id > 0) {
           locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
             '    <tr><td>Lvl' + item.raid.level + ': ' + item.raid.pokemon_id + ' - ' + raidPokemonBosses[item.raid.level][item.raid.pokemon_id].name + '<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
@@ -584,7 +584,7 @@ function updateGym(id, type) {
             '    <tr><td style="text-align: center;"><img src="images/map-icons/choose-egg.png" class="eggie" data-location-id="' + id + '" data-toggle="modal"  data-target="#choose-egg" style="width:50px;" onclick="addRaid(this, ' + id + ');" /><img src="images/map-icons/choose-pokemon.png" class="eggie" data-location-id="' + id + '" data-toggle="modal" data-target="#choose-pokemon" style="width:50px;" onclick="addRaid(this, ' + id + ');" /></td></tr>';
           whatsappText = 'Gym: ' + item.location.name + ' (' + gmapsUrl + ')';
         }
-      } else if ((item.raid.level > 0) && (new Date().getTime() <= new Date(item.raid.end.split(' ').join('T')).getTime())) {
+      } else if ((item.raid.level > 0) && (new Date().getTime() <= (new Date(item.raid.end.split(' ').join('T') + 'Z').getTime() - 7200000))) {
         if (item.raid.pokemon_id > 0) {
           locationPopupBody = '    <tr><th>Raid Info</th></tr>' +
             '    <tr><td>Lvl' + item.raid.level + ': ' + item.raid.pokemon_id + ' - ' + raidPokemonBosses[item.raid.level][item.raid.pokemon_id].name + '<br>Time: ' + item.raid.start.substring(0, 16) + ' &tilde; ' + item.raid.end.substring(11, 16) + '</td></tr>';
@@ -629,7 +629,7 @@ function updateGym(id, type) {
       titleDashed: '',
       pokemonId: item.raid.pokemon_id
     };
-    if (new Date().getTime() <= new Date(item.raid.spawn.split(' ').join('T')).getTime()) {
+    if (new Date().getTime() <= (new Date(item.raid.spawn.split(' ').join('T') + 'Z').getTime() - 7200000)) {
       markersArray[id - 1].setIcon(useIcon);
     } else {
       markersArray[id - 1].setIcon(newDivIcon(item.raid.level, item.raid.pokemon_id));
@@ -646,21 +646,21 @@ function updateGym(id, type) {
 
 function setInfo(id) {
   // Get todays date and time
-  // var date = new Date();
-  // var now = date.getTime();
-  // var timezoneOffset = '+' + Math.abs((date.getTimezoneOffset() / 60)) + '000';
+  var date = new Date();
+  var now = date.getTime();
+  var timezoneOffset = '+' + Math.abs((date.getTimezoneOffset() / 60)) + '000';
   var timestampSpawn, timestampStart, timestampEnd, locationId, locationName, raidId, raidLevel, pokemonId;
 
   if ($('#tooltip' + id).length <= 0) {
     if (id !== undefined) {
       id = id - 1;
       if (markersArray[id].options.raid.level > 0) {
-        spawn = markersArray[id].options.raid.spawn.split(' ').join('T');
-        start = markersArray[id].options.raid.start.split(' ').join('T');
-        end = markersArray[id].options.raid.end.split(' ').join('T');
-        timestampSpawn = new Date(spawn).getTime();
-        timestampStart = new Date(start).getTime();
-        timestampEnd = new Date(end).getTime();
+        spawn = markersArray[id].options.raid.spawn.split(' ').join('T') + 'Z';
+        start = markersArray[id].options.raid.start.split(' ').join('T') + 'Z';
+        end = markersArray[id].options.raid.end.split(' ').join('T') + 'Z';
+        timestampSpawn = new Date(spawn).getTime() - 7200000;
+        timestampStart = new Date(start).getTime() - 7200000;
+        timestampEnd = new Date(end).getTime() - 7200000;
         locationId = markersArray[id].options.id;
         locationName = markersArray[id].options.title;
         raidId = markersArray[id].options.raid.id;
@@ -680,17 +680,28 @@ function setInfo(id) {
     } else {
       for (var i = 0; i < markersArray.length; i++) {
         if (markersArray[i].options.raid.level > 0) {
-          spawn = markersArray[i].options.raid.spawn.split(' ').join('T');
-          start = markersArray[i].options.raid.start.split(' ').join('T');
-          end = markersArray[i].options.raid.end.split(' ').join('T');
-          timestampSpawn = new Date(spawn).getTime();
-          timestampStart = new Date(start).getTime();
-          timestampEnd = new Date(end).getTime();
+          spawn = markersArray[i].options.raid.spawn.split(' ').join('T') + 'Z';
+          start = markersArray[i].options.raid.start.split(' ').join('T') + 'Z';
+          end = markersArray[i].options.raid.end.split(' ').join('T') + 'Z';
+          timestampSpawn = new Date(spawn).getTime() - 7200000;
+          timestampStart = new Date(start).getTime() - 7200000;
+          timestampEnd = new Date(end).getTime() - 7200000;
           locationId = markersArray[i].options.id;
           locationName = markersArray[i].options.title;
           raidId = markersArray[i].options.raid.id;
           raidLevel = markersArray[i].options.raid.level;
           pokemonId = markersArray[i].options.raid.pokemon_id;
+
+          // if (i == 305) {
+          //   console.log('date: ', date.toUTCString());
+          //   console.log('spawn: ', spawn);
+          //   console.log('start: ', start);
+          //   console.log('end: ', end);
+          //   console.log('now: ', now);
+          //   console.log('timestampSpawn: ', timestampSpawn);
+          //   console.log('timestampStart: ', timestampStart);
+          //   console.log('timestampEnd: ', timestampEnd);
+          // }
 
           // console.log(markersArray[i], timestampSpawn, timestampStart, timestampEnd, locationId, locationName);
           markersArray[i].bindTooltip('', {
