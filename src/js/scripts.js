@@ -113,7 +113,6 @@ $(document).ready(function() {
 
   function onLocationFound(e) {
     useMyLocation = true;
-    // console.log(useMyLocation, e);
     var radius = e.accuracy / 2;
     if (pogomap.hasLayer(pin)) {
       pogomap.removeLayer(pin);
@@ -135,7 +134,6 @@ $(document).ready(function() {
   }
 
   function onLocationError(e) {
-    // console.log(useMyLocation, e);
     console.log(e.message);
   }
 
@@ -383,8 +381,6 @@ $(document).ready(function() {
       };
     }
 
-    // console.log(data, postData);
-
     var jqxhrAdd2 = $.post('php/raid-add.php', postData,
         function(e) {
           // console.log('success');
@@ -616,7 +612,6 @@ function updateGym(id, type) {
       '</table>';
   }).done(function(e) {
     // console.log('second success', e);
-    console.log(item);
     markersArray[id - 1].options = {
       alt: id,
       title: item.location.name,
@@ -690,17 +685,6 @@ function setInfo(id) {
           raidId = markersArray[i].options.raid.id;
           raidLevel = markersArray[i].options.raid.level;
           pokemonId = markersArray[i].options.raid.pokemon_id;
-
-          // if (i == 305) {
-          //   console.log('date: ', date.toUTCString());
-          //   console.log('spawn: ', spawn);
-          //   console.log('start: ', start);
-          //   console.log('end: ', end);
-          //   console.log('now: ', now);
-          //   console.log('timestampSpawn: ', timestampSpawn);
-          //   console.log('timestampStart: ', timestampStart);
-          //   console.log('timestampEnd: ', timestampEnd);
-          // }
 
           // console.log(markersArray[i], timestampSpawn, timestampStart, timestampEnd, locationId, locationName);
           markersArray[i].bindTooltip('', {
