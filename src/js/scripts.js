@@ -305,6 +305,11 @@ $(document).ready(function() {
         })
       .done(function(e) {
         // console.log('second success');
+        $('#choose-egg').modal('toggle');
+
+        setTimeout(function(e) {
+          updateGym(locationId);
+        }, 200);
       })
       .fail(function(e) {
         // console.log('error');
@@ -312,12 +317,6 @@ $(document).ready(function() {
       .always(function(e) {
         // console.log('finished');
       });
-
-    $('#choose-egg').modal('toggle');
-
-    setTimeout(function(e) {
-      updateGym(locationId);
-    }, 200);
   });
 
   $('#choose-pokemon-form').submit(function(event) {
@@ -392,6 +391,11 @@ $(document).ready(function() {
         })
       .done(function(e) {
         // console.log('second success');
+        $('#choose-pokemon').modal('toggle');
+
+        setTimeout(function(e) {
+          updateGym(locationId);
+        }, 200);
       })
       .fail(function(e) {
         // console.log('error');
@@ -399,12 +403,6 @@ $(document).ready(function() {
       .always(function(e) {
         // console.log('finished');
       });
-
-    $('#choose-pokemon').modal('toggle');
-
-    setTimeout(function(e) {
-      updateGym(locationId);
-    }, 200);
   });
 
   $('#choose-egg').on('hidden.bs.modal', function(e) {
@@ -618,6 +616,7 @@ function updateGym(id, type) {
       '</table>';
   }).done(function(e) {
     // console.log('second success', e);
+    console.log(item);
     markersArray[id - 1].options = {
       alt: id,
       title: item.location.name,
