@@ -234,15 +234,26 @@ img.egg {
 
 /* RAIDS */
 
-#raids {
-  width: 600px;
+#filters {
   margin: 50px auto;
   border-radius: 5px;
 }
 
+#raids {
+  width: 800px;
+  margin: 50px auto;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  #raids {
+    width: 320px;
+  }
+}
+
 .raid {
-  width: 130px;
-  height: 210px;
+  width: 150px;
+  height: 220px;
   border-radius: 10px;
   background: white;
   box-shadow: 1px 1px 0px 2px rgba(0, 0, 0, 0.1);
@@ -259,6 +270,10 @@ img.egg {
   font-size: 12px;
   padding: 4px;
   border: 1px solid #dfeef1;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content {
@@ -277,4 +292,46 @@ img.egg {
   float: right;
   margin: 5px;
   border: 5px solid rgb(213, 121, 55);
+}
+
+.exraid {
+  background-image: url(../images/exraid.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  filter: invert(80%);
+  width: 17px;
+  height: 15px;
+}
+
+.exraidPass {
+  background-image: url(../images/exraidPass.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  filter: invert(80%);
+  width: 14px;
+  height: 11px;
+}
+
+.exraidPassCheck {
+  background-image: url(../images/exraidPassCheck.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  filter: invert(80%);
+  width: 17px;
+  height: 13px;
+}
+
+.raidIcon {
+  background-image: url(../images/raidIcon.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  filter: invert(80%);
+  float: left;
+  width: 17px;
+  height: 15px;
+  margin-left: 2px;
 }

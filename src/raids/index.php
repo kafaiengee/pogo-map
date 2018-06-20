@@ -1,16 +1,16 @@
 <?php
 
 if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
-  $environment = 'fieldraids.com';
-} else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
-  $environment = 'www.fieldraids.com';
+    $environment = 'fieldraids.com';
+} elseif ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
+    $environment = 'www.fieldraids.com';
 } else {
-  $environment = 'localhost';
+    $environment = 'localhost';
 }
 
 if ($_SERVER['SERVER_NAME'] != $environment) {
-  print_r('403 - Forbidden!');
-  exit;
+    print_r('403 - Forbidden!');
+    exit;
 }
 
 // Initialize the session
@@ -19,19 +19,19 @@ session_start();
 $username = $firstname = $lastname = $team = '';
 $level = '0';
 if (isset($_SESSION['username'])) {
-  $username = $_SESSION['username'];
+    $username = $_SESSION['username'];
 }
 if (isset($_SESSION['user_firstname'])) {
-  $firstname = $_SESSION['user_firstname'];
+    $firstname = $_SESSION['user_firstname'];
 }
 if (isset($_SESSION['user_lastname'])) {
-  $lastname = $_SESSION['user_lastname'];
+    $lastname = $_SESSION['user_lastname'];
 }
 if (isset($_SESSION['user_team'])) {
-  $team = $_SESSION['user_team'];
+    $team = $_SESSION['user_team'];
 }
 if (isset($_SESSION['user_level'])) {
-  $level = $_SESSION['user_level'];
+    $level = $_SESSION['user_level'];
 }
 ?>
 
@@ -53,6 +53,7 @@ if (isset($_SESSION['user_level'])) {
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
   <script>
     var user = {
       'username': '<?php echo $username ?>',
@@ -74,20 +75,65 @@ if (isset($_SESSION['user_level'])) {
     </div> -->
     <div id="login" data-toggle="modal" data-target="#login-window"></div>
   </div>
+  <div id="filters">
+    <div class="form-group">
+      <label for="filterRange">Raid Level: </label><br>
+      <input type="range" class="form-control-range" min="0" max="5" id="filterRange" list="filterRangeList">
+      <datalist id="filterRangeList">
+        <option value="0" label="All">
+        <option value="1" label="1">
+        <option value="2" label="2">
+        <option value="3" label="3">
+        <option value="4" label="4">
+        <option value="5" label="5">
+      </datalist>
+    </div>
+  <!-- 
+    https://www.webslesson.info/2017/05/bootstrap-multi-select-dropdown-with-checkboxes-using-jquery-in-php.html
+  -->
+  <!-- <div class="container">
+    <div class="form-group">
+     <select id="framework" name="framework[]" multiple class="form-control" >
+      <option value="Codeigniter">Codeigniter</option>
+      <option value="CakePHP">CakePHP</option>
+      <option value="Laravel">Laravel</option>
+      <option value="YII">YII</option>
+      <option value="Zend">Zend</option>
+      <option value="Symfony">Symfony</option>
+      <option value="Phalcon">Phalcon</option>
+      <option value="Slim">Slim</option>
+     </select>
+    </div>
+    <div class="form-group">
+     <input type="submit" class="btn btn-info" name="submit" value="Submit" />
+    </div>
+  </div> -->
+  <!-- <select class="custom-select">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select> -->
+  </div>
   <div id="raids">
     <div class="raid" id="raidcard">
       <div class="content">
-        <h2 class="fw700 lh16 header">Anne Frank Statue</h2>
+        <h2 class="fw700 lh16 header"></h2>
         <div class="ml4 mt4 mb4">
-          <a href="https://api.whatsapp.com/send?text=Raid%20at%3A%20Anne%20Frank%20Statue%20%28https%3A//maps.google.com/maps%3Fsaddr%3Dcurrent+location%26daddr%3D52.374335%2C4.883604%26directionsmode%3Dwalking%29%0ATime%3A%202018-06-15%2016%3A05%20%7E%2016%3A50" rel="nofollow" target="_blank"><img src="../images/map-icons/whatsapp.png" style="width:20px;" /></a>
-          <a class="ml5" href="https://maps.google.com/maps?saddr=current+location&amp;daddr=52.374335,4.883604&amp;directionsmode=walking" target="_blank"><img src="../images/map-icons/gmaps.png" style="width:20px;"/></a>
-          <img class="gymImage" src="https://lh3.googleusercontent.com/NiBDMZG1MkNWoaq4QL8L7vF1thhUpUGeCvkNFqDxfMrH0PxfNnOxxW0h_i187abfsnEx9gd12lEbqSqFSgWY" />
+          <a href="https://api.whatsapp.com/send?text=" rel="nofollow" target="_blank"><img src="../images/map-icons/whatsapp.png" style="width:20px;" /></a>
+          <a class="ml5" href="" target="_blank"><img src="../images/map-icons/gmaps.png" style="width:20px;"/></a>
+          <img class="gymImage" src="" />
         </div>
         <br>
         <table class="w100 wiki_p4 mb4">
           <tbody>
             <tr><th>Raid Info</th></tr>
-            <tr><td style="border: 0;"><span class="lvlpokemon">Lvl5: 382 - Kyogre</span><br>Time: <span class="time">2018-06-15 16:05 ˜ 16:50</span></td></tr>
+            <tr><td style="border: 0;">
+              <span class="lvl"></span><br>
+              <span class="lvlpokemon"></span><br>
+              <span class="spawntime"></span>
+              <span class="raidtime"></span>
+            </td></tr>
           </tbody>
         </table>
       </div>

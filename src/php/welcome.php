@@ -1,16 +1,16 @@
 <?php
 
 if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
-  $environment = 'fieldraids.com';
-} else if ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
-  $environment = 'www.fieldraids.com';
+    $environment = 'fieldraids.com';
+} elseif ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
+    $environment = 'www.fieldraids.com';
 } else {
-  $environment = 'localhost';
+    $environment = 'localhost';
 }
 
 if ($_SERVER['SERVER_NAME'] != $environment) {
-  print_r('403 - Forbidden!');
-  exit;
+    print_r('403 - Forbidden!');
+    exit;
 }
 
 // Initialize the session
@@ -18,8 +18,8 @@ session_start();
 
 // If session variable is not set it will redirect to login page
 if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
-  header("location: login.php");
-  exit;
+    header("location: login.php");
+    exit;
 }
 ?>
 

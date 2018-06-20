@@ -2,11 +2,47 @@ var raids = [];
 
 $(document).ready(function() {
   importRaids();
+
+  $("#filterRange").change(function(e) {
+    var value = $(this).val();
+    $("label[for=filterRange]").text('Raid Level: ' + ((value <= 0) ? 'All' : value));
+    if (value > 0) {
+      $("#raids div[data-lvl]").filter(function() {
+        $(this).toggle($(this).data('lvl') == value);
+      });
+    } else {
+      $("#raids div").show();
+    }
+  });
+
+  // $('#framework').multiselect({
+  //   nonSelectedText: 'Select Framework',
+  //   enableFiltering: true,
+  //   enableCaseInsensitiveFiltering: true,
+  //   buttonWidth: '400px'
+  // });
+
+  // $('#framework_form').on('submit', function(event) {
+  //   event.preventDefault();
+  //   var form_data = $(this).serialize();
+  //   $.ajax({
+  //     url: "insert.php",
+  //     method: "POST",
+  //     data: form_data,
+  //     success: function(data) {
+  //       $('#framework option:selected').each(function() {
+  //         $(this).prop('selected', false);
+  //       });
+  //       $('#framework').multiselect('refresh');
+  //       alert(data);
+  //     }
+  //   });
+  // });
 });
 
 function createCards() {
   var cardTemplate = $('#raidcard').clone();
-  // $('#raidcard').remove();
+  $('#raidcard').remove();
 
   for (i = 0; i < raids.length; i++) {
     addNewCard(raids[i], i);
@@ -14,12 +50,21 @@ function createCards() {
 
   function addNewCard(data, id) {
     console.log(data, id);
+    var spawn = data.raid.spawn;
+    var start = data.raid.start;
+    var end = data.raid.end;
     var newCard = $(cardTemplate).clone();
+
     $(newCard).attr('id', 'card_' + id);
+    $(newCard).attr('data-lvl', data.raid.level);
     $(newCard).find('h2.header').html(data.location.name);
     $(newCard).find('img.gymImage').attr('src', ((data.location.img != 'null') ? data.location.img : '../images/newgyms.png'));
-    $(newCard).find('span.lvlpokemon').html('Lvl' + data.raid.level + ': ' + data.raid.pokemon_id + ' - ' + data.raid.level + ': ');
-    $(newCard).find('span.time').html('Time: ' + data.raid.start + ' &tilde; ' + data.raid.end);
+    for (var j = 0; j < data.raid.level; j++) {
+      $(newCard).find('span.lvl').append('<div class="raidIcon"></div>');
+    }
+    $(newCard).find('span.lvlpokemon').html(data.raid.pokemon_id + ' (' + data.raid.pokemon_id + ')');
+    $(newCard).find('span.spawntime').html('Spawntime: ' + start.substring(11, 16) + ' - ' + end.substring(11, 16));
+    $(newCard).find('span.raidtime').html('Raidtime: ' + start.substring(11, 16));
     $('#raids').append($(newCard));
   }
 }
