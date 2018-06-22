@@ -200,34 +200,64 @@ $(document).ready(function() {
   // layerNests = new L.geoJson(amsParks);
   // pogomap.addLayer(layerNests);
 
-  uncontested = L.icon({
-    iconUrl: 'images/map-icons/Uncontested.svg',
-    iconSize: [24, 24]
+  // uncontested = L.icon({
+  //   iconUrl: 'images/map-icons/Uncontested.svg',
+  //   iconSize: [24, 24]
+  // });
+
+  // raid1 = L.icon({
+  //   iconUrl: 'images/map-icons/raidlv1.png',
+  //   iconSize: [24, 24]
+  // });
+
+  // raid2 = L.icon({
+  //   iconUrl: 'images/map-icons/raidlv2.png',
+  //   iconSize: [24, 24]
+  // });
+
+  // raid3 = L.icon({
+  //   iconUrl: 'images/map-icons/raidlv3.png',
+  //   iconSize: [24, 24]
+  // });
+
+  // raid4 = L.icon({
+  //   iconUrl: 'images/map-icons/raidlv4.png',
+  //   iconSize: [24, 24]
+  // });
+
+  // raid5 = L.icon({
+  //   iconUrl: 'images/map-icons/raidlv5.png',
+  //   iconSize: [24, 24]
+  // });
+
+  uncontested = new L.DivIcon({
+    className: 'egg',
+    html: '<img class="egg" src="images/map-icons/Uncontested.svg" />'
   });
 
-  raid1 = L.icon({
-    iconUrl: 'images/map-icons/raidlv1.png',
-    iconSize: [24, 24]
+  raid1 = new L.DivIcon({
+    className: 'egg',
+    html: '<img class="egg" src="images/map-icons/raidlv1.png" />'
   });
 
-  raid2 = L.icon({
-    iconUrl: 'images/map-icons/raidlv2.png',
-    iconSize: [24, 24]
+  raid2 = new L.DivIcon({
+    className: 'egg',
+    html: '<img class="egg" src="images/map-icons/raidlv2.png" />'
   });
 
-  raid3 = L.icon({
-    iconUrl: 'images/map-icons/raidlv3.png',
-    iconSize: [24, 24]
+  raid3 = new L.DivIcon({
+    className: 'egg',
+    html: '<img class="egg" src="images/map-icons/raidlv3.png" />'
   });
 
-  raid4 = L.icon({
-    iconUrl: 'images/map-icons/raidlv4.png',
-    iconSize: [24, 24]
+  raid4 = new L.DivIcon({
+    className: 'egg',
+    html: '<img class="egg" src="images/map-icons/raidlv4.png" />'
   });
 
-  raid5 = L.icon({
-    iconUrl: 'images/map-icons/raidlv5.png',
-    iconSize: [24, 24]
+  raid5 = new L.DivIcon({
+    className: 'egg',
+    html: '<img class="egg" src="images/map-icons/raidlv5.png" />'
   });
 
   importGyms();
@@ -532,7 +562,7 @@ function updateGym(id, type) {
   var item, useIcon, popupHtml;
   var jqxhrGyms = $.getJSON('php/gyms.php?id=' + id, function(json) {
     item = json[id];
-    // console.log(id, item);
+    console.log(id, item);
 
     var raidLevel = item.raid.level;
     switch (true) {
@@ -623,10 +653,11 @@ function updateGym(id, type) {
       titleDashed: '',
       pokemonId: item.raid.pokemon_id
     };
+
     if (new Date().getTime() <= (new Date(item.raid.spawn.split(' ').join('T') + 'Z').getTime() - 7200000)) {
       markersArray[id - 1].setIcon(useIcon);
     } else {
-      markersArray[id - 1].setIcon(newDivIcon(item.raid.level, item.raid.pokemon_id));
+      markersArray[id - 1].setIcon(newDivIcon(id, item.raid.level, item.raid.pokemon_id));
     }
     markersArray[id - 1]._popup.setContent(popupHtml);
     $(markersArray[id - 1]._icon).addClass('leaflet-interactive');
@@ -711,7 +742,7 @@ function countdowntimer(element, locationId, locationName, raidId, raidLevel, ti
     time = 'started';
     $('#tooltip' + locationId).parent().addClass('time-started');
     countDownDate = timestampEnd;
-    element.setIcon(newDivIcon(raidLevel, pokemonId));
+    element.setIcon(newDivIcon(locationId, raidLevel, pokemonId));
   } else if (now <= timestampStart) {
     time = 'spawn';
     $('#tooltip' + locationId).parent().addClass('time-spawn');
@@ -803,13 +834,13 @@ function addRaid(e, id) {
   }
 }
 
-function newDivIcon(raidLevel, pokemonId) {
+function newDivIcon(locationId, raidLevel, pokemonId) {
   if ((pokemonId !== undefined) && (pokemonId > 0)) {
-    iconHTML = '<img class="egg" src="images/map-icons/raid.png" />' +
+    iconHTML = '<img class="egg" alt="' + locationId + '" src="images/map-icons/raid.png" />' +
       '<div class="egg-pokemon"><img class="pokemon-icon" src="images/icons/' + pokemonId + '.png" /></div>' +
       '<span class="egg-text">' + raidLevel + '</span>';
   } else {
-    iconHTML = '<img class="egg" src="images/map-icons/raidlv0.png" />' +
+    iconHTML = '<img class="egg" alt="' + locationId + '" src="images/map-icons/raidlv0.png" />' +
       '<span class="egg-text">' + raidLevel + '</span>';
   }
 

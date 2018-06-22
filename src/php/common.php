@@ -13,8 +13,8 @@ if ($_SERVER['SERVER_NAME'] != $environment) {
   exit;
 }
 
-// date_default_timezone_set('Europe/Amsterdam');
-date_default_timezone_set('GMT');
+date_default_timezone_set('Europe/Amsterdam');
+// date_default_timezone_set('GMT');
 
 /* DOT NOT EDIT & SHARE */
 
