@@ -76,10 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_team'] = $row['user_team'];
                 $_SESSION['user_level'] = $row['user_level'];
               }
-              echo "  <script>" . 
-              "  setTimeout(function(e) {" . 
-              "    parent.window.location.reload();" . 
-              "  }, 200);" . 
+              echo "  <script>" .
+              "  setTimeout(function(e) {" .
+              "    parent.window.location.reload();" .
+              "  }, 200);" .
               "  </script>";
               // header("location: welcome.php");
             } else {

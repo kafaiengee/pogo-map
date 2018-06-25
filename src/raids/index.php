@@ -1,16 +1,16 @@
 <?php
 
 if ($_SERVER["SERVER_NAME"] == 'fieldraids.com') {
-    $environment = 'fieldraids.com';
+  $environment = 'fieldraids.com';
 } elseif ($_SERVER["SERVER_NAME"] == 'www.fieldraids.com') {
-    $environment = 'www.fieldraids.com';
+  $environment = 'www.fieldraids.com';
 } else {
-    $environment = 'localhost';
+  $environment = 'localhost';
 }
 
 if ($_SERVER['SERVER_NAME'] != $environment) {
-    print_r('403 - Forbidden!');
-    exit;
+  print_r('403 - Forbidden!');
+  exit;
 }
 
 // Initialize the session
@@ -19,19 +19,19 @@ session_start();
 $username = $firstname = $lastname = $team = '';
 $level = '0';
 if (isset($_SESSION['username'])) {
-    $username = $_SESSION['username'];
+  $username = $_SESSION['username'];
 }
 if (isset($_SESSION['user_firstname'])) {
-    $firstname = $_SESSION['user_firstname'];
+  $firstname = $_SESSION['user_firstname'];
 }
 if (isset($_SESSION['user_lastname'])) {
-    $lastname = $_SESSION['user_lastname'];
+  $lastname = $_SESSION['user_lastname'];
 }
 if (isset($_SESSION['user_team'])) {
-    $team = $_SESSION['user_team'];
+  $team = $_SESSION['user_team'];
 }
 if (isset($_SESSION['user_level'])) {
-    $level = $_SESSION['user_level'];
+  $level = $_SESSION['user_level'];
 }
 ?>
 

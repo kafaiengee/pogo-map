@@ -27,7 +27,8 @@ $dblink = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 /* DOT NOT EDIT & SHARE */
 
 
-function utf8ize($d) {
+function utf8ize($d)
+{
   if (is_array($d)) {
     foreach ($d as $k => $v) {
       $d[$k] = utf8ize($v);

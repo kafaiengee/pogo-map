@@ -1,7 +1,7 @@
 <?php
 
 require_once('common.php');
-  
+
 // file_put_contents("test.txt", file_get_contents("php://input"));
 
 // print_r($_POST);
@@ -25,7 +25,7 @@ $user = (isset($_POST['user']) ? $_POST['user'] : 'Anonymous');
 
 if ($raid == 'egg') {
   $time = $spawn;
-  
+
   $spawn = date('Y-m-d ' . $spawn);
   $start = $spawn;
   $end = date('Y-m-d H:i:s', strtotime($start) + (45 * 60));
@@ -65,7 +65,7 @@ if ($raid == 'pokemon-update') {
   echo $query . "<br>\n";
   $result = mysqli_query($dblink, $query) or die('gyms > ' . mysqli_error($dblink) . ' > ' . $query);
 
-  while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
+  while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     $raidId = $row['raid_id'] . "<br>\n";
   }
 

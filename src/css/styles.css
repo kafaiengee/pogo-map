@@ -235,6 +235,7 @@ img.egg {
 /* RAIDS */
 
 #filters {
+  width: 800px;
   margin: 50px auto;
   border-radius: 5px;
 }
@@ -246,6 +247,9 @@ img.egg {
 }
 
 @media only screen and (max-width: 600px) {
+  #filters {
+    width: 320px;
+  }
   #raids {
     width: 320px;
   }
