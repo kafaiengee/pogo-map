@@ -1,0 +1,326 @@
+<body>
+  <!-- PokemonGoMap.info SITE -->
+
+  <select id="global_quest_list">
+    <option data-rewards="200x Stardust##5x Potion##2x Revive##5x Nanab Berry##1x Pinap Berry####Mankey Encounter##Houndour Encounter##Poliwag Encounter##Numel Encounter##Bulbasaur Encounter##Charmander Encounter##Horsea Encounter##Horsea Encounter##" value="1">Battling in a Gym</option>
+    <option data-rewards="500x Stardust##5x Potion##3x Super Potion##2-4x Revive##10x Nanab Berry####Machop Encounter##" value="2">Battle in a Gym 5 times</option>
+    <option data-rewards="10x Nanab Berry##5x Potion##4x Revive####Bulbasaur Encounter##Charmander Encounter##Squirtle Encounter##" value="3">Win a Gym battle</option>
+    <option data-rewards="3x Hyper Potion##1x Max Revive##1x Rare Candy####Kingler Encounter##Jynx Encounter##" value="4">Win 3 Gym battles</option>
+    <option data-rewards="200x Stardust##5x Potion##2x Revive####Minun Encounter##" value="5">Battle in a raid</option>
+    <option data-rewards="500x Stardust##3x Super Potion##4x Revive##10x Nanab Berry##1x Rare Candy##1x Rare Candy##" value="6">Win a Raid Battle</option>
+    <option data-rewards="Quilava Encounter##" value="7">Win 2 Raid Battles</option>
+    <option data-rewards="1500x Stardust##3x Max Potion##8x Revive##3x Max Revive##1x Fast TM##" value="8">Win 3 Raid Battles</option>
+    <option data-rewards="Typhlosion Encounter##" value="9">Win 5 Raid Battles</option>
+    <option data-rewards="1000x Stardust##3x Hyper Potion##1-3x Max Revive##1x Rare Candy##6x Revive##" value="10">Win a level 3 or higher Raid Battle</option>
+    <option data-rewards="500x Stardust##3x Super Potion##4x Revive##10x Nanab Berry##" value="11">Use a super-effective Charged attack in a Gym battle</option>
+    <option data-rewards="1x Charged TM##" value="12">Use a super-effective Charged attack in 5 Gym battles</option>
+    <option data-rewards="1000x Stardust##3x Super Potion##6x Revive##1x Max Revive##1x Rare Candy####Electabuzz Encounter##" value="13">Use a super-effective Charged attack in 7 Gym battles</option>
+    <option value="0" disabled style="color:#AAA;">-----------------------------</option>
+    <option data-rewards="200x Stardust##5x Poke Ball##3x Razz Berry##1x Pinap Berry####Magikarp Encounter##" value="14">Catch 10 Pokemon</option>
+    <option data-rewards="6x Razz Berry##" value="15">Catch 10 Normal-type Pokemon</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##4-6x Razz Berry##1-2x Pinap Berry####Tangela Encounter##" value="16">Catch 3 Oddish or Bellsprout</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##4-6x Razz Berry##1-2x Pinap Berry####Ekans Encounter##" value="17">Catch 3 Pidgey or Murkrow</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##4-6x Razz Berry##1-2x Pinap Berry####Torchic Encounter##" value="18">Catch 3 Treecko or Mudkip</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##4-6x Razz Berry##1-2x Pinap Berry####Growlithe Encounter##" value="19">Catch 3 Meowth or Skitty</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##4-6x Razz Berry##1-2x Pinap Berry##" value="20">Catch 3 Swablu</option>
+    <option data-rewards="Magikarp Encounter##" value="21">Catch 2 Water-type Pokemon</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##3-6x Razz Berry##1-3x Pinap Berry####Pinsir Encounter##" value="22">Catch 3 / 10 Bug-type Pokemon</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##3-6x Razz Berry##1-3x Pinap Berry####Houndour Encounter##" value="23">Catch 3 / 10 Dark-type Pokemon</option>
+    <option data-rewards="Jynx Encounter##" value="24">Catch 2 Ice-type Pokemon</option>
+    <option data-rewards="1500x Stardust##10x Ultra Ball##2-3x Rare Candy##2x Golden Razz Berry####Dratini Encounter##" value="25">Catch a Dragon-type Pokemon</option>
+    <option data-rewards="3x Rare Candy##" value="26">Catch 3 Dragon-type Pokemon</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##3-6x Razz Berry##1-3x Pinap Berry####Pikachu Encounter##" value="27">Catch 3 / 10 Electrictype Pokemon</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##3-6x Razz Berry##1-3x Pinap Berry####Ponyta Encounter##Magcargo Encounter##" value="28">Catch 3 / 10 Fire-type Pokemon</option>
+    <option data-rewards="Luvdisc Encounter##" value="29">Catch 5 Magikarp or Wailmer</option>
+    <option data-rewards="Flareon Encounter##" value="30">Catch 5 Fire-type Pokemon</option>
+    <option data-rewards="200-500x Stardust##5x Poke Ball##5x Great Ball##3-6x Razz Berry##1-3x Pinap Berry####Doduo Encounter##" value="31">Catch 3 / 10 Flying-type Pokemon</option>
+    <option data-rewards="Gligar Encounter##" value="32">Catch 5 Flying-type Pokemon</option>
+    <option data-rewards="Jynx Encounter##" value="33">Catch 2 Ice-type Pokemon</option>
+    <option data-rewards="Grimer Encounter##" value="34">Catch 3 Poison-type Pokemon</option>
+    <option data-rewards="Numel Encounter##" value="35">Catch 3 Grass, Ground or Fire-Type Pokemon</option>
+    <option data-rewards="Electrike Encounter##" value="36">Catch 3 Water, Electric or Bug-Type Pokemon</option>
+    <option data-rewards="200x Stardust##5x Poke Ball##3x Razz Berry##1x Pinap Berry####Vulpix Encounter##Poliwag Encounter##" value="37">Catch 5 Pokemon with Weather Boost</option>
+    <option data-rewards="500x Stardust##5x Poke Ball##5x Poke Ball##6x Razz Berry####Poliwag Encounter##" value="38">Catch 10 Pokemon with Weather Boost</option>
+    <option data-rewards="Ninetales Encounter##" value="39">Catch 20 Pokemon with Weather Boost</option>
+    <option data-rewards="1500x Stardust##10x Ultra Ball##3x Rare Candy##2x Golden Razz Berry##" value="40">Catch a Ditto</option>
+    <option data-rewards="Wailmer Encounter##" value="41">Use 3 Berries to help catch Pokemon</option>
+    <option data-rewards="500x Stardust##5x Great Ball##6x Razz Berry##2x Pinap Berry##" value="42">Use 5 Berries to help catch Pokemon</option>
+    <option value="0" disabled style="color:#AAA;">-----------------------------</option>
+    <option data-rewards="Slowpoke Encounter##" value="43">Make a Nice Throw</option>
+    <option data-rewards="200x Stardust##5x Poke Ball##3x Razz Berry##1x Pinap Berry####Voltorb Encounter##" value="44">Make 5 Nice Throws</option>
+    <option data-rewards="500x Stardust##3x Nanab Berry##" value="45">Make 2 Nice throws in a row</option>
+    <option data-rewards="500x Stardust##5x Great Ball##2x Ultra Ball##2x Pinap Berry##" value="46">Make 3 Nice throws in a row</option>
+    <option data-rewards="200x Stardust##5x Poke Ball##3x Razz Berry##1x Pinap Berry##" value="47">Make 2 Nice Curveball throws in a row</option>
+    <option data-rewards="3x Razz Berry####Electrode Encounter##" value="48">Make 3 Nice Curveball throws in a row</option>
+    <option data-rewards="200x Stardust##5x Poke Ball##3x Razz Berry##2x Pinap Berry####Gastly Encounter##" value="49">Make 3 Great Throws</option>
+    <option data-rewards="5x Razz Berry##" value="50">Make 5 Great throws</option>
+    <option data-rewards="500x XP##" value="51">Make 10 Great throws</option>
+    <option data-rewards="1000x Stardust##5-10x Ultra Ball##9x Razz Berry##3x Pinap Berry##1x Rare Candy####Onix Encounter##" value="52">Make 3 Great throws in a row</option>
+    <option data-rewards="2x Pinap Berry####Flaaffy Encounter##" value="53">Make 5 Great throws in a row</option>
+    <option data-rewards="1000x Stardust##5x Ultra Ball##9x Razz Berry##2x Golden Razz Berry##" value="54">Make 3 Great Curveball throws</option>
+    <option data-rewards="5x Poke Ball##" value="55">Make 2 Great Curveball throws in a row</option>
+    <option data-rewards="1500x Stardust##1x Ultra Ball##3x Rare Candy####Charmeleon Encounter##" value="56">Make 3 Great Curveball throws in a row</option>
+    <option data-rewards="500x Stardust##5x Great Ball##2x Ultra Ball##2x Pinap Berry##" value="57">Make an Excellent throw</option>
+    <option data-rewards="Larvitar Encounter##" value="58">Make 3 Excellent throws in a row</option>
+    <option data-rewards="500x Stardust##Absol Encounter##" value="59">Make an Excellent Curveball throw</option>
+    <option data-rewards="Golduck Encounter##" value="60">Make 3 Curveball throws in a row</option>
+    <option data-rewards="5x Great Ball##6x Nanab Berry##1-2x Pinap Berry##500x Stardust##" value="62">Make 5 Curveball throws in a row</option>
+    <option value="0" disabled style="color:#AAA;">-----------------------------</option>
+    <option data-rewards="Lapras Encounter##" value="63">Evolve 2 Shellder</option>
+    <option data-rewards="Vulpix Encounter##Eevee Encounter##" value="64">Evolve a Pokemon</option>
+    <option data-rewards="Seel Encounter##" value="65">Evolve a Watertype Pokemon</option>
+    <option data-rewards="Jolteon Encounter##" value="66">Evolve 5 Electrictype Pokemon</option>
+    <option data-rewards="Flareon Encounter##" value="67">Evolve 5 Fire-type Pokemon</option>
+    <option data-rewards="200x Stardust##5-10x Poke Ball##3x Razz Berry##1x Pinap Berry##" value="68">Spin 10 PokeStops</option>
+    <option data-rewards="Ponyta Encounter##" value="69">Spin 3 PokeStops that were not previously visited</option>
+    <option data-rewards="Aerodactyl Encounter##" value="70">Spin 6 PokeStops that were not previously visited</option>
+    <option data-rewards="200x Stardust##5x Poke Ball##3x Razz Berry##1x Pinap Berry####Exeggcute Encounter##Shellder Encounter##" value="71">Hatch an Egg</option>
+    <option data-rewards="1000x Stardust##10x Poke Ball##5x Ultra Ball##9x Razz Berry##3x Pinap Berry##1-2x Rare Candy####Magmar Encounter##" value="72">Hatch 3 Eggs</option>
+    <option data-rewards="Chansey Encounter##" value="73">Hatch 5 Eggs</option>
+    <option data-rewards="Plusle Encounter##" value="74">Power Up Pokemon 1 time</option>
+    <option data-rewards="Staryu Encounter##" value="75">Power Up Pokemon 3 times</option>
+    <option data-rewards="Bulbasaur Encounter##Charmander Encounter##Squirtle Encounter##" value="76">Power Up Pokemon 5 times</option>
+    <option data-rewards="Magneton Encounter##" value="77">Power Up Pokemon 7 times</option>
+    <option data-rewards="Krabby Encounter##" value="78">Earn a candy walking a Buddy</option>
+  </select>
+
+  <select id="global_rewards_list">
+    <option value="132">6x Revive</option>
+    <option value="133">Absol Encounter</option>
+    <option value="134">Aerodactyl Encounter</option>
+    <option value="135">Bulbasaur Encounter</option>
+    <option value="136">Chansey Encounter</option>
+    <option value="137">Charmander Encounter</option>
+    <option value="138">Charmeleon Encounter</option>
+    <option value="139">Doduo Encounter</option>
+    <option value="140">Dratini Encounter</option>
+    <option value="141">Eevee Encounter</option>
+    <option value="142">Ekans Encounter</option>
+    <option value="143">Electabuzz Encounter</option>
+    <option value="144">Electrike Encounter</option>
+    <option value="145">Electrode Encounter</option>
+    <option value="146">Exeggcute Encounter</option>
+    <option value="147">Flaaffy Encounter</option>
+    <option value="148">Flareon Encounter</option>
+    <option value="149">Gastly Encounter</option>
+    <option value="150">Gligar Encounter</option>
+    <option value="151">Golduck Encounter</option>
+    <option value="152">Grimer Encounter</option>
+    <option value="153">Growlithe Encounter</option>
+    <option value="154">Horsea Encounter</option>
+    <option value="155">Houndour Encounter</option>
+    <option value="156">Jolteon Encounter</option>
+    <option value="157">Jynx Encounter</option>
+    <option value="158">Kingler Encounter</option>
+    <option value="159">Krabby Encounter</option>
+    <option value="160">Lapras Encounter</option>
+    <option value="161">Larvitar Encounter</option>
+    <option value="162">Luvdisc Encounter</option>
+    <option value="163">Machop Encounter</option>
+    <option value="164">Magcargo Encounter</option>
+    <option value="165">Magikarp Encounter</option>
+    <option value="166">Magmar Encounter</option>
+    <option value="167">Magneton Encounter</option>
+    <option value="168">Mankey Encounter</option>
+    <option value="169">Minun Encounter</option>
+    <option value="170">Ninetales Encounter</option>
+    <option value="171">Numel Encounter</option>
+    <option value="172">Onix Encounter</option>
+    <option value="173">Pikachu Encounter</option>
+    <option value="174">Pinsir Encounter</option>
+    <option value="175">Plusle Encounter</option>
+    <option value="176">Poliwag Encounter</option>
+    <option value="177">Ponyta Encounter</option>
+    <option value="178">Quilava Encounter</option>
+    <option value="179">Seel Encounter</option>
+    <option value="180">Shellder Encounter</option>
+    <option value="181">Slowpoke Encounter</option>
+    <option value="182">Squirtle Encounter</option>
+    <option value="183">Staryu Encounter</option>
+    <option value="184">Tangela Encounter</option>
+    <option value="185">Torchic Encounter</option>
+    <option value="186">Typhlosion Encounter</option>
+    <option value="187">Voltorb Encounter</option>
+    <option value="188">Vulpix Encounter</option>
+    <option value="189">Wailmer Encounter</option>
+    <option value="0" disabled style="color:#AAA;">-----------------------------</option>
+    <option value="79">1-2x Pinap Berry</option>
+    <option value="80">1-2x Rare Candy</option>
+    <option value="81">1-3x Max Revive</option>
+    <option value="82">1-3x Pinap Berry</option>
+    <option value="83">1000x Stardust</option>
+    <option value="84">10x Nanab Berry</option>
+    <option value="85">10x Poke Ball</option>
+    <option value="86">10x Ultra Ball</option>
+    <option value="87">1500x Stardust</option>
+    <option value="88">1x Charged TM</option>
+    <option value="89">1x Max Revive</option>
+    <option value="90">1x Pinap Berry</option>
+    <option value="91">1x Rare Candy</option>
+    <option value="92">1x Ultra Ball</option>
+    <option value="93">1x Fast TM</option>
+    <option value="94">1x Rare Candy</option>
+    <option value="95">2-3x Rare Candy</option>
+    <option value="96">2-4x Revive</option>
+    <option value="97">200-500x Stardust</option>
+    <option value="98">200x Stardust</option>
+    <option value="99">2x Golden Razz Berry</option>
+    <option value="100">2x Pinap Berry</option>
+    <option value="101">2x Revive</option>
+    <option value="102">2x Ultra Ball</option>
+    <option value="103">2x Pinap Berry</option>
+    <option value="104">3-6x Razz Berry</option>
+    <option value="105">3x Hyper Potion</option>
+    <option value="106">3x Max Potion</option>
+    <option value="107">3x Max Revive</option>
+    <option value="108">3x Nanab Berry</option>
+    <option value="109">3x Pinap Berry</option>
+    <option value="110">3x Rare Candy</option>
+    <option value="111">3x Razz Berry</option>
+    <option value="112">3x Super Potion</option>
+    <option value="113">4-6x Razz Berry</option>
+    <option value="114">4x Revive</option>
+    <option value="115">5-10x Poke Ball</option>
+    <option value="116">5-10x Ultra Ball</option>
+    <option value="117">500x Stardust</option>
+    <option value="118">500x XP</option>
+    <option value="119">500x Stardust</option>
+    <option value="120">5x Great Ball</option>
+    <option value="121">5x Nanab Berry</option>
+    <option value="122">5x Poke Ball</option>
+    <option value="123">5x Potion</option>
+    <option value="124">5x Razz Berry</option>
+    <option value="125">5x Ultra Ball</option>
+    <option value="126">6x Nanab Berry</option>
+    <option value="127">6x Razz Berry</option>
+    <option value="128">6x Revive</option>
+    <option value="129">6x Razz Berry</option>
+    <option value="130">8x Revive</option>
+    <option value="131">9x Razz Berry</option>
+  </select>
+
+  <!-- JP SITE -->
+  <select id="task_list" name="char1">
+    <option data-id="17" data-reward_list="485_1,4193_1" value="こおりタイプのポケモンを2匹捕まえる">
+      こおりタイプのポケモンを2匹捕まえる
+    </option>
+    <option data-id="8" data-reward_list="379_1,4193_1" value="みずタイプのポケモンを1匹進化させる">
+      みずタイプのポケモンを1匹進化させる
+    </option>
+    <option data-id="21" data-reward_list="492_1,4193_1" value="ウォーターフェスティバル：シェルダーを2匹進化させる">
+      ウォーターフェスティバル：シェルダーを2匹進化させる
+    </option>
+    <option data-id="24" data-reward_list="1409_1,4193_1" selected value="エクセレントスローを3回連続投げる">
+      エクセレントスローを3回連続投げる
+    </option>
+    <option data-id="25" data-reward_list="2580_1,4193_1" value="カーブボールのエクセレントスローを1回投げる">
+      カーブボールのエクセレントスローを1回投げる
+    </option>
+    <option data-id="4" data-reward_list="264_1,4193_1" value="カーブボールを3回連続で投げる">
+      カーブボールを3回連続で投げる
+    </option>
+    <option data-id="9" data-reward_list="399_1,4193_1" value="グレートスローを3回投げる">
+      グレートスローを3回投げる
+    </option>
+    <option data-id="10" data-reward_list="408_1,2006_1000,2296_1,4193_1" value="グレートスローを3回連続で投げる">
+      グレートスローを3回連続で投げる
+    </option>
+    <option data-id="2" data-reward_list="81_1,109_1,133_1,4193_1" value="ジムで1回バトルに勝つ">
+      ジムで1回バトルに勝つ
+    </option>
+    <option data-id="12" data-reward_list="424_1,485_1,2006_1000,4193_1" value="ジムで3回バトルに勝つ">
+      ジムで3回バトルに勝つ
+    </option>
+    <option data-id="5" data-reward_list="268_1,477_1,4193_1" value="ジムバトルを1回する">
+      ジムバトルを1回する
+    </option>
+    <option data-id="6" data-reward_list="302_1,4193_1" value="ジムバトルを5回する">
+      ジムバトルを5回する
+    </option>
+    <option data-id="14" data-reward_list="446_1,4193_1" value="タマゴを1個かえす">
+      タマゴを1個かえす
+    </option>
+    <option data-id="19" data-reward_list="487_1,2006_1000,2296_1,4193_1" value="タマゴを3個かえす">
+      タマゴを3個かえす
+    </option>
+    <option data-id="15" data-reward_list="474_1,4193_1" value="タマゴを5個かえす">
+      タマゴを5個かえす
+    </option>
+    <option data-id="23" data-reward_list="508_1,2006_1500,2296_3,2295_2,4193_1" value="ドラゴンタイプのポケモンを1匹捕まえる">
+      ドラゴンタイプのポケモンを1匹捕まえる
+    </option>
+    <option data-id="7" data-reward_list="353_1,4193_1" value="ナイススローを1回投げる">
+      ナイススローを1回投げる
+    </option>
+    <option data-id="13" data-reward_list="429_1,4193_1" value="ナイススローを5回投げる">
+      ナイススローを5回投げる
+    </option>
+    <option data-id="20" data-reward_list="490_1,4193_1" value="ポケモンを10匹捕まえる">
+      ポケモンを10匹捕まえる
+    </option>
+    <option data-id="22" data-reward_list="494_1,4193_1" value="ポケモンを1匹進化する">
+      ポケモンを1匹進化する
+    </option>
+    <option data-id="16" data-reward_list="481_1,4193_1" value="ポケモンを3回強化する">
+      ポケモンを3回強化する
+    </option>
+    <option data-id="1" data-reward_list="81_1,109_1,133_1,4193_1" value="ポケモンを5回強化する">
+      ポケモンを5回強化する
+    </option>
+    <option data-id="18" data-reward_list="486_1,2006_1000,4193_1" value="効果ばつぐんのスペシャルアタックを使ってジムバトルする・7回">
+      効果ばつぐんのスペシャルアタックを使ってジムバトルする・7回
+    </option>
+    <option data-id="3" data-reward_list="234_1,280_1,4193_1" value="天候ブーストを受けているポケモンを5匹捕まえる">
+      天候ブーストを受けているポケモンを5匹捕まえる
+    </option>
+    <option data-id="11" data-reward_list="420_1,2554_1,4193_1" value="相棒と歩いて1個アメをもらう">
+      相棒と歩いて1個アメをもらう
+    </option>
+  </select>
+
+  <ul id="reward_list">
+    <li data-id="4193" data-num="1" data-task_list="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg4%2Fimg4193_5.png&amp;w=50"></li>
+    <li data-id="81" data-num="1" data-task_list="1,2"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg81_5.png&amp;w=50"></li>
+    <li data-id="109" data-num="1" data-task_list="1,2"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg109_5.png&amp;w=50"></li>
+    <li data-id="133" data-num="1" data-task_list="1,2"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg133_5.png&amp;w=50"></li>
+    <li data-id="234" data-num="1" data-task_list="3"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg234_5.png&amp;w=50"></li>
+    <li data-id="264" data-num="1" data-task_list="4"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg264_5.png&amp;w=50"></li>
+    <li data-id="268" data-num="1" data-task_list="5"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg268_5.png&amp;w=50"></li>
+    <li data-id="280" data-num="1" data-task_list="3"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg280_5.png&amp;w=50"></li>
+    <li data-id="302" data-num="1" data-task_list="6"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg302_5.png&amp;w=50"></li>
+    <li data-id="353" data-num="1" data-task_list="7"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg353_5.png&amp;w=50"></li>
+    <li data-id="379" data-num="1" data-task_list="8"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg379_5.png&amp;w=50"></li>
+    <li data-id="399" data-num="1" data-task_list="9"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg399_5.png&amp;w=50"></li>
+    <li data-id="408" data-num="1" data-task_list="10"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg408_5.png&amp;w=50"></li>
+    <li data-id="420" data-num="1" data-task_list="11"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg420_5.png&amp;w=50"></li>
+    <li data-id="424" data-num="1" data-task_list="12"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg424_5.png&amp;w=50"></li>
+    <li data-id="429" data-num="1" data-task_list="13"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg429_5.png&amp;w=50"></li>
+    <li data-id="446" data-num="1" data-task_list="14"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg446_5.png&amp;w=50"></li>
+    <li data-id="474" data-num="1" data-task_list="15"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg474_5.png&amp;w=50"></li>
+    <li data-id="477" data-num="1" data-task_list="5"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg477_5.png&amp;w=50"></li>
+    <li data-id="481" data-num="1" data-task_list="16"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg481_5.png&amp;w=50"></li>
+    <li data-id="485" data-num="1" data-task_list="17,12"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg485_5.png&amp;w=50"></li>
+    <li data-id="486" data-num="1" data-task_list="18"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg486_5.png&amp;w=50"></li>
+    <li data-id="487" data-num="1" data-task_list="19"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg487_5.png&amp;w=50"></li>
+    <li data-id="490" data-num="1" data-task_list="20"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg490_5.png&amp;w=50"></li>
+    <li data-id="492" data-num="1" data-task_list="21"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg492_5.png&amp;w=50"></li>
+    <li data-id="494" data-num="1" data-task_list="22"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg494_5.png&amp;w=50"></li>
+    <li data-id="508" data-num="1" data-task_list="23"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg0%2Fimg508_5.png&amp;w=50"></li>
+    <li data-id="1409" data-num="1" data-task_list="24"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg1%2Fimg1409_5.png&amp;w=50"></li>
+    <li data-id="2554" data-num="1" data-task_list="11"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg2%2Fimg2554_5.png&amp;w=50"></li>
+    <li data-id="2580" data-num="1" data-task_list="25"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg2%2Fimg2580_5.png&amp;w=50"></li>
+    <li data-id="2006" data-num="1000" data-task_list="18,10,26,12,27,19"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fwiki%2Freward2006x1000.png&amp;w=50"></li>
+    <li data-id="2006" data-num="1500" data-task_list="28,23,29,30"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fwiki%2Freward2006x1500.png&amp;w=50"></li>
+    <li data-id="2296" data-num="1" data-task_list="31,27,19,26,10,32,33"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fwiki%2Freward2296x1.png&amp;w=50"></li>
+    <li data-id="2296" data-num="3" data-task_list="28,30,23"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fwiki%2Freward2296x3.png&amp;w=50"></li>
+    <li data-id="2294" data-num="1" data-task_list="34"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg2%2Fimg2294_5.png&amp;w=50"></li>
+    <li data-id="2295" data-num="2" data-task_list="30,23,28"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fwiki%2Freward2295x2.png&amp;w=50"></li>
+    <li data-id="2017" data-num="1" data-task_list="35,36,37"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg2%2Fimg2017_5.png&amp;w=50"></li>
+    <li data-id="2017" data-num="3" data-task_list="37,38"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fwiki%2Freward2017x3.png&amp;w=50"></li>
+    <li data-id="4189" data-num="1" data-task_list="0"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg4%2Fimg4189_5.png&amp;w=50"></li>
+    <li data-id="4190" data-num="1" data-task_list="0"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg4%2Fimg4190_5.png&amp;w=50"></li>
+    <li data-id="4191" data-num="1" data-task_list="0"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg4%2Fimg4191_5.png&amp;w=50"></li>
+    <li data-id="2016" data-num="1" data-task_list="0"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg2%2Fimg2016_5.png&amp;w=50"></li>
+    <li data-id="4194" data-num="1" data-task_list="0"><img src="https://cdn08.net/games/resize?src=%2Fpokemongo%2Fdata%2Fimg4%2Fimg4194_5.png&amp;w=50"></li>
+  </ul>
+</body>
