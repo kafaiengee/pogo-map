@@ -25,7 +25,10 @@ $global = 'global_direct_link_';
 $main_page_image = 'main_page_image';
 $data = [];
 
-$directory = 'C:\Users\kafai.engee.WEBORAMA\Desktop\TEST\_ALL';
+// $directory = 'C:\Users\kafai.engee.WEBORAMA\Desktop\TEST\_ALL';
+// $directory = 'C:\Users\kafai.engee.WEBORAMA\Desktop\TEST\_ALL2';
+$directory = 'C:\Users\kafai.engee.WEBORAMA\Desktop\TEST\_ALL3';
+
 $scanned_directory = array_diff(scandir($directory), array('..', '.'));
 
 foreach ($scanned_directory as $key => $value) {
@@ -61,6 +64,7 @@ foreach ($scanned_directory as $key => $value) {
 echo "<table>\n";
 echo "  <thead>\n";
 echo "    <tr>\n";
+echo "      <th>key</th>\n";
 echo "      <th>ID</th>\n";
 echo "      <th>Clean Name</th>\n";
 echo "      <th>Name Raw</th>\n";
@@ -73,11 +77,12 @@ echo "  <tbody>\n";
 
 foreach ($data as $key => $value) {
   echo "    <tr>\n";
+  echo "      <td>" . $key . "</td>\n";
   echo "      <td>" . $value['link_id'] . "</td>\n";
   echo "      <td>" . $value['link_clean_name'] . "</td>\n";
   echo "      <td>" . $value['link_name_raw'] . "</td>\n";
-  echo "      <td>" . $value['link_lat'] . "</td>\n";
-  echo "      <td>" . $value['link_lng'] . "</td>\n";
+  echo "      <td>'" . $value['link_lat'] . "'</td>\n";
+  echo "      <td>'" . $value['link_lng'] . "'</td>\n";
   echo "      <td>" . $value['img'] . "</td>\n";
   echo "    </tr>\n";
   // break;
